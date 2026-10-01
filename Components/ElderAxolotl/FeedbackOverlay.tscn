@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://diktdssu686x0"]
+
+[ext_resource type="Shader" uid="uid://c6xn62ywvuib7" path="res://Resources/Shader/holo_shader.gdshader" id="1_7yr4u"]
+[ext_resource type="Script" uid="uid://b01db7xetspgg" path="res://Components/ElderAxolotl/FeedbackOverlay.gd" id="1_wvllr"]
+[ext_resource type="Texture2D" uid="uid://8msqiktsa0bi" path="res://Assets/Textures/Axolotl/elder_axolotl.svg" id="3_2qi2y"]
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="4_2qi2y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2qi2y"]
+shader = ExtResource("1_7yr4u")
+shader_parameter/lines = 90
+shader_parameter/color1 = Color(0.100439, 0.337708, 1, 1)
+shader_parameter/color2 = Color(9.62615e-07, 0.588354, 0.757339, 1)
+shader_parameter/speed = 0.35
+shader_parameter/alpha = 0.47
+shader_parameter/noise_amount = 0.07
+shader_parameter/effect_factor = 0.39
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ft21p"]
+shader = ExtResource("1_7yr4u")
+shader_parameter/lines = 90
+shader_parameter/color1 = Color(1.20327e-06, 0.405667, 0.61827, 1)
+shader_parameter/color2 = Color(0, 0.607843, 1, 1)
+shader_parameter/speed = 0.06
+shader_parameter/alpha = 0.67
+shader_parameter/noise_amount = 0.05
+shader_parameter/effect_factor = 0.43
+
+[node name="FeedbackOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_wvllr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(608.39, 155.81)
+layout_mode = 2
+offset_left = -1472.0
+offset_top = 231.0
+offset_right = -580.0
+offset_bottom = 387.0
+scale = Vector2(1.30498, 1.27204)
+mouse_filter = 2
+color = Color(0.140447, 0.140447, 0.140447, 1)
+
+[node name="Background" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_2qi2y")
+layout_direction = 2
+layout_mode = 2
+offset_left = -1468.0
+offset_top = 238.0
+offset_right = -1409.0
+offset_bottom = 278.0
+rotation = 3.14159
+scale = Vector2(-19.5788, -4.59535)
+mouse_filter = 2
+color = Color(0, 0, 0.0823529, 0.568627)
+
+[node name="Axolotl" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ft21p")
+texture = ExtResource("3_2qi2y")
+
+[node name="Line" type="RichTextLabel" parent="."]
+layout_mode = 2
+offset_left = -1463.0
+offset_top = 240.0
+offset_right = -290.0
+offset_bottom = 428.0
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("4_2qi2y")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Das klingt noch nach Rauschen ... schau nochmal im Cheatsheet nach."
+fit_content = true
+autowrap_mode = 2

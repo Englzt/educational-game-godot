@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://d04ei2mvtbf85"]
+
+[ext_resource type="Script" uid="uid://1g1keqwneft" path="res://Components/TreeNode/tree_node.gd" id="1_4gu7j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ra4su"]
+size = Vector2(40, 40)
+
+[node name="TreeNode" type="Area2D"]
+script = ExtResource("1_4gu7j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 60.0
+offset_bottom = 60.0
+scale = Vector2(0.5, 0.5)
+mouse_filter = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_ra4su")

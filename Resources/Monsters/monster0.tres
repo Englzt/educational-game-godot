@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MonsterStat" load_steps=3 format=3 uid="uid://cvpcr7rvod7a6"]
+
+[ext_resource type="Script" uid="uid://bdtru5xucrgfi" path="res://Resources/Monsters/monter_stats.gd" id="1_rmanc"]
+[ext_resource type="Texture2D" uid="uid://4qklbqgsd6t2" path="res://Assets/Textures/Monsters/monster_lvl0.svg" id="2_rmanc"]
+
+[resource]
+script = ExtResource("1_rmanc")
+attack_cooldown = 90.0
+min_health = 50
+max_health = 255
+attack_damage = 20
+texture = ExtResource("2_rmanc")
+texture_scale = Vector2(1, 1)
+metadata/_custom_type_script = "uid://bdtru5xucrgfi"

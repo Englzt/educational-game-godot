@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://1i8tmlpjyu1v"]
+
+[ext_resource type="Script" uid="uid://c7laes2jxxwp4" path="res://Components/Switch/switch.gd" id="1_jet2u"]
+[ext_resource type="Texture2D" uid="uid://c5i6h74ontx5m" path="res://Assets/Textures/Binary/switch.svg" id="2_kl85v"]
+[ext_resource type="Shader" uid="uid://dgw8jv2b3x70a" path="res://Resources/Shader/led_shader.gdshader" id="3_kl85v"]
+[ext_resource type="Texture2D" uid="uid://bldgn5gnculri" path="res://Assets/Textures/LogicGates/LED.svg" id="4_k2hta"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kl85v"]
+size = Vector2(112, 136)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jet2u"]
+resource_local_to_scene = true
+shader = ExtResource("3_kl85v")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[node name="Switch" type="Node2D"]
+script = ExtResource("1_jet2u")
+
+[node name="Switch" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kl85v")
+region_enabled = true
+region_rect = Rect2(0, 0, 124, 149)
+
+[node name="Area2D" type="Area2D" parent="Switch"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Switch/Area2D"]
+visible = false
+position = Vector2(5.96046e-08, -4.17233e-07)
+shape = SubResource("RectangleShape2D_kl85v")
+
+[node name="LED" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_jet2u")
+position = Vector2(0, -64)
+texture = ExtResource("4_k2hta")
+
+[connection signal="input_event" from="Switch/Area2D" to="." method="_on_area_2d_input_event"]

@@ -1,0 +1,170 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnkxitdp5tkbf"]
+
+[ext_resource type="PackedScene" uid="uid://1i8tmlpjyu1v" path="res://Components/Switch/switch.tscn" id="1_d0k6f"]
+[ext_resource type="Script" uid="uid://dc34p5p6mwdhi" path="res://Stations/Binary/binary.gd" id="1_usmpa"]
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="3_wbxii"]
+[ext_resource type="Texture2D" uid="uid://b6b6kqshln6qv" path="res://Assets/Textures/Binary/display.svg" id="4_c7yye"]
+[ext_resource type="FontFile" uid="uid://5utw7mjw5nfu" path="res://Assets/Fonts/Lux_SevenSegmentNumbers.ttf" id="5_c7yye"]
+
+[sub_resource type="Theme" id="Theme_c7yye"]
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("3_wbxii")
+
+[sub_resource type="LabelSettings" id="LabelSettings_fv8xd"]
+font = ExtResource("5_c7yye")
+font_size = 42
+font_color = Color(0, 1, 0, 1)
+
+[node name="Binary" type="Node2D"]
+script = ExtResource("1_usmpa")
+
+[node name="Switches" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Switch0" parent="Switches" instance=ExtResource("1_d0k6f")]
+position = Vector2(308, 0)
+
+[node name="Switch1" parent="Switches" instance=ExtResource("1_d0k6f")]
+position = Vector2(220, 0)
+index = 1
+
+[node name="Switch2" parent="Switches" instance=ExtResource("1_d0k6f")]
+position = Vector2(133, 0)
+index = 2
+
+[node name="Switch3" parent="Switches" instance=ExtResource("1_d0k6f")]
+position = Vector2(45, 0)
+index = 3
+
+[node name="Switch4" parent="Switches" instance=ExtResource("1_d0k6f")]
+position = Vector2(-44, 0)
+index = 4
+
+[node name="Switch5" parent="Switches" instance=ExtResource("1_d0k6f")]
+position = Vector2(-133, 0)
+index = 5
+
+[node name="Switch6" parent="Switches" instance=ExtResource("1_d0k6f")]
+position = Vector2(-222, 0)
+index = 6
+
+[node name="Switch7" parent="Switches" instance=ExtResource("1_d0k6f")]
+position = Vector2(-310, 0)
+index = 7
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_c7yye")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 382.0
+offset_top = -69.0
+offset_right = 524.0
+offset_bottom = 41.0
+
+[node name="Control" type="Control" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Control"]
+layout_mode = 2
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 144.0
+offset_bottom = 66.4222
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("4_c7yye")
+expand_mode = 5
+
+[node name="LabelTargetValue" type="Label" parent="Control/VBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 41.0
+offset_top = 10.0
+offset_right = 112.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.74902, 0.243137, 0, 0.733333)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.670588)
+theme_override_colors/font_outline_color = Color(1, 0.593174, 0.458537, 0.32549)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_wbxii")
+theme_override_font_sizes/font_size = 34
+text = "---"
+label_settings = SubResource("LabelSettings_fv8xd")
+horizontal_alignment = 3
+
+[node name="ButtonFire" type="Button" parent="Control/VBoxContainer/Control"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+offset_left = 6.0
+offset_top = 76.0
+offset_right = 135.0
+offset_bottom = 103.0
+theme_override_fonts/font = ExtResource("3_wbxii")
+text = "FIRE"
+
+[node name="ValuesHelp" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = -355.0
+offset_top = 43.0
+offset_right = 353.0
+offset_bottom = 65.0
+alignment = 1
+
+[node name="Label7" type="Label" parent="Control/ValuesHelp"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "128"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Control/ValuesHelp"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "64"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Control/ValuesHelp"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "32"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Control/ValuesHelp"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16	"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Control/ValuesHelp"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "8"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/ValuesHelp"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4"
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="Control/ValuesHelp"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "2"
+horizontal_alignment = 1
+
+[node name="Label0" type="Label" parent="Control/ValuesHelp"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Control/VBoxContainer/Control/ButtonFire" to="." method="_on_button_fire_pressed"]

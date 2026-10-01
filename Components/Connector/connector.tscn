@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://bw7cdhf5tkcn2"]
+
+[ext_resource type="Script" uid="uid://b5ancorn5qq0e" path="res://Components/Connector/connector.gd" id="1_x0e6h"]
+[ext_resource type="Texture2D" uid="uid://dcb3n465p7sqm" path="res://Assets/Textures/LogicGates/wire.png" id="2_ca4rc"]
+[ext_resource type="PackedScene" uid="uid://3vcxroh04js0" path="res://Components/DraggableNode/draggable_node.tscn" id="3_ymclf"]
+[ext_resource type="Material" uid="uid://43t5mysp6qdh" path="res://Resources/Shader/gate_input_material.tres" id="4_s11ij"]
+[ext_resource type="Material" uid="uid://gjyvo60j3r3r" path="res://Resources/Shader/gate_output_material.tres" id="5_ahij7"]
+[ext_resource type="Texture2D" uid="uid://dyyhetmaprrrx" path="res://Assets/Textures/LogicGates/connector.svg" id="5_otba7"]
+[ext_resource type="Shader" uid="uid://dgw8jv2b3x70a" path="res://Resources/Shader/led_shader.gdshader" id="7_ca4rc"]
+[ext_resource type="Texture2D" uid="uid://bldgn5gnculri" path="res://Assets/Textures/LogicGates/LED.svg" id="8_ca4rc"]
+[ext_resource type="Texture2D" uid="uid://b2auo1hn74q5o" path="res://Assets/Textures/LogicGates/move_icon.png" id="9_otba7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ymclf"]
+radius = 20.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_otba7"]
+shader = ExtResource("7_ca4rc")
+shader_parameter/enabled = true
+shader_parameter/color_on = Vector4(0, 1, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[node name="Connector" type="Node2D"]
+texture_filter = 1
+texture_repeat = 1
+script = ExtResource("1_x0e6h")
+
+[node name="Wire" type="Line2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(13, 15)
+points = PackedVector2Array(-7, -7, 84, -7)
+width = 20.0
+texture = ExtResource("2_ca4rc")
+texture_mode = 1
+
+[node name="ConnectorIn" parent="." instance=ExtResource("3_ymclf")]
+unique_name_in_owner = true
+material = ExtResource("5_ahij7")
+position = Vector2(0, 8)
+texture = ExtResource("5_otba7")
+
+[node name="Area" type="Area2D" parent="ConnectorIn"]
+position = Vector2(-8, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ConnectorIn/Area"]
+visible = false
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_ymclf")
+
+[node name="ConnectorOut" parent="." instance=ExtResource("3_ymclf")]
+unique_name_in_owner = true
+material = ExtResource("4_s11ij")
+position = Vector2(100, 8)
+texture = ExtResource("5_otba7")
+
+[node name="LED" type="Sprite2D" parent="ConnectorOut"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_otba7")
+position = Vector2(0, -0.5)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("8_ca4rc")
+
+[node name="Area" type="Area2D" parent="ConnectorOut"]
+position = Vector2(-8, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ConnectorOut/Area"]
+visible = false
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_ymclf")
+
+[node name="DragPoint" parent="." instance=ExtResource("3_ymclf")]
+unique_name_in_owner = true
+position = Vector2(51, 8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_otba7")
+
+[editable path="ConnectorIn"]
+[editable path="ConnectorOut"]

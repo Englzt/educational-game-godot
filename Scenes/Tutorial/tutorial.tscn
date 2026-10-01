@@ -1,0 +1,1283 @@
+[gd_scene load_steps=54 format=3 uid="uid://cltecouc75q84"]
+
+[ext_resource type="Script" uid="uid://d3ehxy1j7mei3" path="res://Scenes/Tutorial/spiel_01.gd" id="1_6w3qm"]
+[ext_resource type="PackedScene" uid="uid://cyowb6t3tsbge" path="res://Stations/CaesarShift/CaesarMinigame.tscn" id="1_oc6bj"]
+[ext_resource type="Script" uid="uid://btrojoe7b6wd6" path="res://Scenes/Tutorial/tutorial.gd" id="1_t0s0g"]
+[ext_resource type="Texture2D" uid="uid://bvh5gaw6gk0v8" path="res://Assets/Textures/Tutorial/Zoohandlung1-01.svg" id="2_37jl6"]
+[ext_resource type="Texture2D" uid="uid://dsvqmmv5sxqa0" path="res://Assets/Textures/Axolotl/Kapitän.svg" id="3_6w3qm"]
+[ext_resource type="Texture2D" uid="uid://clsu6de1pflqt" path="res://Assets/Textures/Tutorial/aquarium.svg" id="3_rp3sh"]
+[ext_resource type="Texture2D" uid="uid://bl4d87ctm0pp8" path="res://Assets/Textures/Tutorial/blase.png" id="4_37jl6"]
+[ext_resource type="Texture2D" uid="uid://rv3lp0cn7glf" path="res://Assets/Textures/Tutorial/aquarium_deckel.svg" id="4_t0s0g"]
+[ext_resource type="Texture2D" uid="uid://67vnafy7c4yp" path="res://Assets/Textures/Axolotl/Funker.svg" id="4_xpl50"]
+[ext_resource type="PackedScene" uid="uid://ctxkov3yvq82p" path="res://Scenes/Settings/settings.tscn" id="5_6w3qm"]
+[ext_resource type="Texture2D" uid="uid://bxhf8e3wy52qr" path="res://Assets/Textures/Axolotl/Mechaniker.svg" id="5_n53el"]
+[ext_resource type="Texture2D" uid="uid://dytlq6hffhnrq" path="res://Assets/Textures/CaesarShift/radio_station.svg" id="7_v4esa"]
+[ext_resource type="AudioStream" uid="uid://dmcyovs54hdci" path="res://Assets/Audio/SFX/Tutorial/coffee-shop-70190.mp3" id="8_i0hnp"]
+[ext_resource type="Texture2D" uid="uid://8msqiktsa0bi" path="res://Assets/Textures/Axolotl/elder_axolotl.svg" id="9_iy1n2"]
+[ext_resource type="PackedScene" uid="uid://ccs1o46v75ghu" path="res://Components/CheatSheet/cheat_sheet.tscn" id="9_tmlxl"]
+[ext_resource type="Script" uid="uid://cfwyx4pif6wu7" path="res://Scenes/Tutorial/spiel_02.gd" id="11_tnu2s"]
+[ext_resource type="PackedScene" uid="uid://bnkxitdp5tkbf" path="res://Stations/Binary/binary.tscn" id="12_mr02u"]
+[ext_resource type="Shader" uid="uid://d26us3abq63jt" path="res://Resources/Shader/trapez_shader.gdshader" id="13_1n4ff"]
+[ext_resource type="Script" uid="uid://cqtd2wor0alc3" path="res://Scenes/Tutorial/Binary_Tutorial.gd" id="14_by5v1"]
+[ext_resource type="PackedScene" uid="uid://chqbs4qit58gk" path="res://Stations/Circuit/circuit.tscn" id="15_48x6o"]
+[ext_resource type="Texture2D" uid="uid://dtx3ddq7se04e" path="res://Assets/Textures/Tutorial/sprechblase.svg" id="15_tmlxl"]
+[ext_resource type="Script" uid="uid://hwf2wq50pgal" path="res://Scenes/Tutorial/spiel_03.gd" id="16_4ukv6"]
+[ext_resource type="Texture2D" uid="uid://chlq7qbuukblq" path="res://Assets/Textures/Tutorial/Zoohandlung_nacht_schrankOffen_neu.svg" id="16_bu5db"]
+[ext_resource type="AudioStream" uid="uid://h16ubhw38i8p" path="res://Assets/Audio/SFX/cricket.mp3" id="16_u8eo3"]
+[ext_resource type="Texture2D" uid="uid://irhog47tlaf0" path="res://Assets/Textures/Tutorial/Ausrufezeichen.png" id="17_t0s0g"]
+[ext_resource type="Texture2D" uid="uid://dc2gtwsy4006v" path="res://Assets/Textures/Tutorial/Zoohandlung_Eingang_neu.svg" id="21_i0hnp"]
+[ext_resource type="Texture2D" uid="uid://bhr57cwu6war1" path="res://Assets/Textures/Axolotl/Kanonier.svg" id="21_n138o"]
+[ext_resource type="Texture2D" uid="uid://benwswtqyr483" path="res://Assets/Textures/Tutorial/Zoohandlung_Eingang_ohneTür.svg" id="22_2iurx"]
+[ext_resource type="PackedScene" uid="uid://buyhd1rmwfkl" path="res://Stations/Navigator/navigator.tscn" id="22_rp3sh"]
+[ext_resource type="PackedScene" uid="uid://dpmgtaf1hfw4i" path="res://Stations/TreeTraversal/tree_traversal.tscn" id="23_t0s0g"]
+[ext_resource type="Texture2D" uid="uid://hc0a6i6ofoj1" path="res://Assets/Textures/Tutorial/Eingang_Tür.svg" id="23_x7vmi"]
+[ext_resource type="AudioStream" uid="uid://bdycyvuf7el08" path="res://Assets/Audio/SFX/Tutorial/squeaky-door-open-113212.mp3" id="24_e8gna"]
+[ext_resource type="Script" uid="uid://cu4r58qc6e74p" path="res://Scenes/Tutorial/select_games.gd" id="24_rp3sh"]
+[ext_resource type="Theme" uid="uid://dkrwbt08atd1e" path="res://Resources/Themes/settings_theme.tres" id="26_v4esa"]
+[ext_resource type="Texture2D" uid="uid://c6ymtp2yy8a72" path="res://Assets/Textures/Tutorial/papyrus_map.svg" id="30_owuam"]
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="31_iy1n2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2iurx"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_37jl6"]
+viewport_path = NodePath("Spiel01/BG/BG_Aquarium/SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_owuam"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tvnyb"]
+bg_color = Color(0.0543795, 0.148611, 0.0220175, 0.415686)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0313726, 0.0313726, 0.137255, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t0s0g"]
+bg_color = Color(0.764706, 0.317647, 0.227451, 0.635294)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.907942, 0.907942, 0.907942, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_n138o"]
+viewport_path = NodePath("Spiel02/BG/BG_Aquarium/SubViewport2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1n4ff"]
+bg_color = Color(0, 0, 0, 0.854902)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e8gna"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t0s0g"]
+shader = ExtResource("13_1n4ff")
+shader_parameter/p1 = Vector2(0.062, 0.48)
+shader_parameter/p2 = Vector2(0.98, -1.07)
+shader_parameter/p3 = Vector2(0.98, 1.875)
+shader_parameter/p4 = Vector2(0.062, 1.063)
+shader_parameter/size = Vector2(800, 400)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7vmi"]
+bg_color = Color(0.45098, 0.45098, 0.45098, 0)
+border_width_top = 10
+border_width_bottom = 10
+border_color = Color(0.803922, 0.803922, 0.803922, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v4esa"]
+shader = ExtResource("13_1n4ff")
+shader_parameter/p1 = Vector2(-0.055, 0.39)
+shader_parameter/p2 = Vector2(3.425, -1.07)
+shader_parameter/p3 = Vector2(3.43, 1.865)
+shader_parameter/p4 = Vector2(-0.05, 0.93)
+shader_parameter/size = Vector2(800, 400)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8gna"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_top = 10
+border_width_bottom = 10
+border_color = Color(0.803922, 0.803922, 0.803922, 1)
+corner_radius_bottom_right = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rp3sh"]
+bg_color = Color(0.45098, 0.45098, 0.45098, 0.729412)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.862745, 0.843137, 0.819608, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_37jl6"]
+shader = ExtResource("13_1n4ff")
+shader_parameter/p1 = Vector2(-0.04, -0.005)
+shader_parameter/p2 = Vector2(0.75, -0.08)
+shader_parameter/p3 = Vector2(0.755, 0.355)
+shader_parameter/p4 = Vector2(-0.04, 0.465)
+shader_parameter/size = Vector2(500, 500)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0hnp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 5
+border_width_right = 10
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8eo3"]
+bg_color = Color(0.890196, 0.890196, 0.890196, 0.74902)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4esa"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_t0s0g")
+
+[node name="Schwarz HG" type="Panel" parent="."]
+offset_left = -258.0
+offset_top = -85.0
+offset_right = 4247.0
+offset_bottom = 2368.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2iurx")
+
+[node name="Spiel01" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6w3qm")
+
+[node name="BG" type="Control" parent="Spiel01"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Zoohandlung1-01" type="Sprite2D" parent="Spiel01/BG"]
+position = Vector2(1919, 1112)
+scale = Vector2(1.45379, 1)
+texture = ExtResource("2_37jl6")
+
+[node name="BG_Aquarium" type="Sprite2D" parent="Spiel01/BG"]
+position = Vector2(2454.5, 1316)
+scale = Vector2(1.05502, 1)
+texture = ExtResource("3_rp3sh")
+
+[node name="SubViewport" type="SubViewport" parent="Spiel01/BG/BG_Aquarium"]
+transparent_bg = true
+size = Vector2i(2388, 1477)
+render_target_update_mode = 4
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Spiel01/BG/BG_Aquarium/SubViewport"]
+position = Vector2(1000, 1000)
+scale = Vector2(1.05502, 1)
+amount = 10
+texture = ExtResource("4_37jl6")
+lifetime = 3.0
+preprocess = 1.14
+speed_scale = 0.5
+explosiveness = 0.1
+randomness = 0.5
+lifetime_randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 0)
+direction = Vector2(0, -1)
+gravity = Vector2(8.33, 0)
+initial_velocity_max = 1000.0
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+color = Color(0.701961, 1, 1, 1)
+hue_variation_max = 1.0
+
+[node name="BubbleDisplay" type="TextureRect" parent="Spiel01/BG/BG_Aquarium"]
+offset_left = -1183.39
+offset_top = -738.0
+offset_right = 1204.61
+offset_bottom = 739.0
+mouse_filter = 2
+texture = SubResource("ViewportTexture_37jl6")
+expand_mode = 2
+stretch_mode = 2
+
+[node name="AquariumDeckel" type="Sprite2D" parent="Spiel01/BG"]
+position = Vector2(2439.5, 339)
+scale = Vector2(1.03751, 1)
+texture = ExtResource("4_t0s0g")
+
+[node name="RadioStation" type="Sprite2D" parent="Spiel01/BG"]
+modulate = Color(1, 1, 1, 0.862745)
+position = Vector2(2464.36, 1050.5)
+scale = Vector2(1.98136, 1.98136)
+texture = ExtResource("7_v4esa")
+
+[node name="HintergrundSound" type="AudioStreamPlayer" parent="Spiel01/BG"]
+stream = ExtResource("8_i0hnp")
+volume_db = -25.0
+parameters/looping = false
+
+[node name="CheatSheet" parent="Spiel01" instance=ExtResource("9_tmlxl")]
+material = SubResource("ShaderMaterial_owuam")
+position = Vector2(606, 811)
+
+[node name="TextHG" type="Panel" parent="Spiel01"]
+layout_mode = 0
+offset_left = 1231.0
+offset_top = 1632.0
+offset_right = 3678.0
+offset_bottom = 1956.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tvnyb")
+
+[node name="ElderAxolotl" type="Sprite2D" parent="Spiel01"]
+position = Vector2(602, 1714)
+scale = Vector2(0.723393, 0.713279)
+texture = ExtResource("9_iy1n2")
+
+[node name="Kapitän" type="Sprite2D" parent="Spiel01"]
+use_parent_material = true
+position = Vector2(528, 1672)
+scale = Vector2(0.746837, 0.746837)
+texture = ExtResource("3_6w3qm")
+flip_h = true
+
+[node name="Funker" type="Sprite2D" parent="Spiel01"]
+position = Vector2(648, 1720)
+scale = Vector2(0.735214, 0.735214)
+texture = ExtResource("4_xpl50")
+flip_h = true
+
+[node name="Mechaniker" type="Sprite2D" parent="Spiel01"]
+position = Vector2(552, 1697)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_n53el")
+flip_h = true
+
+[node name="HistogramHG" type="Panel" parent="Spiel01"]
+visible = false
+layout_mode = 2
+offset_left = 163.0
+offset_top = 157.0
+offset_right = 843.0
+offset_bottom = 772.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t0s0g")
+
+[node name="CaesarMinigame" parent="Spiel01" instance=ExtResource("1_oc6bj")]
+layout_direction = 1
+offset_left = 128.0
+offset_top = 483.0
+offset_right = 128.0
+offset_bottom = 483.0
+scale = Vector2(1.405, 1.405)
+original_text = "SOBALD DIE TEMPERATUR EINUNDZWANZIG GRAD CELSIUS ERREICHT, GEHT DER DECKEL AUF UND DIE KUEHLUNG STARTET"
+histogrammanzeige = 7
+
+[node name="Panel" parent="Spiel01/CaesarMinigame" index="0"]
+offset_left = 839.0
+offset_top = -12.0
+offset_right = 2483.0
+offset_bottom = 794.0
+
+[node name="FixedEncryptedText" parent="Spiel01/CaesarMinigame" index="1"]
+modulate = Color(1, 1, 1, 0.745098)
+custom_minimum_size = Vector2(0, 0)
+offset_left = 928.036
+offset_top = 525.0
+offset_right = 1303.04
+offset_bottom = 620.0
+scale = Vector2(2, 2)
+
+[node name="EncryptedText" parent="Spiel01/CaesarMinigame" index="2"]
+modulate = Color(1, 1, 1, 0.745098)
+custom_minimum_size = Vector2(0, 0)
+offset_left = 927.837
+offset_top = 169.071
+offset_right = 1313.84
+offset_bottom = 267.071
+scale = Vector2(2, 2)
+
+[node name="DecryptedText" parent="Spiel01/CaesarMinigame" index="3"]
+visible = true
+
+[node name="SpinBox" parent="Spiel01/CaesarMinigame" index="4"]
+offset_left = 2318.86
+offset_top = -195.018
+offset_right = 2429.86
+offset_bottom = -154.018
+scale = Vector2(2.71, 2.71)
+alignment = 1
+
+[node name="ApplyButton" parent="Spiel01/CaesarMinigame" index="5"]
+offset_left = 2217.08
+offset_top = 649.11
+offset_right = 2397.08
+offset_bottom = 703.11
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "Dekodieren"
+
+[node name="rad_sprite" parent="Spiel01/CaesarMinigame" index="6"]
+position = Vector2(2106.05, 625.623)
+scale = Vector2(0.635, 0.635)
+
+[node name="Background" parent="Spiel01/CaesarMinigame/rad_sprite" index="0"]
+scale = Vector2(2.7, 2.7)
+
+[node name="Dial" parent="Spiel01/CaesarMinigame/rad_sprite" index="1"]
+scale = Vector2(2.7, 2.7)
+
+[node name="CollisionShape2D" parent="Spiel01/CaesarMinigame/rad_sprite" index="2"]
+scale = Vector2(2.675, 2.675)
+
+[node name="HistogramContainer" parent="Spiel01/CaesarMinigame" index="7"]
+offset_left = 1853.38
+offset_top = 143.06
+offset_right = 1893.38
+offset_bottom = 183.06
+scale = Vector2(1.7, 1.7)
+
+[node name="ShiftUpButton" parent="Spiel01/CaesarMinigame" index="8"]
+offset_left = 2322.42
+offset_top = 551.153
+offset_right = 2454.42
+offset_bottom = 683.153
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 80
+
+[node name="ShiftDownButton" parent="Spiel01/CaesarMinigame" index="9"]
+layout_mode = 1
+offset_left = 2224.86
+offset_top = 551.153
+offset_right = 2356.86
+offset_bottom = 683.153
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 80
+
+[node name="ShiftLabel" parent="Spiel01/CaesarMinigame" index="10"]
+offset_left = 1839.86
+offset_top = 563.701
+offset_right = 1979.86
+offset_bottom = 675.701
+horizontal_alignment = 1
+
+[node name="Text01" type="FlowContainer" parent="Spiel01"]
+layout_mode = 0
+offset_left = 1256.0
+offset_top = 1665.0
+offset_right = 3656.0
+offset_bottom = 1922.0
+
+[node name="LabelTemplate" type="Label" parent="Spiel01/Text01"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="WeiterTextButton" type="Button" parent="Spiel01"]
+layout_mode = 0
+offset_left = 3513.0
+offset_top = 1874.0
+offset_right = 3618.0
+offset_bottom = 1923.0
+scale = Vector2(1.5, 1.5)
+text = "WEITER"
+
+[node name="ZweiCaesarMinigame2" parent="Spiel01" instance=ExtResource("1_oc6bj")]
+layout_direction = 1
+offset_left = 128.0
+offset_top = 483.0
+offset_right = 128.0
+offset_bottom = 483.0
+scale = Vector2(1.405, 1.405)
+original_text = "DIE FISCHE IM AQUARIUM  WARTEN NOCH AUFS FUTTER – UND DAS MUSS ERLEDIGT SEIN, BEVOR WIR UM EINUNDZWANZIG UHR SCHLIESSEN"
+shift = 16
+shiftzeigen = 16
+histogrammanzeige = 7
+
+[node name="Panel" parent="Spiel01/ZweiCaesarMinigame2" index="0"]
+offset_right = 2.0
+offset_bottom = 3.0
+
+[node name="FixedEncryptedText" parent="Spiel01/ZweiCaesarMinigame2" index="1"]
+offset_left = 3752.31
+offset_top = 326.69
+offset_right = 4342.32
+offset_bottom = 406.69
+scale = Vector2(2, 2)
+
+[node name="EncryptedText" parent="Spiel01/ZweiCaesarMinigame2" index="2"]
+offset_left = 3752.31
+offset_top = 173.665
+offset_right = 4342.32
+offset_bottom = 253.665
+scale = Vector2(2, 2)
+
+[node name="SpinBox" parent="Spiel01/ZweiCaesarMinigame2" index="4"]
+offset_left = 2318.86
+offset_top = -195.018
+offset_right = 2429.86
+offset_bottom = -154.018
+scale = Vector2(2.71, 2.71)
+alignment = 1
+
+[node name="ApplyButton" parent="Spiel01/ZweiCaesarMinigame2" index="5"]
+offset_left = 5573.67
+offset_top = 344.484
+offset_right = 5851.67
+offset_bottom = 474.484
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "Dekodieren"
+
+[node name="rad_sprite" parent="Spiel01/ZweiCaesarMinigame2" index="6"]
+position = Vector2(5354.45, 374.377)
+
+[node name="Background" parent="Spiel01/ZweiCaesarMinigame2/rad_sprite" index="0"]
+scale = Vector2(2.7, 2.7)
+
+[node name="Dial" parent="Spiel01/ZweiCaesarMinigame2/rad_sprite" index="1"]
+scale = Vector2(2.7, 2.7)
+
+[node name="CollisionShape2D" parent="Spiel01/ZweiCaesarMinigame2/rad_sprite" index="2"]
+scale = Vector2(2.675, 2.675)
+
+[node name="HistogramContainer" parent="Spiel01/ZweiCaesarMinigame2" index="7"]
+offset_left = 4599.29
+offset_top = 232.028
+offset_right = 4639.29
+offset_bottom = 272.028
+scale = Vector2(1.7, 1.7)
+
+[node name="ShiftUpButton" parent="Spiel01/ZweiCaesarMinigame2" index="8"]
+offset_left = 5407.12
+offset_top = 575.088
+offset_right = 5540.12
+offset_bottom = 695.088
+theme_override_font_sizes/font_size = 80
+
+[node name="ShiftDownButton" parent="Spiel01/ZweiCaesarMinigame2" index="9"]
+layout_mode = 1
+offset_left = 5183.96
+offset_top = 576.035
+offset_right = 5316.96
+offset_bottom = 696.035
+theme_override_font_sizes/font_size = 80
+
+[node name="ShiftLabel" parent="Spiel01/ZweiCaesarMinigame2" index="10"]
+layout_mode = 1
+offset_left = 5570.96
+offset_top = 205.035
+offset_right = 5848.96
+offset_bottom = 317.035
+horizontal_alignment = 1
+
+[node name="Anmerkung" type="Control" parent="Spiel01"]
+anchors_preset = 0
+offset_left = 632.0
+offset_top = 796.0
+offset_right = 1683.0
+offset_bottom = 1584.0
+
+[node name="Sprechblase" type="Sprite2D" parent="Spiel01/Anmerkung"]
+modulate = Color(1, 1, 1, 0.635294)
+position = Vector2(441, 439.5)
+scale = Vector2(2.54, 2.03)
+texture = ExtResource("15_tmlxl")
+
+[node name="Richtig" type="Label" parent="Spiel01/Anmerkung"]
+layout_mode = 2
+offset_left = 186.0
+offset_top = 331.0
+offset_right = 684.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Falsch" type="Label" parent="Spiel01/Anmerkung"]
+layout_mode = 2
+offset_left = 186.0
+offset_top = 331.0
+offset_right = 684.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Spiel02" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_tnu2s")
+
+[node name="BG" type="Control" parent="Spiel02"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Zoohandlung1-01" type="Sprite2D" parent="Spiel02/BG"]
+position = Vector2(1919, 1112)
+scale = Vector2(1.45379, 1)
+texture = ExtResource("2_37jl6")
+
+[node name="ZoohandlungSchrank" type="Sprite2D" parent="Spiel02/BG"]
+position = Vector2(1919, 1112)
+scale = Vector2(1.45379, 1)
+texture = ExtResource("16_bu5db")
+
+[node name="BG_Aquarium" type="Sprite2D" parent="Spiel02/BG"]
+position = Vector2(2454.5, 1316)
+scale = Vector2(1.05502, 1)
+texture = ExtResource("3_rp3sh")
+
+[node name="SubViewport2" type="SubViewport" parent="Spiel02/BG/BG_Aquarium"]
+transparent_bg = true
+size = Vector2i(2388, 1477)
+render_target_update_mode = 4
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Spiel02/BG/BG_Aquarium/SubViewport2"]
+position = Vector2(1000, 1000)
+scale = Vector2(1.05502, 1)
+amount = 10
+texture = ExtResource("4_37jl6")
+lifetime = 3.0
+preprocess = 1.14
+speed_scale = 0.5
+explosiveness = 0.1
+randomness = 0.5
+lifetime_randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 0)
+direction = Vector2(0, -1)
+gravity = Vector2(8.33, 0)
+initial_velocity_max = 1000.0
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+color = Color(0.701961, 1, 1, 1)
+hue_variation_max = 1.0
+
+[node name="BubbleDisplay" type="TextureRect" parent="Spiel02/BG/BG_Aquarium"]
+offset_left = -1175.81
+offset_top = -851.0
+offset_right = 1212.19
+offset_bottom = 626.0
+mouse_filter = 2
+texture = SubResource("ViewportTexture_n138o")
+expand_mode = 2
+stretch_mode = 2
+
+[node name="AquariumDeckel" type="Sprite2D" parent="Spiel02/BG"]
+position = Vector2(2439.5, 339)
+scale = Vector2(1.03751, 1)
+texture = ExtResource("4_t0s0g")
+
+[node name="Nacht" type="Panel" parent="Spiel02/BG"]
+layout_mode = 0
+offset_left = -8.0
+offset_right = 3832.0
+offset_bottom = 2225.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1n4ff")
+
+[node name="Nacht_Sound" type="AudioStreamPlayer" parent="Spiel02/BG"]
+stream = ExtResource("16_u8eo3")
+volume_db = -10.0
+pitch_scale = 0.8
+parameters/looping = false
+
+[node name="Projektion" type="Control" parent="Spiel02"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport_Binary1" type="SubViewport" parent="Spiel02/Projektion"]
+transparent_bg = true
+size = Vector2i(4000, 4000)
+render_target_clear_mode = 1
+render_target_update_mode = 4
+
+[node name="ViewportDisplay_Binary1" type="TextureRect" parent="Spiel02/Projektion"]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 1039.0
+offset_right = 4332.0
+offset_bottom = 5039.0
+rotation = -0.10472
+scale = Vector2(0.15, 0.15)
+
+[node name="SubViewport_Binary2" type="SubViewport" parent="Spiel02/Projektion"]
+transparent_bg = true
+size = Vector2i(4000, 4000)
+render_target_clear_mode = 1
+render_target_update_mode = 4
+
+[node name="ViewportDisplay_Binary2" type="TextureRect" parent="Spiel02/Projektion"]
+material = SubResource("ShaderMaterial_e8gna")
+layout_mode = 0
+offset_left = 320.0
+offset_top = 1054.0
+offset_right = 4320.0
+offset_bottom = 5054.0
+rotation = -0.113446
+scale = Vector2(0.15, 0.15)
+
+[node name="Anzeige" type="Control" parent="Spiel02"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Schatten" type="Panel" parent="Spiel02/Anzeige"]
+material = SubResource("ShaderMaterial_t0s0g")
+layout_mode = 0
+offset_left = 459.0
+offset_top = 879.0
+offset_right = 1251.0
+offset_bottom = 1267.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x7vmi")
+
+[node name="Schatten2" type="Panel" parent="Spiel02/Anzeige"]
+material = SubResource("ShaderMaterial_v4esa")
+layout_mode = 0
+offset_left = 936.0
+offset_top = 879.0
+offset_right = 1728.0
+offset_bottom = 1267.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e8gna")
+
+[node name="SchaltungAquarium" type="Panel" parent="Spiel02/Anzeige"]
+layout_mode = 0
+offset_left = 1226.0
+offset_top = 451.0
+offset_right = 3683.0
+offset_bottom = 1630.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rp3sh")
+
+[node name="SchaltungWand" type="Panel" parent="Spiel02/Anzeige"]
+material = SubResource("ShaderMaterial_37jl6")
+layout_mode = 0
+offset_left = 528.0
+offset_top = 1072.0
+offset_right = 872.0
+offset_bottom = 1164.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i0hnp")
+
+[node name="Binary" parent="Spiel02" instance=ExtResource("12_mr02u")]
+position = Vector2(2212, 818)
+scale = Vector2(2.765, 2.765)
+script = ExtResource("14_by5v1")
+target_value = 21
+
+[node name="ButtonFire" parent="Spiel02/Binary/Control/VBoxContainer/Control" index="2"]
+text = "Schalten"
+
+[node name="LabelCurrentValue" type="Label" parent="Spiel02/Binary/Control/VBoxContainer/Control" index="3"]
+layout_mode = 0
+offset_left = -229.618
+offset_top = -55.4485
+offset_right = -39.6184
+offset_bottom = 4.55153
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_u8eo3")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ButtonShowValue" type="TextureButton" parent="Spiel02/Binary/Control/VBoxContainer/Control" index="4"]
+layout_mode = 2
+offset_left = -59.407
+offset_top = -47.5949
+offset_right = 15.593
+offset_bottom = 25.4051
+action_mode = 0
+texture_normal = ExtResource("17_t0s0g")
+texture_pressed = ExtResource("17_t0s0g")
+texture_hover = ExtResource("17_t0s0g")
+texture_disabled = ExtResource("17_t0s0g")
+texture_focused = ExtResource("17_t0s0g")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Panel" type="Panel" parent="Spiel02/Binary"]
+offset_left = -348.0
+offset_top = -127.0
+offset_right = 525.0
+offset_bottom = 73.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4esa")
+
+[node name="Temperaturanzeige" type="Label" parent="Spiel02/Binary"]
+offset_left = -329.476
+offset_top = -122.604
+offset_right = -95.4756
+offset_bottom = -74.604
+theme_override_font_sizes/font_size = 20
+text = "Temperaturregler"
+
+[node name="Axolotl" type="Control" parent="Spiel02"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ElderAxolotl" type="Sprite2D" parent="Spiel02/Axolotl"]
+position = Vector2(602, 1714)
+scale = Vector2(0.723393, 0.713279)
+texture = ExtResource("9_iy1n2")
+
+[node name="Kapitän" type="Sprite2D" parent="Spiel02/Axolotl"]
+visible = false
+use_parent_material = true
+position = Vector2(528, 1672)
+scale = Vector2(0.746837, 0.746837)
+texture = ExtResource("3_6w3qm")
+flip_h = true
+
+[node name="Funker" type="Sprite2D" parent="Spiel02/Axolotl"]
+visible = false
+position = Vector2(648, 1720)
+scale = Vector2(0.735214, 0.735214)
+texture = ExtResource("4_xpl50")
+flip_h = true
+
+[node name="Mechaniker" type="Sprite2D" parent="Spiel02/Axolotl"]
+visible = false
+position = Vector2(552, 1697)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_n53el")
+flip_h = true
+
+[node name="Kanonier" type="Sprite2D" parent="Spiel02/Axolotl"]
+visible = false
+position = Vector2(552, 1697)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("21_n138o")
+flip_h = true
+
+[node name="TextHG" type="Panel" parent="Spiel02"]
+layout_mode = 0
+offset_left = 1231.0
+offset_top = 1632.0
+offset_right = 3678.0
+offset_bottom = 1956.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tvnyb")
+
+[node name="Text01" type="FlowContainer" parent="Spiel02"]
+layout_mode = 0
+offset_left = 1256.0
+offset_top = 1665.0
+offset_right = 3656.0
+offset_bottom = 1922.0
+
+[node name="LabelTemplate" type="Label" parent="Spiel02/Text01"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="WeiterTextButton" type="Button" parent="Spiel02"]
+layout_mode = 0
+offset_left = 3513.0
+offset_top = 1874.0
+offset_right = 3618.0
+offset_bottom = 1923.0
+scale = Vector2(1.5, 1.5)
+text = "WEITER"
+
+[node name="Binary2" parent="Spiel02" instance=ExtResource("12_mr02u")]
+position = Vector2(2215, 1395)
+scale = Vector2(2.765, 2.765)
+script = ExtResource("14_by5v1")
+target_value = 196
+
+[node name="ButtonFire" parent="Spiel02/Binary2/Control/VBoxContainer/Control" index="2"]
+text = "Schalten"
+
+[node name="LabelCurrentValue" type="Label" parent="Spiel02/Binary2/Control/VBoxContainer/Control" index="3"]
+layout_mode = 0
+offset_left = -229.618
+offset_top = -55.4485
+offset_right = -39.6184
+offset_bottom = 4.55153
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_u8eo3")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ButtonShowValue" type="TextureButton" parent="Spiel02/Binary2/Control/VBoxContainer/Control" index="4"]
+layout_mode = 2
+offset_left = -59.407
+offset_top = -47.5949
+offset_right = 15.593
+offset_bottom = 25.4051
+action_mode = 0
+texture_normal = ExtResource("17_t0s0g")
+texture_pressed = ExtResource("17_t0s0g")
+texture_hover = ExtResource("17_t0s0g")
+texture_disabled = ExtResource("17_t0s0g")
+texture_focused = ExtResource("17_t0s0g")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Bewegungsmelder" type="Label" parent="Spiel02/Binary2"]
+offset_left = -329.476
+offset_top = -113.924
+offset_right = -95.4756
+offset_bottom = -65.924
+theme_override_font_sizes/font_size = 20
+text = "Bewegungmelder"
+
+[node name="Anmerkung" type="Control" parent="Spiel02"]
+visible = false
+anchors_preset = 0
+offset_left = 632.0
+offset_top = 796.0
+offset_right = 1683.0
+offset_bottom = 1584.0
+
+[node name="Sprechblase" type="Sprite2D" parent="Spiel02/Anmerkung"]
+modulate = Color(1, 1, 1, 0.635294)
+position = Vector2(441, 439.5)
+scale = Vector2(2.54, 2.03)
+texture = ExtResource("15_tmlxl")
+
+[node name="Richtig" type="Label" parent="Spiel02/Anmerkung"]
+layout_mode = 2
+offset_left = 186.0
+offset_top = 331.0
+offset_right = 684.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Falsch" type="Label" parent="Spiel02/Anmerkung"]
+layout_mode = 2
+offset_left = 186.0
+offset_top = 331.0
+offset_right = 684.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Spiel03" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("16_4ukv6")
+
+[node name="BG" type="Control" parent="Spiel03"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Zoohandlung1-01" type="Sprite2D" parent="Spiel03/BG"]
+position = Vector2(1919, 1112)
+scale = Vector2(1.45379, 1)
+texture = ExtResource("2_37jl6")
+
+[node name="Eingang" type="Sprite2D" parent="Spiel03/BG"]
+visible = false
+position = Vector2(2004.05, 1083.4)
+scale = Vector2(1.47009, 0.988593)
+texture = ExtResource("21_i0hnp")
+flip_h = true
+
+[node name="EingangOhneTuer" type="Sprite2D" parent="Spiel03/BG"]
+position = Vector2(2004.05, 1083.4)
+scale = Vector2(1.47009, 0.988593)
+texture = ExtResource("22_2iurx")
+flip_h = true
+
+[node name="Tuer" type="Sprite2D" parent="Spiel03/BG"]
+position = Vector2(2004.05, 1083.4)
+scale = Vector2(1.47009, 0.988593)
+texture = ExtResource("23_x7vmi")
+flip_h = true
+
+[node name="Nacht" type="Panel" parent="Spiel03/BG"]
+layout_mode = 0
+offset_left = -80.0
+offset_top = -55.0
+offset_right = 3933.0
+offset_bottom = 2292.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1n4ff")
+
+[node name="Tuer_Sound" type="AudioStreamPlayer" parent="Spiel03/BG"]
+stream = ExtResource("24_e8gna")
+volume_db = -8.0
+
+[node name="Axolotl" type="Control" parent="Spiel03"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ElderAxolotl" type="Sprite2D" parent="Spiel03/Axolotl"]
+position = Vector2(602, 1714)
+scale = Vector2(0.723393, 0.713279)
+texture = ExtResource("9_iy1n2")
+
+[node name="Kapitän" type="Sprite2D" parent="Spiel03/Axolotl"]
+use_parent_material = true
+position = Vector2(528, 1672)
+scale = Vector2(0.746837, 0.746837)
+texture = ExtResource("3_6w3qm")
+flip_h = true
+
+[node name="Funker" type="Sprite2D" parent="Spiel03/Axolotl"]
+position = Vector2(648, 1720)
+scale = Vector2(0.735214, 0.735214)
+texture = ExtResource("4_xpl50")
+flip_h = true
+
+[node name="Kanonier" type="Sprite2D" parent="Spiel03/Axolotl"]
+position = Vector2(552, 1697)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_n53el")
+flip_h = true
+
+[node name="Mechaniker" type="Sprite2D" parent="Spiel03/Axolotl"]
+position = Vector2(552, 1697)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_n53el")
+flip_h = true
+
+[node name="Navigator" parent="Spiel03" instance=ExtResource("22_rp3sh")]
+position = Vector2(1385, -14)
+
+[node name="Map" parent="Spiel03/Navigator" index="0"]
+modulate = Color(1, 1, 1, 0.776471)
+position = Vector2(-19, 269)
+rotation = 0.0
+scale = Vector2(1.48323, 1.35662)
+texture = ExtResource("30_owuam")
+
+[node name="TravelPenaltyContainer" parent="Spiel03/Navigator" index="1"]
+visible = false
+
+[node name="Nodes" parent="Spiel03/Navigator" index="2"]
+position = Vector2(170, 279)
+
+[node name="GraphNode1" parent="Spiel03/Navigator/Nodes" index="1"]
+position = Vector2(1486, 277)
+
+[node name="GraphNode2" parent="Spiel03/Navigator/Nodes" index="2"]
+position = Vector2(1676, 783)
+
+[node name="GraphNode3" parent="Spiel03/Navigator/Nodes" index="3"]
+position = Vector2(1295, 580)
+
+[node name="GraphNode4" parent="Spiel03/Navigator/Nodes" index="4"]
+position = Vector2(1029, 965)
+
+[node name="GraphNode5" parent="Spiel03/Navigator/Nodes" index="5"]
+position = Vector2(935, 401)
+
+[node name="GraphNode6" parent="Spiel03/Navigator/Nodes" index="6"]
+position = Vector2(702, 618)
+
+[node name="GraphNode7" parent="Spiel03/Navigator/Nodes" index="7"]
+position = Vector2(462, 845)
+
+[node name="GraphNode8" parent="Spiel03/Navigator/Nodes" index="8"]
+position = Vector2(490, 279)
+
+[node name="GraphNode9" parent="Spiel03/Navigator/Nodes" index="9"]
+position = Vector2(104, 469)
+
+[node name="GraphNode10" parent="Spiel03/Navigator/Nodes" index="10"]
+position = Vector2(182, 1031)
+
+[node name="Paths" parent="Spiel03/Navigator" index="3"]
+position = Vector2(170, 279)
+
+[node name="ShaderRect" parent="Spiel03/Navigator" index="4"]
+visible = false
+offset_left = 3.0
+offset_top = 117.0
+offset_right = 1917.0
+offset_bottom = 1183.0
+
+[node name="Frame" parent="Spiel03/Navigator" index="5"]
+visible = false
+
+[node name="ButtonTravel" parent="Spiel03/Navigator/Control" index="0"]
+offset_left = 1986.0
+offset_top = 783.0
+offset_right = 2109.0
+offset_bottom = 906.0
+
+[node name="TreeTraversal1" parent="Spiel03" instance=ExtResource("23_t0s0g")]
+visible = false
+position = Vector2(1986, 789)
+scale = Vector2(2, 2)
+
+[node name="Background" parent="Spiel03/TreeTraversal1" index="1"]
+visible = false
+modulate = Color(0.501407, 0.501406, 0.501406, 1)
+
+[node name="Overlay" parent="Spiel03/TreeTraversal1" index="2"]
+modulate = Color(0.501407, 0.501406, 0.501406, 1)
+
+[node name="Label" parent="Spiel03/TreeTraversal1/Control" index="0"]
+text = ""
+
+[node name="Border" parent="Spiel03/TreeTraversal1" index="4"]
+visible = false
+
+[node name="TreeTraversal2" parent="Spiel03" instance=ExtResource("23_t0s0g")]
+visible = false
+position = Vector2(2866, 789)
+scale = Vector2(2, 2)
+traversal_mode = 1
+
+[node name="Background" parent="Spiel03/TreeTraversal2" index="1"]
+visible = false
+modulate = Color(0.501407, 0.501406, 0.501406, 1)
+
+[node name="Overlay" parent="Spiel03/TreeTraversal2" index="2"]
+modulate = Color(0.501407, 0.501406, 0.501406, 1)
+
+[node name="Label" parent="Spiel03/TreeTraversal2/Control" index="0"]
+text = ""
+
+[node name="Border" parent="Spiel03/TreeTraversal2" index="4"]
+visible = false
+
+[node name="Circuit" parent="Spiel03" instance=ExtResource("15_48x6o")]
+visible = false
+position = Vector2(1224, 287)
+scale = Vector2(1.895, 1.895)
+
+[node name="ExpressionInput" parent="Spiel03/Circuit/UI" index="1"]
+offset_left = -1240.86
+offset_top = -773.797
+offset_right = -364.863
+offset_bottom = -728.797
+theme_override_fonts/font = ExtResource("31_iy1n2")
+theme_override_font_sizes/font_size = 28
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
+[node name="FormattedInputField" parent="Spiel03/Circuit" index="13"]
+visible = true
+
+[node name="ColorRect" parent="Spiel03/Circuit/FormattedInputField" index="0"]
+offset_left = -154.0
+
+[node name="LabelInputString" parent="Spiel03/Circuit/FormattedInputField" index="1"]
+offset_left = -141.0
+
+[node name="doNOTtouch" type="Control" parent="Spiel03/Circuit"]
+z_index = 500
+layout_mode = 3
+anchors_preset = 0
+offset_left = -21.0
+offset_top = 580.0
+offset_right = 1284.0
+offset_bottom = 678.0
+
+[node name="TextHG" type="Panel" parent="Spiel03"]
+layout_mode = 0
+offset_left = 1231.0
+offset_top = 1632.0
+offset_right = 3678.0
+offset_bottom = 1956.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tvnyb")
+
+[node name="Text01" type="FlowContainer" parent="Spiel03"]
+layout_mode = 0
+offset_left = 1256.0
+offset_top = 1665.0
+offset_right = 3656.0
+offset_bottom = 1922.0
+
+[node name="LabelTemplate" type="Label" parent="Spiel03/Text01"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="WeiterTextButton" type="Button" parent="Spiel03"]
+layout_mode = 0
+offset_left = 3513.0
+offset_top = 1874.0
+offset_right = 3618.0
+offset_bottom = 1923.0
+scale = Vector2(1.5, 1.5)
+text = "WEITER"
+
+[node name="Anmerkung" type="Control" parent="Spiel03"]
+anchors_preset = 0
+offset_left = 632.0
+offset_top = 796.0
+offset_right = 1683.0
+offset_bottom = 1584.0
+
+[node name="Sprechblase" type="Sprite2D" parent="Spiel03/Anmerkung"]
+modulate = Color(1, 1, 1, 0.635294)
+position = Vector2(441, 439.5)
+scale = Vector2(2.54, 2.03)
+texture = ExtResource("15_tmlxl")
+
+[node name="Richtig" type="Label" parent="Spiel03/Anmerkung"]
+layout_mode = 2
+offset_left = 186.0
+offset_top = 331.0
+offset_right = 684.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Falsch" type="Label" parent="Spiel03/Anmerkung"]
+layout_mode = 2
+offset_left = 186.0
+offset_top = 331.0
+offset_right = 684.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CheatSheet" parent="Spiel03" instance=ExtResource("9_tmlxl")]
+position = Vector2(556, 613)
+type = 1
+
+[node name="Settings" parent="." instance=ExtResource("5_6w3qm")]
+offset_left = 3771.0
+offset_top = 74.0
+offset_right = 3771.0
+offset_bottom = 74.0
+current_scene = 1
+
+[node name="ToggleDebug" parent="Settings/MenuPopup/VBoxContainer" index="1"]
+visible = false
+
+[node name="Games" type="Button" parent="Settings/MenuPopup/VBoxContainer" index="3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+action_mode = 0
+text = "Games"
+script = ExtResource("24_rp3sh")
+
+[node name="GamesContainer" type="VBoxContainer" parent="Settings/MenuPopup/VBoxContainer/Games"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = -427.0
+offset_top = 4.0
+offset_right = -27.0
+offset_bottom = 428.0
+theme = ExtResource("26_v4esa")
+theme_override_constants/separation = 6
+
+[node name="GameCaesar" type="Button" parent="Settings/MenuPopup/VBoxContainer/Games/GamesContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+text = "Ceasar"
+
+[node name="GameBinary" type="Button" parent="Settings/MenuPopup/VBoxContainer/Games/GamesContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+text = "Binär
+"
+
+[node name="GameShortestPath" type="Button" parent="Settings/MenuPopup/VBoxContainer/Games/GamesContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+text = "Shortest Path"
+
+[node name="GameTreeTraversal" type="Button" parent="Settings/MenuPopup/VBoxContainer/Games/GamesContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+text = "Tiefen-/Breitensuche"
+
+[node name="GameLogicGates" type="Button" parent="Settings/MenuPopup/VBoxContainer/Games/GamesContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+text = "Logik-Schaltung
+"
+
+[node name="Container4" type="Container" parent="Settings/MenuPopup/VBoxContainer" index="4"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="Spiel01/WeiterTextButton" to="Spiel01" method="_on_weiter_text_button_pressed"]
+[connection signal="pressed" from="Spiel02/WeiterTextButton" to="Spiel01" method="_on_weiter_text_button_pressed"]
+[connection signal="pressed" from="Spiel03/WeiterTextButton" to="Spiel01" method="_on_weiter_text_button_pressed"]
+[connection signal="pressed" from="Settings/MenuPopup/VBoxContainer/Games/GamesContainer/GameCaesar" to="Settings/MenuPopup/VBoxContainer/Games" method="_on_game_caesar_pressed"]
+[connection signal="pressed" from="Settings/MenuPopup/VBoxContainer/Games/GamesContainer/GameBinary" to="Settings/MenuPopup/VBoxContainer/Games" method="_on_game_binary_pressed"]
+[connection signal="pressed" from="Settings/MenuPopup/VBoxContainer/Games/GamesContainer/GameShortestPath" to="Settings/MenuPopup/VBoxContainer/Games" method="_on_game_shortest_path_pressed"]
+[connection signal="pressed" from="Settings/MenuPopup/VBoxContainer/Games/GamesContainer/GameTreeTraversal" to="Settings/MenuPopup/VBoxContainer/Games" method="_on_game_tree_traversal_pressed"]
+[connection signal="pressed" from="Settings/MenuPopup/VBoxContainer/Games/GamesContainer/GameLogicGates" to="Settings/MenuPopup/VBoxContainer/Games" method="_on_game_logic_gates_pressed"]
+
+[editable path="Spiel01/CheatSheet"]
+[editable path="Spiel01/CaesarMinigame"]
+[editable path="Spiel01/ZweiCaesarMinigame2"]
+[editable path="Spiel02/Binary"]
+[editable path="Spiel02/Binary2"]
+[editable path="Spiel03/Navigator"]
+[editable path="Spiel03/TreeTraversal1"]
+[editable path="Spiel03/TreeTraversal2"]
+[editable path="Spiel03/Circuit"]
+[editable path="Settings"]

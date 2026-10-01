@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://djtin8khfq3ye"]
+
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="1_ol7m4"]
+[ext_resource type="Script" uid="uid://d1cmofeh6xdr" path="res://Scenes/LicenseOverview/license_overview.gd" id="1_r6i8h"]
+[ext_resource type="Texture2D" uid="uid://mmcpi8su2im7" path="res://Assets/Textures/Prologue/prologue8_background.svg" id="2_l022p"]
+[ext_resource type="Theme" uid="uid://fhe7ah7woput" path="res://Resources/Themes/buttons_main_menu.tres" id="3_rhcns"]
+
+[sub_resource type="Theme" id="Theme_fvhfk"]
+RichTextLabel/font_sizes/bold_font_size = 48
+RichTextLabel/font_sizes/normal_font_size = 48
+RichTextLabel/fonts/bold_font = ExtResource("1_ol7m4")
+RichTextLabel/fonts/normal_font = ExtResource("1_ol7m4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_can55"]
+font = ExtResource("1_ol7m4")
+font_size = 32
+
+[node name="LicenceOverview" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r6i8h")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.360784, 0.360784, 0.360784, 1)
+texture = ExtResource("2_l022p")
+centered = false
+
+[node name="Info" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1250.0
+offset_top = -876.0
+offset_right = 1250.0
+offset_bottom = 876.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fvhfk")
+bbcode_enabled = true
+text = "[b]Verwendete Assets[/b]
+
+[b]Godot Plugins[/b]
+- [url=https://github.com/Aarimous/AudioManager][b]AudioManager by Aarimous[/b][/url] - [url=https://creativecommons.org/publicdomain/zero/1.0/][CC0][/url]
+
+[b]Fonts[/b]
+- [url=https://ggbot.itch.io/operation-napalm-font][b]Operation Napalm Font[/b][/url] - [url=https://creativecommons.org/publicdomain/zero/1.0/][CC0][/url]
+- [url=https://luxae.itch.io/seven-segment-numbers][b]Font Seven Segment Numbers[/b][/url] - [url=https://creativecommons.org/publicdomain/zero/1.0/][CC0][/url]
+- [url=https://github.com/microsoft/cascadia-code][b]Cascadia Code Font[/b][/url] - [url=https://openfontlicense.org/][SIL OPEN FONT LICENSE][/url]
+
+[b]Texturen[/b]
+- [url=https://commons.wikimedia.org/wiki/File:Basin_of_Mexico_1519_map-en.svg#/media/File:Basin_of_Mexico_1519_map-en.svg][b]The Valley of Mexico at the time of the Spanish conquest in 1519[/b][/url] - [url=https://creativecommons.org/licenses/by-sa/4.0/][CC BY-SA 4.0][/url]  
+  - Änderungen: Overlays entfernt, Farben angepasst, Umriss des Sees verändert
+
+[b]Shader[/b]
+- [url=https://godotshaders.com/shader/retro-tv-shader/][b]Retro TV shader[/b][/url] - [url=https://creativecommons.org/publicdomain/zero/1.0/][CC0][/url]
+- [url=https://godotshaders.com/shader/hologram-simple-canvasitem-shader/][b]Hologram simple canvasItem shader[/b][/url] - [url=https://creativecommons.org/publicdomain/zero/1.0/][CC0][/url]
+- [url=https://godotshaders.com/shader/2d-flag-wave-animetion-shader/][b]2d Flag wave animetion shader[/b][/url] - [url=https://creativecommons.org/publicdomain/zero/1.0/][CC0][/url]
+
+[b]Soundeffekte von Pixabay[/b] ([url=https://pixabay.com/service/license-summary/]Lizenz[/url])
+- [url=https://pixabay.com/sound-effects/coffee-shop-70190/]coffee-shop[/url]
+- [url=https://pixabay.com/sound-effects/bicycle-gear-45545/]bicycle-gear[/url]
+- [url=https://pixabay.com/sound-effects/squeaky-door-open-113212/]squeaky-door-open[/url]
+- [url=https://pixabay.com/sound-effects/cricket-chirp-56209/]cricket-chirp[/url]
+- [url=https://pixabay.com/sound-effects/powerful-cannon-shot-352459/]powerful-cannon-shot[/url]
+- [url=https://pixabay.com/sound-effects/radio-static-6382/]radio-static[/url]
+- [url=https://pixabay.com/sound-effects/sonar-89448/]sonar[/url]
+- [url=https://pixabay.com/sound-effects/submarine-33709/]submarine[/url]
+- [url=https://pixabay.com/sound-effects/submarine-289985/]submarine[/url]
+- [url=https://pixabay.com/de/sound-effects/old-internet-modem-dialing-189735/]Old internet modem dialing[/url]
+"
+shortcut_keys_enabled = false
+
+[node name="ButtonReturn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 86.0
+offset_top = -171.0
+offset_right = 326.0
+offset_bottom = -64.0
+grow_vertical = 0
+theme = ExtResource("3_rhcns")
+text = "Zurück"
+
+[node name="LabelCredits" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3331.0
+offset_top = -139.0
+offset_right = -121.0
+offset_bottom = -101.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "TU Dresden - MeDiDa SoSe 2025 - Robert Bing, Nicolas Dietze, Pauline Endrulat, Anthony Lanzenberger, Quang Huy Nguyen, Niklas Schmidt, Robert Tschorn     Stand: 03.07.2025"
+label_settings = SubResource("LabelSettings_can55")
+
+[connection signal="meta_clicked" from="Info" to="." method="_on_info_meta_clicked"]
+[connection signal="pressed" from="ButtonReturn" to="." method="_on_button_return_pressed"]

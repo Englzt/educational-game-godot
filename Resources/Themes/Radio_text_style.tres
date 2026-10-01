@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bgud7pwk17e5c"]
+
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="1_7k4ke"]
+
+[resource]
+default_font = ExtResource("1_7k4ke")
+default_font_size = 24
+Label/fonts/font = ExtResource("1_7k4ke")

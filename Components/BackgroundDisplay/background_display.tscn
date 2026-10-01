@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7f5dldic4n72"]
+
+[ext_resource type="Script" uid="uid://wykt5ald5bdo" path="res://Components/BackgroundDisplay/background_display.gd" id="1_q20mg"]
+[ext_resource type="Texture2D" uid="uid://2i16pwceommj" path="res://Assets/Textures/MainLevel/display.svg" id="1_x8jpi"]
+[ext_resource type="Texture2D" uid="uid://dwcoq0o4l5dou" path="res://Assets/Textures/MainLevel/needle.svg" id="2_q20mg"]
+
+[node name="BackgroundDisplay" type="Node2D"]
+script = ExtResource("1_q20mg")
+
+[node name="Display" type="Sprite2D" parent="."]
+texture = ExtResource("1_x8jpi")
+
+[node name="Needle" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+rotation = 1.18682
+texture = ExtResource("2_q20mg")
+offset = Vector2(0, -26)

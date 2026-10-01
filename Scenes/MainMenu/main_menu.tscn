@@ -1,0 +1,172 @@
+[gd_scene load_steps=12 format=3 uid="uid://bx7o7xkp4qxnr"]
+
+[ext_resource type="Script" uid="uid://q0yqrm4efoor" path="res://Scenes/MainMenu/main_menu.gd" id="1_uqdog"]
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="2_v763k"]
+[ext_resource type="Texture2D" uid="uid://mmcpi8su2im7" path="res://Assets/Textures/Prologue/prologue8_background.svg" id="3_qgdf6"]
+[ext_resource type="Theme" uid="uid://fhe7ah7woput" path="res://Resources/Themes/buttons_main_menu.tres" id="4_agesy"]
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="11_mdp32"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qgdf6"]
+font = ExtResource("2_v763k")
+font_size = 256
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mdp32"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rlg4b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w5buf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6c6cs"]
+
+[sub_resource type="Theme" id="Theme_rlg4b"]
+Button/colors/font_hover_color = Color(0.646027, 0.64603, 0.64603, 1)
+Button/font_sizes/font_size = 166
+Button/fonts/font = ExtResource("11_mdp32")
+Button/styles/focus = SubResource("StyleBoxEmpty_mdp32")
+Button/styles/hover = SubResource("StyleBoxEmpty_rlg4b")
+Button/styles/normal = SubResource("StyleBoxEmpty_w5buf")
+Button/styles/pressed = SubResource("StyleBoxEmpty_6c6cs")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uqdog")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.359069, 0.359069, 0.359069, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_qgdf6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 10
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -898.0
+offset_top = -672.0
+offset_right = 898.0
+offset_bottom = 534.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelTitle" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "AXOLOTL-RESCUE"
+label_settings = SubResource("LabelSettings_qgdf6")
+horizontal_alignment = 1
+
+[node name="Container" type="Container" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("4_agesy")
+alignment = 1
+
+[node name="ButtonStory" type="Button" parent="VBoxContainer/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 90)
+layout_mode = 2
+text = "Prolog"
+
+[node name="Container" type="Container" parent="VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Buttons"]
+layout_mode = 2
+
+[node name="ButtonTutorial" type="Button" parent="VBoxContainer/Buttons/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 90)
+layout_mode = 2
+text = "Tutorial"
+
+[node name="Container" type="Container" parent="VBoxContainer/Buttons/HBoxContainer"]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+
+[node name="StoryMode" type="CheckButton" parent="VBoxContainer/Buttons/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(555, 90)
+layout_mode = 2
+action_mode = 0
+text = "Story Modus
+"
+alignment = 1
+
+[node name="Container2" type="Container" parent="VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="ButtonMiddleSequence" type="Button" parent="VBoxContainer/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 90)
+layout_mode = 2
+text = "Zwischensequenz"
+
+[node name="Container5" type="Container" parent="VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="ButtonMainlevel" type="Button" parent="VBoxContainer/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 90)
+layout_mode = 2
+text = "Hauptlevel"
+
+[node name="Container3" type="Container" parent="VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="ButtonBonuslevel" type="Button" parent="VBoxContainer/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 90)
+layout_mode = 2
+text = "Bonus Level"
+
+[node name="Container4" type="Container" parent="VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="ButtonExit" type="Button" parent="VBoxContainer/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 90)
+layout_mode = 2
+text = "Beenden"
+
+[node name="ButtonShowLicenses" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = 70.0
+offset_top = 1878.0
+offset_right = 270.0
+offset_bottom = 2100.0
+theme = SubResource("Theme_rlg4b")
+text = "🛈"
+
+[connection signal="pressed" from="VBoxContainer/Buttons/ButtonStory" to="." method="_on_button_story_pressed"]
+[connection signal="pressed" from="VBoxContainer/Buttons/HBoxContainer/ButtonTutorial" to="." method="_on_button_tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer/Buttons/HBoxContainer/StoryMode" to="." method="_on_story_mode_pressed"]
+[connection signal="toggled" from="VBoxContainer/Buttons/HBoxContainer/StoryMode" to="." method="_on_story_mode_toggled"]
+[connection signal="pressed" from="VBoxContainer/Buttons/ButtonMiddleSequence" to="." method="_on_button_middle_sequnce_pressed"]
+[connection signal="pressed" from="VBoxContainer/Buttons/ButtonMainlevel" to="." method="_on_button_mainlevel_pressed"]
+[connection signal="pressed" from="VBoxContainer/Buttons/ButtonBonuslevel" to="." method="_on_button_bonuslevel_pressed"]
+[connection signal="pressed" from="VBoxContainer/Buttons/ButtonExit" to="." method="_on_button_exit_pressed"]
+[connection signal="pressed" from="ButtonShowLicenses" to="." method="_on_button_show_licenses_pressed"]

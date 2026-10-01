@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://ju4kigya41cp"]
+
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="1_e6oda"]
+
+[resource]
+font = ExtResource("1_e6oda")
+font_size = 32

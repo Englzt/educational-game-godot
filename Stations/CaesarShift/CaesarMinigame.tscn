@@ -1,0 +1,151 @@
+[gd_scene load_steps=10 format=3 uid="uid://cyowb6t3tsbge"]
+
+[ext_resource type="Script" uid="uid://dr4d5dk820kyu" path="res://Stations/CaesarShift/caesar_minigame.gd" id="1_5jqsy"]
+[ext_resource type="Script" uid="uid://b4m0837xcup7r" path="res://Stations/CaesarShift/dial.gd" id="2_q0pf5"]
+[ext_resource type="Theme" uid="uid://cxh5u5fqrenrh" path="res://Resources/Themes/button_theme_mainlevel.tres" id="2_tu4nw"]
+[ext_resource type="Texture2D" uid="uid://grvx2gp0cs7k" path="res://Assets/Textures/CaesarShift/Dial.svg" id="4_1slxn"]
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="4_6ep0t"]
+[ext_resource type="Texture2D" uid="uid://dsp5684b3d3nb" path="res://Assets/Textures/CaesarShift/Dial_middle.svg" id="4_tu4nw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ufsi0"]
+bg_color = Color(0.389441, 0.15098, 0.305441, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_28fny"]
+radius = 56.0
+
+[sub_resource type="Theme" id="Theme_1slxn"]
+Label/colors/font_color = Color(0, 1, 0, 1)
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("4_6ep0t")
+
+[node name="CaesarMinigame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5jqsy")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 646.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ufsi0")
+
+[node name="FixedEncryptedText" type="FlowContainer" parent="."]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 0
+offset_left = 370.0
+offset_top = 134.0
+offset_right = 970.0
+offset_bottom = 214.0
+
+[node name="EncryptedText" type="FlowContainer" parent="."]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 0
+offset_left = 370.0
+offset_top = 35.0
+offset_right = 970.0
+offset_bottom = 115.0
+
+[node name="DecryptedText" type="GridContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 214.0
+offset_top = 570.0
+offset_right = 1050.0
+offset_bottom = 610.0
+columns = 20
+
+[node name="SpinBox" type="SpinBox" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 906.0
+offset_top = 543.0
+offset_right = 992.563
+offset_bottom = 574.0
+max_value = 25.0
+
+[node name="ApplyButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1016.0
+offset_top = 543.0
+offset_right = 1131.0
+offset_bottom = 574.0
+theme = ExtResource("2_tu4nw")
+text = "Aktualisieren "
+
+[node name="rad_sprite" type="Area2D" parent="."]
+position = Vector2(836, 558)
+script = ExtResource("2_q0pf5")
+
+[node name="Background" type="Sprite2D" parent="rad_sprite"]
+texture = ExtResource("4_1slxn")
+
+[node name="Dial" type="Sprite2D" parent="rad_sprite"]
+unique_name_in_owner = true
+texture = ExtResource("4_tu4nw")
+offset = Vector2(0, -7.755)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rad_sprite"]
+shape = SubResource("CircleShape2D_28fny")
+
+[node name="HistogramContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 45.0
+offset_bottom = 50.0
+theme_override_constants/separation = 5
+
+[node name="ShiftUpButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 853.0
+offset_top = 615.0
+offset_right = 894.0
+offset_bottom = 646.0
+theme = ExtResource("2_tu4nw")
+text = "+"
+
+[node name="ShiftDownButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 781.0
+offset_top = 616.0
+offset_right = 822.0
+offset_bottom = 647.0
+theme = ExtResource("2_tu4nw")
+text = "-"
+
+[node name="ShiftLabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 901.0
+offset_top = 513.0
+offset_right = 992.0
+offset_bottom = 597.0
+theme_override_font_sizes/font_size = 80
+
+[node name="CooldownTimerPanel" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+offset_right = 312.0
+offset_bottom = 22.0
+theme = SubResource("Theme_1slxn")
+
+[node name="Label2" type="Label" parent="CooldownTimerPanel"]
+layout_mode = 2
+text = "Die Drähte müssen kurz abkühlen ("
+
+[node name="LabelCooldownTimer" type="Label" parent="CooldownTimerPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "SEC"
+
+[node name="Label3" type="Label" parent="CooldownTimerPanel"]
+layout_mode = 2
+text = ")"
+
+[node name="CooldownTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="value_changed" from="SpinBox" to="." method="_on_spin_box_value_changed"]
+[connection signal="pressed" from="ApplyButton" to="." method="_on_apply_button_pressed"]

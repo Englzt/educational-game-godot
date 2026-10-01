@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cal3btcbiisdg"]
+
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="1_44nfl"]
+
+[resource]
+default_font = ExtResource("1_44nfl")
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_44nfl")

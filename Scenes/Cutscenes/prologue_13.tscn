@@ -1,0 +1,201 @@
+[gd_scene load_steps=12 format=3 uid="uid://fayxdgfw33w0"]
+
+[ext_resource type="Script" uid="uid://8mnqjfqg547n" path="res://Scenes/Cutscenes/prologue_script.gd" id="1_0qkhx"]
+[ext_resource type="Texture2D" uid="uid://cwjhuuv5atkk5" path="res://Assets/Textures/Prologue/prologue13_background.svg" id="2_3wkxw"]
+[ext_resource type="Texture2D" uid="uid://c762nyhoyvijl" path="res://Assets/Textures/Prologue/freighter.svg" id="3_uqf71"]
+[ext_resource type="Shader" uid="uid://dak3jpbt20sbb" path="res://Resources/Shader/flag_wind.gdshader" id="4_o8pc7"]
+[ext_resource type="Texture2D" uid="uid://b85c0r3kgi6jx" path="res://Assets/Textures/Prologue/mexico_flag.svg" id="5_v5852"]
+[ext_resource type="Texture2D" uid="uid://cmy05gvxq7yag" path="res://Assets/Textures/Prologue/flag_pole.svg" id="6_1dt6n"]
+[ext_resource type="Texture2D" uid="uid://dvqaq6tq26e26" path="res://Assets/Textures/Axolotl/Mechaniker_vonHinten.svg" id="7_wqdik"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tnxei"]
+shader = ExtResource("4_o8pc7")
+shader_parameter/amplitude = 5.0
+shader_parameter/frequency = 3.0
+shader_parameter/speed = 1.0
+shader_parameter/pole_side = 3
+shader_parameter/fixed_edge_range = 0.2
+
+[sub_resource type="Animation" id="Animation_tkw1n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2371, 571)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Axolotl:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(65, 1788)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Axolotl:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.58038, 1.58038)]
+}
+
+[sub_resource type="Animation" id="Animation_tnxei"]
+resource_name = "animation2"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 5.2, 6),
+"transitions": PackedFloat32Array(1, 2.5, 1, 2.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"switch_to_next_scene"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(2, 2), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2371, 571), Vector2(2371, 571), Vector2(1920, 1080)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Axolotl:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.86323, 4.5343, 5.40238, 6.19657),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(65, 1788), Vector2(90, 1798), Vector2(120, 1783), Vector2(130, 1803)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Axolotl:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3.86323),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.58038, 1.58038)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhxwp"]
+_data = {
+&"RESET": SubResource("Animation_tkw1n"),
+&"animation": SubResource("Animation_tnxei")
+}
+
+[node name="Prologue_13" type="Node2D" node_paths=PackedStringArray("overlay")]
+script = ExtResource("1_0qkhx")
+next_scene = 18
+overlay = NodePath("ColorRect")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(0, -417)
+texture = ExtResource("2_3wkxw")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Ship" type="Sprite2D" parent="."]
+position = Vector2(2578, 409)
+scale = Vector2(1.28524, 1.28524)
+texture = ExtResource("3_uqf71")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ship"]
+material = SubResource("ShaderMaterial_tnxei")
+position = Vector2(-252.992, -129.554)
+texture = ExtResource("5_v5852")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ship"]
+position = Vector2(-365.362, -97.2488)
+texture = ExtResource("6_1dt6n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qhxwp")
+}
+autoplay = "animation"
+
+[node name="Axolotl" type="Sprite2D" parent="."]
+position = Vector2(65, 1788)
+scale = Vector2(1.58038, 1.58038)
+texture = ExtResource("7_wqdik")
+flip_h = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2371, 571)
+zoom = Vector2(2, 2)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -106.0
+offset_top = -90.0
+offset_right = 4004.0
+offset_bottom = 2246.0
+color = Color(0, 0, 0, 1)

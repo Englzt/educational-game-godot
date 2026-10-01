@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bj6vpineko30e"]
+
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="1_p4rnm"]
+
+[resource]
+font = ExtResource("1_p4rnm")
+font_size = 64
+outline_size = 16
+outline_color = Color(0.230315, 0.230315, 0.230315, 1)

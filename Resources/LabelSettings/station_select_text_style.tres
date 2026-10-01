@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cigims84anthv"]
+
+[sub_resource type="SystemFont" id="SystemFont_jk8sa"]
+font_names = PackedStringArray("Arial")
+
+[resource]
+font = SubResource("SystemFont_jk8sa")
+font_size = 48
+outline_size = 16
+outline_color = Color(0.230315, 0.230315, 0.230315, 1)

@@ -1,0 +1,498 @@
+[gd_scene load_steps=29 format=3 uid="uid://chqbs4qit58gk"]
+
+[ext_resource type="PackedScene" uid="uid://ysn402ro3voe" path="res://Components/Gate/gate.tscn" id="1_1rlxa"]
+[ext_resource type="Script" uid="uid://d3gwoeh0h6g36" path="res://Stations/Circuit/circuit.gd" id="1_f2p7g"]
+[ext_resource type="PackedScene" uid="uid://bw7cdhf5tkcn2" path="res://Components/Connector/connector.tscn" id="2_f2p7g"]
+[ext_resource type="Texture2D" uid="uid://cdhi2g43l66ij" path="res://Assets/Textures/LogicGates/background.svg" id="2_x12oi"]
+[ext_resource type="Texture2D" uid="uid://baswnm8lxnhbv" path="res://Assets/Textures/LogicGates/loading_animation.png" id="4_xfn1b"]
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="5_34jmf"]
+[ext_resource type="Theme" uid="uid://cxh5u5fqrenrh" path="res://Resources/Themes/button_theme_mainlevel.tres" id="6_e86ey"]
+[ext_resource type="Texture2D" uid="uid://bldgn5gnculri" path="res://Assets/Textures/LogicGates/LED.svg" id="7_5n74s"]
+[ext_resource type="Shader" uid="uid://dgw8jv2b3x70a" path="res://Resources/Shader/led_shader.gdshader" id="7_t1k6x"]
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="8_w37x2"]
+[ext_resource type="Texture2D" uid="uid://bdw6gabajj37" path="res://Assets/Textures/BonusLevel/circuit/trash_can.svg" id="9_yttjp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34jmf"]
+atlas = ExtResource("4_xfn1b")
+region = Rect2(0, 0, 40, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x12oi"]
+atlas = ExtResource("4_xfn1b")
+region = Rect2(40, 0, 40, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5n74s"]
+atlas = ExtResource("4_xfn1b")
+region = Rect2(80, 0, 40, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1k6x"]
+atlas = ExtResource("4_xfn1b")
+region = Rect2(120, 0, 40, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e86ey"]
+atlas = ExtResource("4_xfn1b")
+region = Rect2(160, 0, 40, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w37x2"]
+atlas = ExtResource("4_xfn1b")
+region = Rect2(200, 0, 40, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gc7h1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34jmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x12oi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5n74s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1k6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e86ey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w37x2")
+}],
+"loop": true,
+"name": &"animation",
+"speed": 8.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pdy6c"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.469124, 0.0963148, 0.071078, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.933333, 0.933333, 0.933333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bx50b"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.365657, 0.0665092, 0.0462443, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.933333, 0.933333, 0.933333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e86ey"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.561703, 0.123359, 0.0936174, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.933333, 0.933333, 0.933333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpugj"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.176877, 0.332615, 0.224028, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.933333, 0.933333, 0.933333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6jdog"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.134981, 0.263671, 0.174024, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.933333, 0.933333, 0.933333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6iv8r"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.228087, 0.415322, 0.284562, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.933333, 0.933333, 0.933333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_x12oi"]
+line_spacing = 1.0
+font = ExtResource("5_34jmf")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_yttjp"]
+line_spacing = 1.0
+font = ExtResource("8_w37x2")
+font_size = 32
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x12oi"]
+size = Vector2(131, 133)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e86ey"]
+shader = ExtResource("7_t1k6x")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[node name="Circuit" type="Node2D"]
+script = ExtResource("1_f2p7g")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(630, 310)
+texture = ExtResource("2_x12oi")
+
+[node name="BBox" type="ColorRect" parent="."]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 0.0980392)
+offset_right = 1244.0
+offset_bottom = 555.0
+mouse_filter = 1
+
+[node name="Components" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Gates" type="Node2D" parent="Components"]
+unique_name_in_owner = true
+
+[node name="Gate" parent="Components/Gates" instance=ExtResource("1_1rlxa")]
+position = Vector2(840, 200)
+
+[node name="Gate2" parent="Components/Gates" instance=ExtResource("1_1rlxa")]
+position = Vector2(304, 87)
+type = 1
+
+[node name="Gate3" parent="Components/Gates" instance=ExtResource("1_1rlxa")]
+position = Vector2(303, 324)
+type = 3
+
+[node name="Connectors" type="Node2D" parent="Components"]
+unique_name_in_owner = true
+
+[node name="Connector3" parent="Components/Connectors" instance=ExtResource("2_f2p7g")]
+position = Vector2(570, 167)
+
+[node name="Connector4" parent="Components/Connectors" instance=ExtResource("2_f2p7g")]
+position = Vector2(581, 338)
+
+[node name="StaticComponents" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="InputA" parent="StaticComponents" instance=ExtResource("2_f2p7g")]
+unique_name_in_owner = true
+position = Vector2(73, 36)
+set_manually = true
+input_immoveable = true
+deletable = false
+
+[node name="InputB" parent="StaticComponents" instance=ExtResource("2_f2p7g")]
+unique_name_in_owner = true
+position = Vector2(73, 154)
+set_manually = true
+input_immoveable = true
+deletable = false
+
+[node name="InputC" parent="StaticComponents" instance=ExtResource("2_f2p7g")]
+unique_name_in_owner = true
+position = Vector2(73, 271)
+set_manually = true
+input_immoveable = true
+deletable = false
+
+[node name="InputD" parent="StaticComponents" instance=ExtResource("2_f2p7g")]
+unique_name_in_owner = true
+position = Vector2(73, 395)
+set_manually = true
+input_immoveable = true
+deletable = false
+
+[node name="InputE" parent="StaticComponents" instance=ExtResource("2_f2p7g")]
+unique_name_in_owner = true
+position = Vector2(73, 499)
+set_manually = true
+input_immoveable = true
+deletable = false
+
+[node name="Output" parent="StaticComponents" instance=ExtResource("2_f2p7g")]
+unique_name_in_owner = true
+position = Vector2(1041, 269)
+output_immoveable = true
+deletable = false
+
+[node name="EvaluationAnimation" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(1196, 530)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_gc7h1")
+animation = &"animation"
+frame_progress = 0.529229
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(482, 249)
+
+[node name="UI" type="Control" parent="."]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -9.0
+offset_top = 621.0
+offset_right = 1253.0
+offset_bottom = 711.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Buttons" type="HBoxContainer" parent="UI"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 0
+offset_right = 1262.0
+offset_bottom = 47.0
+theme = ExtResource("6_e86ey")
+
+[node name="ButtonAddAND" type="Button" parent="UI/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+text = "AND"
+
+[node name="Gap01" type="Container" parent="UI/Buttons"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="ButtonAddOR" type="Button" parent="UI/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+text = "OR"
+
+[node name="Gap03" type="Container" parent="UI/Buttons"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="ButtonAddXOR" type="Button" parent="UI/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+text = "XOR"
+
+[node name="Gap04" type="Container" parent="UI/Buttons"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="ButtonAddNOT" type="Button" parent="UI/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+text = "NOT"
+
+[node name="Gap05" type="Container" parent="UI/Buttons"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Container2" type="ColorRect" parent="UI/Buttons"]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+color = Color(0.368627, 0.368627, 0.368627, 1)
+
+[node name="Gap02" type="Container" parent="UI/Buttons"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="ButtonAddWire" type="Button" parent="UI/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+text = "Wire"
+
+[node name="Container3" type="Container" parent="UI/Buttons"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="ButtonReset" type="Button" parent="UI/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_pdy6c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bx50b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e86ey")
+text = "RESET"
+
+[node name="Container" type="Container" parent="UI/Buttons"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="ResultLabel" type="Label" parent="UI/Buttons"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Result:
+"
+
+[node name="ButtonEvaluate" type="Button" parent="UI/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_styles/hover = SubResource("StyleBoxFlat_dpugj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6jdog")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6iv8r")
+text = "EVALUATE"
+
+[node name="ExpressionInput" type="TextEdit" parent="UI"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(500, 35)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -583.0
+offset_top = -35.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "(values[2] or values[0]) and not values[3]"
+
+[node name="InputALabel" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 25.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "A"
+label_settings = SubResource("LabelSettings_x12oi")
+
+[node name="InputBLabel" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 141.0
+offset_right = 48.0
+offset_bottom = 178.0
+text = "B"
+label_settings = SubResource("LabelSettings_x12oi")
+
+[node name="InputCLabel" type="Label" parent="."]
+offset_left = 26.0
+offset_top = 257.0
+offset_right = 50.0
+offset_bottom = 294.0
+text = "C"
+label_settings = SubResource("LabelSettings_x12oi")
+
+[node name="InputDLabel" type="Label" parent="."]
+offset_left = 26.0
+offset_top = 380.0
+offset_right = 50.0
+offset_bottom = 417.0
+text = "D"
+label_settings = SubResource("LabelSettings_x12oi")
+
+[node name="InputELabel" type="Label" parent="."]
+offset_left = 27.0
+offset_top = 486.0
+offset_right = 51.0
+offset_bottom = 523.0
+text = "E"
+label_settings = SubResource("LabelSettings_x12oi")
+
+[node name="OutputLabel" type="Label" parent="."]
+offset_left = 1176.0
+offset_top = 258.0
+offset_right = 1248.0
+offset_bottom = 295.0
+text = "OUT"
+label_settings = SubResource("LabelSettings_x12oi")
+
+[node name="FormattedInputField" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 856.0
+offset_top = 9.0
+offset_right = 1237.0
+offset_bottom = 55.0
+
+[node name="ColorRect" type="ColorRect" parent="FormattedInputField"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.136826, 0.136826, 0.136826, 0.588235)
+
+[node name="LabelInputString" type="Label" parent="FormattedInputField"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_right = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "¬A ∨ E"
+label_settings = SubResource("LabelSettings_yttjp")
+
+[node name="DeletePanel" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1181, 495)
+scale = Vector2(0.189453, 0.189453)
+texture = ExtResource("9_yttjp")
+
+[node name="Area2D" type="Area2D" parent="DeletePanel"]
+position = Vector2(-5.27835, -5.27835)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeletePanel/Area2D"]
+position = Vector2(-13.1968, -23.7529)
+scale = Vector2(5.27835, 5.27835)
+shape = SubResource("RectangleShape2D_x12oi")
+
+[node name="LED" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_e86ey")
+position = Vector2(1227, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("7_5n74s")
+
+[connection signal="pressed" from="UI/Buttons/ButtonAddAND" to="." method="_on_button_add_and_pressed"]
+[connection signal="pressed" from="UI/Buttons/ButtonAddOR" to="." method="_on_button_add_or_pressed"]
+[connection signal="pressed" from="UI/Buttons/ButtonAddXOR" to="." method="_on_button_add_xor_pressed"]
+[connection signal="pressed" from="UI/Buttons/ButtonAddNOT" to="." method="_on_button_add_not_pressed"]
+[connection signal="pressed" from="UI/Buttons/ButtonAddWire" to="." method="_on_button_add_wire_pressed"]
+[connection signal="pressed" from="UI/Buttons/ButtonReset" to="." method="reset"]
+[connection signal="pressed" from="UI/Buttons/ButtonEvaluate" to="." method="on_evaluate"]
+[connection signal="input_event" from="DeletePanel/Area2D" to="." method="_on_delete_panel_input"]

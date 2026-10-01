@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccecdh67d56pq"]
+
+[ext_resource type="Texture2D" uid="uid://ctaxc0ygroql2" path="res://Assets/Textures/BonusLevel/cutscenes/cockpit.svg" id="1_1dm7g"]
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="2_1nnoo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_obhwx"]
+font = ExtResource("2_1nnoo")
+font_size = 126
+font_color = Color(0.121569, 0.996078, 0.490196, 1)
+outline_size = 15
+outline_color = Color(0.168627, 0.827451, 0.435294, 1)
+
+[node name="Cutscene_system_repaired" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1dm7g")
+centered = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 1168.0
+offset_top = 831.0
+offset_right = 3014.0
+offset_bottom = 978.0
+text = "SYSTEME WIEDERHERGESTELLT"
+label_settings = SubResource("LabelSettings_obhwx")

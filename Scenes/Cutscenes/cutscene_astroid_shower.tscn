@@ -1,0 +1,121 @@
+[gd_scene load_steps=11 format=3 uid="uid://ld1kny7thxh"]
+
+[ext_resource type="Texture2D" uid="uid://j0a17035tjfl" path="res://Assets/Textures/BonusLevel/cutscenes/asteroiden_far.svg" id="1_u1ik3"]
+[ext_resource type="Texture2D" uid="uid://w3b0tavcba2" path="res://Assets/Textures/BonusLevel/cutscenes/asteroiden_near.svg" id="2_u1ik3"]
+[ext_resource type="Texture2D" uid="uid://dhs3g6crbsnxo" path="res://Assets/Textures/Prologue/spaceship.svg" id="3_0o66g"]
+[ext_resource type="Texture2D" uid="uid://bxfvfjinp477k" path="res://Assets/Textures/Other/smoke_particle_texture.png" id="4_0ac61"]
+
+[sub_resource type="GDScript" id="GDScript_u1ik3"]
+script/source = "extends Node2D
+##
+##  Cutscene Asteroid-Shower
+## 
+##
+
+# ──────────────────────────────────────────────────────────────
+# NODES (per Drag-&-Drop im Inspector neu zuweisen)
+# ──────────────────────────────────────────────────────────────
+@onready var background : Sprite2D = $Background
+@onready var foreground : Sprite2D = $Foreground
+
+
+@onready var layers     : Array[Sprite2D] = [background, foreground]
+
+var layer_scales : Array[float] = [0.5, 1.0]
+
+# Basisscrollspeed (Pixel pro Sekunde nach links)
+@export var scroll_speed : float = -38.0
+
+
+const TILE_SIZE := Vector2(900, 900)
+
+# ──────────────────────────────────────────────────────────────
+# LEBENSCYCLE
+# ──────────────────────────────────────────────────────────────
+func _ready() -> void:
+	#reset()
+	pass
+		
+func _process(delta: float) -> void:
+	_scroll_layers(delta)
+	
+# ──────────────────────────────────────────────────────────────
+# HELPER
+# ──────────────────────────────────────────────────────────────
+func _scroll_layers(delta: float) -> void:
+	for i in layers.size():
+		var layer := layers[i]
+		var rect  := layer.region_rect
+		rect.position.x -= scroll_speed * layer_scales[i] * delta
+		if rect.position.x <= -TILE_SIZE.x:
+			rect.position.x += TILE_SIZE.x
+		layer.region_rect = rect
+		
+func reset() -> void:
+	for layer in layers:
+		layer.region_rect = Rect2(Vector2.ZERO, TILE_SIZE)
+		
+"
+
+[sub_resource type="Gradient" id="Gradient_xkt42"]
+offsets = PackedFloat32Array(0, 0.464891, 1)
+colors = PackedColorArray(0.995264, 1, 0.715743, 1, 0.908173, 0.542989, 0, 1, 0.713726, 0, 0.0156863, 0.403922)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2l4a7"]
+gradient = SubResource("Gradient_xkt42")
+
+[sub_resource type="Curve" id="Curve_fihfb"]
+_data = [Vector2(0, 0.690744), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_wf71g"]
+curve = SubResource("Curve_fihfb")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_afkau"]
+particle_flag_disable_z = true
+spread = 20.0
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_wf71g")
+color_ramp = SubResource("GradientTexture1D_2l4a7")
+
+[node name="Cutscene_astroid_shower" type="Node2D"]
+script = SubResource("GDScript_u1ik3")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(1919.08, 1023.07)
+scale = Vector2(1.65045, 1.65045)
+texture = ExtResource("1_u1ik3")
+region_enabled = true
+region_rect = Rect2(0, 0, 2356.09, 2352.82)
+
+[node name="Foreground" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(2572, 1148)
+texture = ExtResource("2_u1ik3")
+region_enabled = true
+region_rect = Rect2(0, 0, 5502.53, 2524.3)
+
+[node name="Foreground2" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1908.64, 1141.64)
+rotation = 1.13097
+scale = Vector2(0.959, 0.959)
+texture = ExtResource("3_0o66g")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Foreground2"]
+z_index = -1
+position = Vector2(-72.6963, 406.212)
+rotation = 0.64971
+scale = Vector2(3, 3)
+amount = 300
+texture = ExtResource("4_0ac61")
+lifetime = 2.0
+preprocess = 2.0
+speed_scale = 1.5
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_afkau")

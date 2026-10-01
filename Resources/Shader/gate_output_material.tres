@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://gjyvo60j3r3r"]
+
+[ext_resource type="Shader" uid="uid://oatc8juc71ja" path="res://Resources/Shader/gate_output.gdshader" id="1_jx48u"]
+
+[resource]
+shader = ExtResource("1_jx48u")

@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://l3of3osbq3uw"]
+
+[ext_resource type="Script" uid="uid://c8immj4m6lb1w" path="res://Stations/led_station/led_station.gd" id="1_luuif"]
+[ext_resource type="Texture2D" uid="uid://dj3ky3vg3l2lu" path="res://Assets/Textures/bonuslevel/led_station/led_station1.svg" id="2_hqu7s"]
+[ext_resource type="Texture2D" uid="uid://dlgqafev3hx7k" path="res://Assets/Textures/bonuslevel/led_station/led_off_round.svg" id="4_hqu7s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwj2e"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqu7s"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4p3vq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_jwj2e"]
+Button/styles/hover = SubResource("StyleBoxFlat_jwj2e")
+Button/styles/normal = SubResource("StyleBoxFlat_hqu7s")
+Button/styles/pressed = SubResource("StyleBoxFlat_4p3vq")
+
+[node name="LED_Station" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_luuif")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -100
+position = Vector2(-20, 57)
+scale = Vector2(0.4275, 0.484148)
+texture = ExtResource("2_hqu7s")
+centered = false
+offset = Vector2(31.695, -178.165)
+
+[node name="nextButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 80.0
+offset_right = 207.0
+offset_bottom = 272.0
+theme = SubResource("Theme_jwj2e")
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_font_sizes/font_size = 26
+text = "Nächste Runde
+"
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -16.0
+offset_right = -36.0
+offset_bottom = -16.0
+grow_vertical = 2
+
+[node name="Led1" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(838, 190)
+texture = ExtResource("4_hqu7s")
+
+[node name="Led2" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(608, 190)
+rotation = 0.00187877
+texture = ExtResource("4_hqu7s")
+
+[node name="Led3" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(380, 190)
+texture = ExtResource("4_hqu7s")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 82.9999
+offset_top = 317.0
+offset_right = 646.0
+offset_bottom = 377.0
+scale = Vector2(1.44, 1.44)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+text = "Erkläre den anderen Spielern deine Station und unterstütze sie beim Lösen der Aufgabe."
+autowrap_mode = 2
+
+[connection signal="pressed" from="nextButton" to="." method="_on_next_button_pressed"]

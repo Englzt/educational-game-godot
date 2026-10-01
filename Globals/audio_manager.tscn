@@ -1,0 +1,107 @@
+[gd_scene load_steps=21 format=3 uid="uid://byyxkyrecwikx"]
+
+[ext_resource type="Script" uid="uid://bjxfp2n0tmsrk" path="res://Globals/audio_manager.gd" id="1_kho5r"]
+[ext_resource type="Script" uid="uid://b42ncq7ylcr8s" path="res://Resources/sound_effect.gd" id="2_rpwd6"]
+[ext_resource type="AudioStream" uid="uid://2yjcjln7efvg" path="res://Assets/Audio/SFX/plug_in.mp3" id="3_oi1wl"]
+[ext_resource type="AudioStream" uid="uid://danl3y732cv4w" path="res://Assets/Audio/SFX/plug_out.mp3" id="4_fb0sx"]
+[ext_resource type="AudioStream" uid="uid://bwrxbgiy2mvcb" path="res://Assets/Audio/SFX/dial_sound.mp3" id="5_fb0sx"]
+[ext_resource type="AudioStream" uid="uid://bqj3yy1s3jfvs" path="res://Assets/Audio/SFX/radio-static-6382.mp3" id="7_qhhwe"]
+[ext_resource type="AudioStream" uid="uid://bdjpp1qdg77lx" path="res://Assets/Audio/SFX/powerful-cannon-shot-352459.mp3" id="8_jatf3"]
+[ext_resource type="AudioStream" uid="uid://2hd2krsyqwp7" path="res://Assets/Audio/SFX/button_on.mp3" id="9_lxs7p"]
+[ext_resource type="AudioStream" uid="uid://dkgjalqrrq0ym" path="res://Assets/Audio/SFX/button_off.mp3" id="10_oi1wl"]
+[ext_resource type="AudioStream" uid="uid://dglx3la7bqeyi" path="res://Assets/Audio/SFX/modem.mp3" id="11_fb0sx"]
+[ext_resource type="AudioStream" uid="uid://h16ubhw38i8p" path="res://Assets/Audio/SFX/cricket.mp3" id="12_r6l1c"]
+
+[sub_resource type="Resource" id="Resource_lm0o0"]
+script = ExtResource("2_rpwd6")
+limit = 5
+type = 0
+sound_effect = ExtResource("3_oi1wl")
+volume = 10.0
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://b42ncq7ylcr8s"
+
+[sub_resource type="Resource" id="Resource_3s57x"]
+script = ExtResource("2_rpwd6")
+limit = 5
+type = 1
+sound_effect = ExtResource("4_fb0sx")
+volume = 10.0
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://b42ncq7ylcr8s"
+
+[sub_resource type="Resource" id="Resource_jatf3"]
+script = ExtResource("2_rpwd6")
+limit = 5
+type = 2
+sound_effect = ExtResource("5_fb0sx")
+volume = 10.0
+pitch_scale = 1.0
+pitch_randomness = 0.05
+metadata/_custom_type_script = "uid://b42ncq7ylcr8s"
+
+[sub_resource type="Resource" id="Resource_oi1wl"]
+script = ExtResource("2_rpwd6")
+limit = 1
+type = 3
+sound_effect = ExtResource("7_qhhwe")
+volume = 10.0
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://b42ncq7ylcr8s"
+
+[sub_resource type="Resource" id="Resource_fb0sx"]
+script = ExtResource("2_rpwd6")
+limit = 1
+type = 4
+sound_effect = ExtResource("8_jatf3")
+volume = 0.0
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://b42ncq7ylcr8s"
+
+[sub_resource type="Resource" id="Resource_r6l1c"]
+script = ExtResource("2_rpwd6")
+limit = 5
+type = 5
+sound_effect = ExtResource("9_lxs7p")
+volume = 3.0
+pitch_scale = 1.0
+pitch_randomness = 0.05
+metadata/_custom_type_script = "uid://b42ncq7ylcr8s"
+
+[sub_resource type="Resource" id="Resource_0ab1g"]
+script = ExtResource("2_rpwd6")
+limit = 5
+type = 6
+sound_effect = ExtResource("10_oi1wl")
+volume = 3.0
+pitch_scale = 1.0
+pitch_randomness = 0.05
+metadata/_custom_type_script = "uid://b42ncq7ylcr8s"
+
+[sub_resource type="Resource" id="Resource_yu1vx"]
+script = ExtResource("2_rpwd6")
+limit = 5
+type = 7
+sound_effect = ExtResource("11_fb0sx")
+volume = -10.0
+pitch_scale = 1.0
+pitch_randomness = 0.05
+metadata/_custom_type_script = "uid://b42ncq7ylcr8s"
+
+[sub_resource type="Resource" id="Resource_uwodp"]
+script = ExtResource("2_rpwd6")
+limit = 5
+type = 8
+sound_effect = ExtResource("12_r6l1c")
+volume = 5.0
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://b42ncq7ylcr8s"
+
+[node name="AudioManager" type="Node2D"]
+script = ExtResource("1_kho5r")
+sound_effects = Array[ExtResource("2_rpwd6")]([SubResource("Resource_lm0o0"), SubResource("Resource_3s57x"), SubResource("Resource_jatf3"), SubResource("Resource_oi1wl"), SubResource("Resource_fb0sx"), SubResource("Resource_r6l1c"), SubResource("Resource_0ab1g"), SubResource("Resource_yu1vx"), SubResource("Resource_uwodp")])

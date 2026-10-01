@@ -1,0 +1,159 @@
+[gd_scene load_steps=13 format=3 uid="uid://cyd430wvjrhpk"]
+
+[ext_resource type="Script" uid="uid://c1dta4l0gpe8c" path="res://Components/asteroids/asteroids.gd" id="1_36l87"]
+[ext_resource type="Texture2D" uid="uid://bb2a703qlgqks" path="res://Assets/Textures/Asteroids/rakete.svg" id="3_36l87"]
+[ext_resource type="Texture2D" uid="uid://nxi2fnkjuga" path="res://Assets/Textures/Asteroids/Asteroid.svg" id="4_yas2s"]
+[ext_resource type="Texture2D" uid="uid://ba8cimla0e3n1" path="res://Assets/Textures/Asteroids/explosion5.svg" id="5_2epgy"]
+[ext_resource type="Texture2D" uid="uid://cqw1ftf7di67v" path="res://Assets/Textures/Asteroids/transparent_placeholder_64x64.png" id="6_yas2s"]
+[ext_resource type="Texture2D" uid="uid://dtuhnej3c6u67" path="res://Assets/Textures/Asteroids/explosion1.svg" id="7_i4v4q"]
+[ext_resource type="Texture2D" uid="uid://c0e1omi3k1pxa" path="res://Assets/Textures/Asteroids/explosion2.svg" id="8_6xgqq"]
+[ext_resource type="Texture2D" uid="uid://v1di0gcen0ej" path="res://Assets/Textures/Asteroids/explosion3.svg" id="9_385ln"]
+[ext_resource type="Texture2D" uid="uid://clxge1uashdsb" path="res://Assets/Textures/Asteroids/explosion4.svg" id="10_x6gog"]
+
+[sub_resource type="Animation" id="Animation_ostn7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Explosion:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_2epgy")]
+}
+
+[sub_resource type="Animation" id="Animation_wxr0s"]
+resource_name = "asteroid"
+length = 1.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -5.54666]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(365, 13), Vector2(205.325, 2.85), Vector2(365, 13)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RocketShoot:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(41.805, 1), Vector2(157.365, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("RocketShoot:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.366667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Explosion:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1, 1, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Explosion:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.1, 1.23333, 1.36667, 1.46667, 1.6, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_yas2s"), ExtResource("7_i4v4q"), ExtResource("8_6xgqq"), ExtResource("9_385ln"), ExtResource("10_x6gog"), ExtResource("5_2epgy"), ExtResource("6_yas2s")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6e23t"]
+_data = {
+&"RESET": SubResource("Animation_ostn7"),
+&"asteroid": SubResource("Animation_wxr0s")
+}
+
+[node name="Asteroids" type="Node2D"]
+script = ExtResource("1_36l87")
+
+[node name="Explosion" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(188.13, 0)
+texture = ExtResource("6_yas2s")
+
+[node name="RocketShoot" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(157.365, 1)
+scale = Vector2(0.095, 0.095)
+texture = ExtResource("3_36l87")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.904721, 0.899812, 1)
+position = Vector2(365, 13)
+rotation = 0.797615
+scale = Vector2(0.095, 0.095)
+texture = ExtResource("4_yas2s")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+libraries = {
+&"": SubResource("AnimationLibrary_6e23t")
+}

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://3vcxroh04js0"]
+
+[ext_resource type="Script" uid="uid://dax3bkqoj86sh" path="res://Components/DraggableNode/draggable_node.gd" id="1_yy8uc"]
+
+[node name="DraggableNode" type="Sprite2D"]
+texture_filter = 1
+script = ExtResource("1_yy8uc")
+metadata/_edit_use_anchors_ = true

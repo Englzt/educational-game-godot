@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://djx1cj66nbw1h"]
+
+[ext_resource type="Texture2D" uid="uid://cy8csgfmfvykv" path="res://Assets/Textures/MainLevel/thermometer.svg" id="1_g7mwi"]
+[ext_resource type="Script" uid="uid://ihek012guf8x" path="res://Components/BackgroundThermometer/background_thermometer.gd" id="1_k543l"]
+[ext_resource type="Texture2D" uid="uid://2m7yp7b7jagk" path="res://Assets/Textures/MainLevel/thermometer_fill.svg" id="2_k543l"]
+
+[node name="Background_Thermometer" type="Node2D"]
+script = ExtResource("1_k543l")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+clip_children = 2
+offset_left = -165.0
+offset_top = -236.0
+offset_right = 169.0
+offset_bottom = 245.0
+color = Color(0.396078, 0.396078, 0.396078, 1)
+
+[node name="ThermometerFill" type="Sprite2D" parent="ColorRect"]
+unique_name_in_owner = true
+modulate = Color(0, 0, 1, 1)
+position = Vector2(163, 401)
+scale = Vector2(1.796, 1.5)
+texture = ExtResource("2_k543l")
+
+[node name="Thermometer" type="Sprite2D" parent="."]
+texture = ExtResource("1_g7mwi")

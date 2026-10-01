@@ -1,0 +1,113 @@
+[gd_scene load_steps=12 format=3 uid="uid://ysn402ro3voe"]
+
+[ext_resource type="Script" uid="uid://co0rr6r5jp240" path="res://Components/Gate/gate.gd" id="1_ikl61"]
+[ext_resource type="Texture2D" uid="uid://dvjrq4r1esgap" path="res://Assets/Textures/LogicGates/gate.svg" id="3_p35gl"]
+[ext_resource type="PackedScene" uid="uid://3vcxroh04js0" path="res://Components/DraggableNode/draggable_node.tscn" id="4_4oabi"]
+[ext_resource type="Material" uid="uid://43t5mysp6qdh" path="res://Resources/Shader/gate_input_material.tres" id="4_jhui3"]
+[ext_resource type="Texture2D" uid="uid://bldgn5gnculri" path="res://Assets/Textures/LogicGates/LED.svg" id="5_0g770"]
+[ext_resource type="Texture2D" uid="uid://dyyhetmaprrrx" path="res://Assets/Textures/LogicGates/connector.svg" id="5_p35gl"]
+[ext_resource type="Material" uid="uid://gjyvo60j3r3r" path="res://Resources/Shader/gate_output_material.tres" id="6_6qcw8"]
+[ext_resource type="Texture2D" uid="uid://dfrb4vg62n3o4" path="res://Assets/Textures/LogicGates/gate_types.svg" id="7_p35gl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4oabi"]
+radius = 16.0
+
+[sub_resource type="Shader" id="Shader_p35gl"]
+code = "shader_type canvas_item;
+
+uniform bool enabled;
+uniform vec4 color_on = vec4(0.0, 0.8, 0.4, 1.0);
+uniform vec4 color_off = vec4(0.8, 0.0, 0.2, 1.0);
+
+void fragment() {
+	if(enabled) {
+		COLOR *= color_on;
+	} else {
+		COLOR *= color_off;
+	}
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p35gl"]
+shader = SubResource("Shader_p35gl")
+shader_parameter/enabled = true
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[node name="Gate" type="Node2D"]
+texture_filter = 1
+texture_repeat = 1
+script = ExtResource("1_ikl61")
+
+[node name="Base" parent="." instance=ExtResource("4_4oabi")]
+unique_name_in_owner = true
+texture = ExtResource("3_p35gl")
+centered = false
+
+[node name="InputAnchorA" type="Area2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(0, 37)
+
+[node name="InputASprite" type="Sprite2D" parent="Base/InputAnchorA"]
+unique_name_in_owner = true
+material = ExtResource("4_jhui3")
+texture = ExtResource("5_p35gl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Base/InputAnchorA"]
+visible = false
+shape = SubResource("CircleShape2D_4oabi")
+
+[node name="InputAnchorB" type="Area2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(0, 117)
+
+[node name="InputBSprite" type="Sprite2D" parent="Base/InputAnchorB"]
+unique_name_in_owner = true
+material = ExtResource("4_jhui3")
+texture = ExtResource("5_p35gl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Base/InputAnchorB"]
+visible = false
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_4oabi")
+
+[node name="OutputAnchor" type="Area2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(122, 78)
+
+[node name="OutputSprite" type="Sprite2D" parent="Base/OutputAnchor"]
+unique_name_in_owner = true
+material = ExtResource("6_6qcw8")
+texture = ExtResource("5_p35gl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Base/OutputAnchor"]
+visible = false
+shape = SubResource("CircleShape2D_4oabi")
+
+[node name="GateTypeSprite" type="Sprite2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(63, 79)
+scale = Vector2(1.0026, 1.0026)
+texture = ExtResource("7_p35gl")
+region_enabled = true
+region_rect = Rect2(0, 0, 70, 90)
+
+[node name="Debug" type="RichTextLabel" parent="Base"]
+unique_name_in_owner = true
+visible = false
+offset_left = 4.0
+offset_top = 137.0
+offset_right = 121.0
+offset_bottom = 211.0
+text = "A: null
+B: null
+O: null"
+fit_content = true
+
+[node name="LED" type="Sprite2D" parent="Base"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_p35gl")
+position = Vector2(104, 20)
+texture = ExtResource("5_0g770")
+
+[editable path="Base"]

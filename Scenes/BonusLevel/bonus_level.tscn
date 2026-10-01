@@ -1,0 +1,2165 @@
+[gd_scene load_steps=60 format=3 uid="uid://c2cf4o1mvxh4"]
+
+[ext_resource type="Script" uid="uid://ce2dhq5hlu6di" path="res://Scenes/BonusLevel/bonus_level.gd" id="1_ex8ox"]
+[ext_resource type="PackedScene" uid="uid://ixdj5wbu4ix7" path="res://Scenes/Cutscenes/cutscene_coordinates_encrypted.tscn" id="2_mxqrl"]
+[ext_resource type="PackedScene" uid="uid://bgmmiqimrqt6b" path="res://Scenes/Cutscenes/cutscene_route_found.tscn" id="2_q80i3"]
+[ext_resource type="PackedScene" uid="uid://bnkxitdp5tkbf" path="res://Stations/Binary/binary.tscn" id="2_usurx"]
+[ext_resource type="PackedScene" uid="uid://cyd430wvjrhpk" path="res://Components/asteroids/Asteroids.tscn" id="3_01v6r"]
+[ext_resource type="PackedScene" uid="uid://chqbs4qit58gk" path="res://Stations/Circuit/circuit.tscn" id="4_01v6r"]
+[ext_resource type="PackedScene" uid="uid://cyowb6t3tsbge" path="res://Stations/CaesarShift/CaesarMinigame.tscn" id="4_drwq4"]
+[ext_resource type="PackedScene" uid="uid://cbvcnf0sovmmv" path="res://Scenes/Cutscenes/cutscene_system_down.tscn" id="4_mxqrl"]
+[ext_resource type="PackedScene" uid="uid://yk4rlbto5hgc" path="res://Scenes/Cutscenes/cutscene_astroid_shower_2.tscn" id="4_ychq7"]
+[ext_resource type="Theme" uid="uid://bgud7pwk17e5c" path="res://Resources/Themes/Radio_text_style.tres" id="5_bfy5j"]
+[ext_resource type="PackedScene" uid="uid://b5o76vflhmbut" path="res://Components/radar space/Radar Space.tscn" id="5_ex8ox"]
+[ext_resource type="Shader" uid="uid://dgw8jv2b3x70a" path="res://Resources/Shader/led_shader.gdshader" id="5_oe5xn"]
+[ext_resource type="PackedScene" uid="uid://l3of3osbq3uw" path="res://Stations/led_station/led_station.tscn" id="6_oe5xn"]
+[ext_resource type="PackedScene" uid="uid://ccecdh67d56pq" path="res://Scenes/Cutscenes/cutscene_system_repaired.tscn" id="7_brygb"]
+[ext_resource type="LabelSettings" uid="uid://bbolqiut2rbaq" path="res://Resources/LabelSettings/seven_segment_label.tres" id="7_q80i3"]
+[ext_resource type="PackedScene" uid="uid://c8d1hp87fk83j" path="res://Scenes/Cutscenes/cutscene_planet_reached.tscn" id="8_gqr68"]
+[ext_resource type="PackedScene" uid="uid://ctxkov3yvq82p" path="res://Scenes/Settings/settings.tscn" id="8_s62r6"]
+[ext_resource type="Texture2D" uid="uid://c32nms2npprpq" path="res://Assets/Textures/bonuslevel/navigator/tisch_bonuslevel.svg" id="9_4mwk3"]
+[ext_resource type="PackedScene" uid="uid://buyhd1rmwfkl" path="res://Stations/Navigator/navigator.tscn" id="10_0fiio"]
+[ext_resource type="Texture2D" uid="uid://ur45yikx42m3" path="res://Assets/Textures/bonuslevel/caesar/caesar_station.svg" id="10_4mwk3"]
+[ext_resource type="PackedScene" uid="uid://d0drrspolhjr2" path="res://Stations/ShipStatus/ship_status.tscn" id="11_3scep"]
+[ext_resource type="Theme" uid="uid://cal3btcbiisdg" path="res://Resources/Themes/histogram_theme.tres" id="12_lcngf"]
+[ext_resource type="Texture2D" uid="uid://b5js7k266xpxt" path="res://Assets/Textures/bonuslevel/caesar/bonus_cheatsheet.svg" id="15_fcu61"]
+[ext_resource type="Texture2D" uid="uid://cqw1ftf7di67v" path="res://Assets/Textures/Asteroids/transparent_placeholder_64x64.png" id="18_db7sf"]
+[ext_resource type="PackedScene" uid="uid://diktdssu686x0" path="res://Components/ElderAxolotl/FeedbackOverlay.tscn" id="19_drwq4"]
+[ext_resource type="Texture2D" uid="uid://dnot1cuvnaabi" path="res://Assets/Textures/bonuslevel/navigator/starmap.svg" id="19_fcu61"]
+[ext_resource type="PackedScene" uid="uid://ld1kny7thxh" path="res://Scenes/Cutscenes/cutscene_astroid_shower.tscn" id="20_bfy5j"]
+[ext_resource type="Texture2D" uid="uid://u4n20vsjqa2o" path="res://Assets/Textures/bonuslevel/navigator/Erde_und_Mond.svg" id="20_fcu61"]
+[ext_resource type="Texture2D" uid="uid://r5l2lq7e6b38" path="res://Assets/Textures/bonuslevel/navigator/alien_planet.svg" id="21_lcngf"]
+[ext_resource type="Texture2D" uid="uid://deg02eeover0l" path="res://Assets/Textures/bonuslevel/navigator/navigator_frame.svg" id="22_lcngf"]
+[ext_resource type="Texture2D" uid="uid://c11ph448q4su0" path="res://Assets/Textures/bonuslevel/navigator/navigator_monitor(anweisungen).svg" id="24_4mwk3"]
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="25_4mwk3"]
+[ext_resource type="Texture2D" uid="uid://cmjgs3eyxg41w" path="res://Assets/Textures/bonuslevel/binary/switch_bonus.svg" id="25_pgmtf"]
+[ext_resource type="Texture2D" uid="uid://d0tuf333csxjp" path="res://Assets/Textures/bonuslevel/binary/bin_station.svg" id="28_lcngf"]
+[ext_resource type="Texture2D" uid="uid://bd41hfiflw2o5" path="res://Assets/Textures/bonuslevel/binary/frame_bin_dec.png" id="28_pgmtf"]
+[ext_resource type="Texture2D" uid="uid://c6hhda15dmuct" path="res://Assets/Textures/bonuslevel/circuit/circuit_frame.svg" id="32_ov0at"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bb7bn"]
+font = ExtResource("25_4mwk3")
+font_size = 32
+font_color = Color(0.823529, 0.827451, 0.905882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mvpoe"]
+bg_color = Color(0.552941, 0.560784, 0.721569, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fcu61"]
+font = ExtResource("25_4mwk3")
+font_size = 32
+font_color = Color(0.823529, 0.827451, 0.905882, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ov0at"]
+font = ExtResource("25_4mwk3")
+font_size = 32
+font_color = Color(0.823529, 0.827451, 0.905882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pdgup"]
+bg_color = Color(0.552941, 0.560784, 0.721569, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bloce"]
+font = ExtResource("25_4mwk3")
+font_size = 32
+font_color = Color(0.823529, 0.827451, 0.905882, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gks4u"]
+font = ExtResource("25_4mwk3")
+font_size = 32
+font_color = Color(0.823529, 0.827451, 0.905882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng6ho"]
+bg_color = Color(0.552941, 0.560784, 0.721569, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dma0e"]
+resource_local_to_scene = true
+shader = ExtResource("5_oe5xn")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_86ehu"]
+resource_local_to_scene = true
+shader = ExtResource("5_oe5xn")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eu01k"]
+resource_local_to_scene = true
+shader = ExtResource("5_oe5xn")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oyu53"]
+resource_local_to_scene = true
+shader = ExtResource("5_oe5xn")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4renm"]
+resource_local_to_scene = true
+shader = ExtResource("5_oe5xn")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5okmh"]
+resource_local_to_scene = true
+shader = ExtResource("5_oe5xn")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3eslr"]
+resource_local_to_scene = true
+shader = ExtResource("5_oe5xn")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_drwq4"]
+resource_local_to_scene = true
+shader = ExtResource("5_oe5xn")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcu61"]
+bg_color = Color(0.19207, 0.194985, 0.313495, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.0823529, 0.0862745, 0.129412, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb7bn"]
+bg_color = Color(0.131401, 0.133548, 0.223936, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.0823529, 0.0862745, 0.129412, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eevtr"]
+bg_color = Color(0.262745, 0.266667, 0.415686, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.0823529, 0.0862745, 0.129412, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_saomy"]
+bg_color = Color(0.262745, 0.266667, 0.415686, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.0823529, 0.0862745, 0.129412, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3p70"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.561703, 0.123359, 0.0936174, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.823529, 0.827451, 0.905882, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktgrm"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.228087, 0.415322, 0.284562, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.823529, 0.827451, 0.905882, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_gklol"]
+line_spacing = 1.0
+font = ExtResource("25_4mwk3")
+font_size = 32
+font_color = Color(0.823529, 0.827451, 0.905882, 1)
+
+[node name="BonusLevel" type="Node2D"]
+script = ExtResource("1_ex8ox")
+
+[node name="Cutscenes" type="CanvasLayer" parent="."]
+
+[node name="Cutscene_coordinates_encrypted" parent="Cutscenes" instance=ExtResource("2_mxqrl")]
+visible = false
+
+[node name="Cutscene_route_found" parent="Cutscenes" instance=ExtResource("2_q80i3")]
+visible = false
+
+[node name="Cutscene_astroid_shower_2" parent="Cutscenes" instance=ExtResource("4_ychq7")]
+visible = false
+
+[node name="Cutscene_astroid_shower" parent="Cutscenes" instance=ExtResource("20_bfy5j")]
+visible = false
+
+[node name="Cutscene_system_down" parent="Cutscenes" instance=ExtResource("4_mxqrl")]
+visible = false
+
+[node name="Cutscene_system_repaired" parent="Cutscenes" instance=ExtResource("7_brygb")]
+visible = false
+
+[node name="Cutscene_planet_reached" parent="Cutscenes" instance=ExtResource("8_gqr68")]
+visible = false
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -100
+texture = ExtResource("9_4mwk3")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Container_radio" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Radio1" type="Node2D" parent="Container_radio"]
+position = Vector2(1697.56, 1819)
+
+[node name="SpriteRadio" type="Sprite2D" parent="Container_radio/Radio1"]
+z_index = -1
+position = Vector2(40, -10)
+scale = Vector2(0.865, 0.865)
+texture = ExtResource("10_4mwk3")
+
+[node name="CaesarMinigame" parent="Container_radio/Radio1" instance=ExtResource("4_drwq4")]
+unique_name_in_owner = true
+offset_left = -104.8
+offset_top = -16.2
+offset_right = -104.8
+offset_bottom = -16.2
+histogrammanzeige = 6
+
+[node name="FixedEncryptedText" parent="Container_radio/Radio1/CaesarMinigame" index="1"]
+offset_left = -356.2
+offset_top = 81.2
+offset_right = 202.885
+offset_bottom = 213.515
+theme = ExtResource("5_bfy5j")
+
+[node name="EncryptedText" parent="Container_radio/Radio1/CaesarMinigame" index="2"]
+offset_left = -355.2
+offset_top = -157.8
+offset_right = 204.92
+offset_bottom = -23.9451
+theme = ExtResource("5_bfy5j")
+
+[node name="DecryptedText" parent="Container_radio/Radio1/CaesarMinigame" index="3"]
+visible = true
+
+[node name="SpinBox" parent="Container_radio/Radio1/CaesarMinigame" index="4"]
+offset_left = 431.0
+offset_top = 224.0
+offset_right = 517.563
+offset_bottom = 255.0
+
+[node name="ApplyButton" parent="Container_radio/Radio1/CaesarMinigame" index="5"]
+custom_minimum_size = Vector2(0, 50)
+offset_left = 269.0
+offset_top = 208.0
+offset_right = 512.0
+offset_bottom = 258.0
+theme_override_colors/font_outline_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_colors/font_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_constants/outline_size = 1
+text = "Dekodieren
+"
+
+[node name="rad_sprite" parent="Container_radio/Radio1/CaesarMinigame" index="6"]
+position = Vector2(594.8, 144.2)
+
+[node name="HistogramContainer" parent="Container_radio/Radio1/CaesarMinigame" index="7"]
+custom_minimum_size = Vector2(224.125, 0)
+offset_left = 294.8
+offset_top = -158.8
+offset_right = 719.895
+offset_bottom = 45.62
+scale = Vector2(0.875, 0.875)
+theme = ExtResource("12_lcngf")
+
+[node name="ShiftUpButton" parent="Container_radio/Radio1/CaesarMinigame" index="8"]
+offset_left = 450.8
+offset_top = 88.1999
+offset_right = 511.8
+offset_bottom = 135.2
+theme_override_colors/font_outline_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_colors/font_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_constants/outline_size = 1
+
+[node name="ShiftDownButton" parent="Container_radio/Radio1/CaesarMinigame" index="9"]
+offset_left = 449.8
+offset_top = 148.2
+offset_right = 511.355
+offset_bottom = 195.2
+theme_override_colors/font_outline_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_colors/font_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_constants/outline_size = 1
+
+[node name="ShiftLabel" parent="Container_radio/Radio1/CaesarMinigame" index="10"]
+offset_left = 310.8
+offset_top = 104.2
+offset_right = 396.8
+offset_bottom = 192.2
+text = "25"
+label_settings = ExtResource("7_q80i3")
+horizontal_alignment = 2
+
+[node name="RadioCheatSheet" type="Sprite2D" parent="Container_radio/Radio1"]
+position = Vector2(947, 67)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_fcu61")
+
+[node name="Radio2" type="Node2D" parent="Container_radio"]
+position = Vector2(3405, 1257)
+rotation = -1.5708
+scale = Vector2(1.04, 1.04)
+
+[node name="SpriteRadio" type="Sprite2D" parent="Container_radio/Radio2"]
+z_index = -1
+position = Vector2(-81.8, 1.80005)
+scale = Vector2(0.805, 0.805)
+texture = ExtResource("10_4mwk3")
+
+[node name="CaesarMinigame" parent="Container_radio/Radio2" instance=ExtResource("4_drwq4")]
+offset_left = -104.8
+offset_top = -16.2
+offset_right = -104.8
+offset_bottom = -16.2
+histogrammanzeige = 6
+
+[node name="FixedEncryptedText" parent="Container_radio/Radio2/CaesarMinigame" index="1"]
+custom_minimum_size = Vector2(403.54, 124)
+offset_left = -443.0
+offset_top = 86.0
+offset_right = 79.0
+offset_bottom = 212.0
+theme = ExtResource("5_bfy5j")
+
+[node name="EncryptedText" parent="Container_radio/Radio2/CaesarMinigame" index="2"]
+offset_left = -443.0
+offset_top = -135.0
+offset_right = 79.0
+offset_bottom = -10.0
+theme = ExtResource("5_bfy5j")
+
+[node name="DecryptedText" parent="Container_radio/Radio2/CaesarMinigame" index="3"]
+visible = true
+
+[node name="SpinBox" parent="Container_radio/Radio2/CaesarMinigame" index="4"]
+offset_left = 431.0
+offset_top = 224.0
+offset_right = 517.563
+offset_bottom = 255.0
+
+[node name="ApplyButton" parent="Container_radio/Radio2/CaesarMinigame" index="5"]
+custom_minimum_size = Vector2(0, 50)
+offset_left = 137.0
+offset_top = 204.0
+offset_right = 357.0
+offset_bottom = 254.0
+theme_override_colors/font_outline_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_colors/font_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_constants/outline_size = 1
+text = "Dekodieren
+"
+
+[node name="rad_sprite" parent="Container_radio/Radio2/CaesarMinigame" index="6"]
+position = Vector2(427.876, 146.97)
+base_rotation_degrees = 180.0
+
+[node name="HistogramContainer" parent="Container_radio/Radio2/CaesarMinigame" index="7"]
+offset_left = 160.0
+offset_top = -138.0
+offset_right = 571.0
+offset_bottom = 62.0
+scale = Vector2(0.85, 0.85)
+theme = ExtResource("12_lcngf")
+
+[node name="ShiftUpButton" parent="Container_radio/Radio2/CaesarMinigame" index="8"]
+offset_left = 297.107
+offset_top = 91.2007
+offset_right = 358.107
+offset_bottom = 138.201
+theme_override_colors/font_outline_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_colors/font_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_constants/outline_size = 1
+
+[node name="ShiftDownButton" parent="Container_radio/Radio2/CaesarMinigame" index="9"]
+offset_left = 296.146
+offset_top = 146.97
+offset_right = 357.316
+offset_bottom = 193.97
+theme_override_colors/font_outline_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_colors/font_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_constants/outline_size = 1
+
+[node name="ShiftLabel" parent="Container_radio/Radio2/CaesarMinigame" index="10"]
+offset_left = 174.992
+offset_top = 105.624
+offset_right = 260.992
+offset_bottom = 194.957
+text = "25"
+label_settings = ExtResource("7_q80i3")
+horizontal_alignment = 2
+
+[node name="RadioCheatSheet" type="Sprite2D" parent="Container_radio/Radio2"]
+position = Vector2(774.038, 51.9259)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_fcu61")
+
+[node name="Radio3" type="Node2D" parent="Container_radio"]
+position = Vector2(2125.82, 343)
+rotation = 3.14159
+
+[node name="SpriteRadio" type="Sprite2D" parent="Container_radio/Radio3"]
+z_index = -1
+position = Vector2(-103, 10.9997)
+scale = Vector2(0.825, 0.825)
+texture = ExtResource("10_4mwk3")
+
+[node name="CaesarMinigame" parent="Container_radio/Radio3" instance=ExtResource("4_drwq4")]
+offset_left = -104.8
+offset_top = -16.2
+offset_right = -104.8
+offset_bottom = -16.2
+histogrammanzeige = 6
+
+[node name="FixedEncryptedText" parent="Container_radio/Radio3/CaesarMinigame" index="1"]
+offset_left = -479.0
+offset_top = 97.0
+offset_right = 58.0
+offset_bottom = 226.0
+theme = ExtResource("5_bfy5j")
+
+[node name="EncryptedText" parent="Container_radio/Radio3/CaesarMinigame" index="2"]
+offset_left = -475.0
+offset_top = -130.0
+offset_right = 58.0
+offset_bottom = 0.0
+theme = ExtResource("5_bfy5j")
+
+[node name="DecryptedText" parent="Container_radio/Radio3/CaesarMinigame" index="3"]
+visible = true
+
+[node name="SpinBox" parent="Container_radio/Radio3/CaesarMinigame" index="4"]
+offset_left = 431.0
+offset_top = 224.0
+offset_right = 517.563
+offset_bottom = 255.0
+
+[node name="ApplyButton" parent="Container_radio/Radio3/CaesarMinigame" index="5"]
+custom_minimum_size = Vector2(0, 50)
+offset_left = 121.0
+offset_top = 218.0
+offset_right = 341.0
+offset_bottom = 268.0
+theme_override_colors/font_outline_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_colors/font_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_constants/outline_size = 1
+text = "Dekodieren
+"
+
+[node name="rad_sprite" parent="Container_radio/Radio3/CaesarMinigame" index="6"]
+position = Vector2(408.8, 162.201)
+base_rotation_degrees = -90.0
+
+[node name="HistogramContainer" parent="Container_radio/Radio3/CaesarMinigame" index="7"]
+offset_left = 143.8
+offset_top = -131.8
+offset_right = 183.8
+offset_bottom = -91.7999
+scale = Vector2(0.85, 0.85)
+theme = ExtResource("12_lcngf")
+
+[node name="ShiftUpButton" parent="Container_radio/Radio3/CaesarMinigame" index="8"]
+offset_left = 279.8
+offset_top = 105.2
+offset_right = 340.8
+offset_bottom = 152.2
+theme_override_colors/font_outline_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_colors/font_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_constants/outline_size = 1
+
+[node name="ShiftDownButton" parent="Container_radio/Radio3/CaesarMinigame" index="9"]
+offset_left = 280.0
+offset_top = 162.0
+offset_right = 341.0
+offset_bottom = 209.0
+theme_override_colors/font_outline_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_colors/font_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_constants/outline_size = 1
+
+[node name="ShiftLabel" parent="Container_radio/Radio3/CaesarMinigame" index="10"]
+offset_left = 157.8
+offset_top = 119.2
+offset_right = 243.8
+offset_bottom = 208.533
+text = "25"
+label_settings = ExtResource("7_q80i3")
+horizontal_alignment = 2
+
+[node name="RadioCheatSheet" type="Sprite2D" parent="Container_radio/Radio3"]
+position = Vector2(768, 70.0019)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_fcu61")
+
+[node name="LED_Station1" parent="Container_radio" instance=ExtResource("6_oe5xn")]
+offset_left = 787.0
+offset_top = 346.575
+offset_right = 787.0
+offset_bottom = 346.575
+rotation = 1.5708
+scale = Vector2(1.41, 1.41)
+
+[node name="Container_navigator" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Control1" type="Control" parent="Container_navigator"]
+anchors_preset = 0
+offset_left = 3854.0
+offset_top = 2088.33
+offset_right = 3894.0
+offset_bottom = 2128.33
+rotation = 3.14159
+mouse_filter = 2
+
+[node name="Navigator1" parent="Container_navigator/Control1" instance=ExtResource("10_0fiio")]
+unique_name_in_owner = true
+position = Vector2(791.999, 272.002)
+rotation = 1.5708
+scale = Vector2(0.465, 0.465)
+
+[node name="Map" parent="Container_navigator/Control1/Navigator1" index="0"]
+position = Vector2(1935, 1330)
+rotation = 3.14159
+scale = Vector2(1, 1)
+texture = ExtResource("18_db7sf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Container_navigator/Control1/Navigator1/Map" index="0"]
+position = Vector2(971.786, 595.999)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("19_fcu61")
+
+[node name="Sprite2D" type="Sprite2D" parent="Container_navigator/Control1/Navigator1/Map/Sprite2D"]
+position = Vector2(-602.99, 330.681)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("20_fcu61")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Container_navigator/Control1/Navigator1/Map/Sprite2D"]
+position = Vector2(541.09, 308.804)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("21_lcngf")
+
+[node name="GraphNode0" parent="Container_navigator/Control1/Navigator1/Nodes" index="0"]
+position = Vector2(1635.5, 315.998)
+
+[node name="GraphNode1" parent="Container_navigator/Control1/Navigator1/Nodes" index="1"]
+position = Vector2(1428, 415.998)
+
+[node name="GraphNode2" parent="Container_navigator/Control1/Navigator1/Nodes" index="2"]
+position = Vector2(1528, 648.998)
+
+[node name="GraphNode3" parent="Container_navigator/Control1/Navigator1/Nodes" index="3"]
+position = Vector2(1241, 542.998)
+
+[node name="Frame" parent="Container_navigator/Control1/Navigator1" index="5"]
+position = Vector2(-186.651, -66.2744)
+scale = Vector2(2.98057, 3.23339)
+texture = ExtResource("22_lcngf")
+
+[node name="ButtonTravel" parent="Container_navigator/Control1/Navigator1/Control" index="0"]
+offset_left = 1920.0
+offset_top = 79.9982
+offset_right = 2092.0
+offset_bottom = 251.998
+scale = Vector2(0.6, 0.6)
+
+[node name="ShipStatus1" parent="Container_navigator/Control1" instance=ExtResource("11_3scep")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 593.997
+offset_top = 1261.0
+offset_right = 593.997
+offset_bottom = 1261.0
+rotation = 1.5708
+scale = Vector2(0.835, 0.835)
+
+[node name="VBoxContainer" parent="Container_navigator/Control1/ShipStatus1" index="0"]
+offset_left = 111.379
+offset_top = -41.9161
+offset_right = 797.379
+offset_bottom = -1.91609
+scale = Vector2(0.99, 0.99)
+
+[node name="SecStatus" parent="Container_navigator/Control1/ShipStatus1/VBoxContainer" index="0"]
+visible = false
+
+[node name="Container" parent="Container_navigator/Control1/ShipStatus1/VBoxContainer" index="1"]
+visible = false
+
+[node name="SecHealth" parent="Container_navigator/Control1/ShipStatus1/VBoxContainer" index="2"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Container_navigator/Control1/ShipStatus1/VBoxContainer/SecEnergy" index="0"]
+position = Vector2(252.773, -22.7847)
+scale = Vector2(1.17232, 0.792569)
+texture = ExtResource("24_4mwk3")
+
+[node name="Label" parent="Container_navigator/Control1/ShipStatus1/VBoxContainer/SecEnergy" index="1"]
+visible = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+label_settings = SubResource("LabelSettings_bb7bn")
+
+[node name="Container" parent="Container_navigator/Control1/ShipStatus1/VBoxContainer/SecEnergy" index="2"]
+visible = false
+
+[node name="EnergyLabel" parent="Container_navigator/Control1/ShipStatus1/VBoxContainer/SecEnergy" index="3"]
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.552941, 0.560784, 0.721569, 1)
+label_settings = SubResource("LabelSettings_bb7bn")
+
+[node name="EnergyBar" parent="Container_navigator/Control1/ShipStatus1/VBoxContainer/SecEnergy" index="4"]
+theme_override_colors/font_color = Color(0.0901961, 0.0941176, 0.145098, 1)
+theme_override_colors/font_outline_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_constants/outline_size = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_mvpoe")
+
+[node name="Label" type="Label" parent="Container_navigator/Control1/ShipStatus1"]
+layout_mode = 0
+offset_left = 111.379
+offset_top = -131.736
+offset_right = 213.379
+offset_bottom = -94.7363
+text = "Energie"
+label_settings = SubResource("LabelSettings_fcu61")
+
+[node name="Control2" type="Control" parent="Container_navigator"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2982.58
+offset_top = -116.875
+offset_right = 3022.58
+offset_bottom = -76.875
+rotation = 1.5708
+mouse_filter = 2
+
+[node name="ShipStatus2" parent="Container_navigator/Control2" instance=ExtResource("11_3scep")]
+layout_mode = 1
+offset_left = 617.005
+offset_top = 1265.0
+offset_right = 617.005
+offset_bottom = 1265.0
+rotation = 1.5708
+scale = Vector2(0.83, 0.83)
+
+[node name="VBoxContainer" parent="Container_navigator/Control2/ShipStatus2" index="0"]
+offset_left = 104.817
+offset_top = -13.2532
+offset_right = 790.817
+offset_bottom = 26.7468
+scale = Vector2(1.075, 1.075)
+
+[node name="SecStatus" parent="Container_navigator/Control2/ShipStatus2/VBoxContainer" index="0"]
+visible = false
+
+[node name="Container" parent="Container_navigator/Control2/ShipStatus2/VBoxContainer" index="1"]
+visible = false
+
+[node name="SecHealth" parent="Container_navigator/Control2/ShipStatus2/VBoxContainer" index="2"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Container_navigator/Control2/ShipStatus2/VBoxContainer/SecEnergy" index="0"]
+position = Vector2(257.563, -11.2653)
+scale = Vector2(1.13951, 0.657642)
+texture = ExtResource("24_4mwk3")
+
+[node name="Label" parent="Container_navigator/Control2/ShipStatus2/VBoxContainer/SecEnergy" index="1"]
+visible = false
+label_settings = SubResource("LabelSettings_ov0at")
+
+[node name="Container" parent="Container_navigator/Control2/ShipStatus2/VBoxContainer/SecEnergy" index="2"]
+visible = false
+
+[node name="EnergyLabel" parent="Container_navigator/Control2/ShipStatus2/VBoxContainer/SecEnergy" index="3"]
+label_settings = SubResource("LabelSettings_ov0at")
+
+[node name="EnergyBar" parent="Container_navigator/Control2/ShipStatus2/VBoxContainer/SecEnergy" index="4"]
+theme_override_colors/font_color = Color(0.0901961, 0.0941176, 0.145098, 1)
+theme_override_colors/font_outline_color = Color(0.715046, 0.722771, 0.841204, 1)
+theme_override_constants/outline_size = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_pdgup")
+
+[node name="Label" type="Label" parent="Container_navigator/Control2/ShipStatus2"]
+layout_mode = 0
+offset_left = 109.635
+offset_top = -98.7955
+offset_right = 211.635
+offset_bottom = -61.7955
+text = "Energie"
+label_settings = SubResource("LabelSettings_fcu61")
+
+[node name="Navigator2" parent="Container_navigator/Control2" instance=ExtResource("10_0fiio")]
+position = Vector2(758.001, 324.997)
+rotation = 1.5708
+scale = Vector2(0.43, 0.43)
+
+[node name="Map" parent="Container_navigator/Control2/Navigator2" index="0"]
+position = Vector2(1900, 1247.48)
+rotation = 3.14159
+scale = Vector2(1, 1)
+texture = ExtResource("18_db7sf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Container_navigator/Control2/Navigator2/Map" index="0"]
+position = Vector2(933.005, 596.001)
+scale = Vector2(1.24, 1.24)
+texture = ExtResource("19_fcu61")
+
+[node name="Sprite2D" type="Sprite2D" parent="Container_navigator/Control2/Navigator2/Map/Sprite2D"]
+position = Vector2(-630.222, 212.458)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("20_fcu61")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Container_navigator/Control2/Navigator2/Map/Sprite2D"]
+position = Vector2(505.437, 228.951)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("21_lcngf")
+
+[node name="GraphNode0" parent="Container_navigator/Control2/Navigator2/Nodes" index="0"]
+position = Vector2(1662.99, 349.983)
+
+[node name="GraphNode1" parent="Container_navigator/Control2/Navigator2/Nodes" index="1"]
+position = Vector2(1443.99, 442.983)
+
+[node name="GraphNode2" parent="Container_navigator/Control2/Navigator2/Nodes" index="2"]
+position = Vector2(1543.99, 675.983)
+
+[node name="GraphNode3" parent="Container_navigator/Control2/Navigator2/Nodes" index="3"]
+position = Vector2(1256.99, 569.983)
+
+[node name="Frame" parent="Container_navigator/Control2/Navigator2" index="5"]
+position = Vector2(-235.496, -80.4975)
+scale = Vector2(3.11514, 3.15715)
+texture = ExtResource("22_lcngf")
+
+[node name="ButtonTravel" parent="Container_navigator/Control2/Navigator2/Control" index="0"]
+offset_left = 1989.99
+offset_top = 49.9799
+offset_right = 2161.99
+offset_bottom = 221.98
+scale = Vector2(0.6, 0.6)
+
+[node name="Control3" type="Control" parent="Container_navigator"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -3.0
+offset_top = 17.735
+offset_right = 37.0
+offset_bottom = 57.735
+mouse_filter = 2
+
+[node name="ShipStatus3" parent="Container_navigator/Control3" instance=ExtResource("11_3scep")]
+layout_mode = 1
+offset_left = 631.0
+offset_top = 1333.0
+offset_right = 631.0
+offset_bottom = 1333.0
+rotation = 1.5708
+scale = Vector2(0.845, 0.845)
+
+[node name="VBoxContainer" parent="Container_navigator/Control3/ShipStatus3" index="0"]
+offset_left = 97.0415
+offset_top = 22.4849
+offset_right = 783.041
+offset_bottom = 62.4849
+
+[node name="SecStatus" parent="Container_navigator/Control3/ShipStatus3/VBoxContainer" index="0"]
+visible = false
+
+[node name="Container" parent="Container_navigator/Control3/ShipStatus3/VBoxContainer" index="1"]
+visible = false
+
+[node name="SecHealth" parent="Container_navigator/Control3/ShipStatus3/VBoxContainer" index="2"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Container_navigator/Control3/ShipStatus3/VBoxContainer/SecEnergy" index="0"]
+position = Vector2(255.621, -26.0366)
+scale = Vector2(1.14697, 0.752021)
+texture = ExtResource("24_4mwk3")
+
+[node name="Label" parent="Container_navigator/Control3/ShipStatus3/VBoxContainer/SecEnergy" index="1"]
+visible = false
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_colors/font_outline_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_bloce")
+
+[node name="Container" parent="Container_navigator/Control3/ShipStatus3/VBoxContainer/SecEnergy" index="2"]
+visible = false
+
+[node name="EnergyLabel" parent="Container_navigator/Control3/ShipStatus3/VBoxContainer/SecEnergy" index="3"]
+theme_override_colors/font_color = Color(0.552941, 0.560784, 0.721569, 1)
+theme_override_colors/font_shadow_color = Color(0.552941, 0.560784, 0.721569, 1)
+theme_override_colors/font_outline_color = Color(0.552941, 0.560784, 0.721569, 1)
+label_settings = SubResource("LabelSettings_gks4u")
+
+[node name="EnergyBar" parent="Container_navigator/Control3/ShipStatus3/VBoxContainer/SecEnergy" index="4"]
+theme_override_colors/font_color = Color(0.0901961, 0.0941176, 0.145098, 1)
+theme_override_colors/font_outline_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/fill = SubResource("StyleBoxFlat_ng6ho")
+
+[node name="Label" type="Label" parent="Container_navigator/Control3/ShipStatus3"]
+layout_mode = 0
+offset_left = 98.2246
+offset_top = -76.9233
+offset_right = 200.225
+offset_bottom = -39.9233
+text = "Energie"
+label_settings = SubResource("LabelSettings_fcu61")
+
+[node name="Navigator3" parent="Container_navigator/Control3" instance=ExtResource("10_0fiio")]
+position = Vector2(767, 270)
+rotation = 1.5708
+scale = Vector2(0.49, 0.49)
+
+[node name="Map" parent="Container_navigator/Control3/Navigator3" index="0"]
+position = Vector2(1927.5, 1317.49)
+rotation = 3.14159
+scale = Vector2(1, 1)
+texture = ExtResource("18_db7sf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Container_navigator/Control3/Navigator3/Map" index="0"]
+position = Vector2(933.005, 623.711)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("19_fcu61")
+
+[node name="Sprite2D" type="Sprite2D" parent="Container_navigator/Control3/Navigator3/Map/Sprite2D"]
+position = Vector2(-614.968, 261.66)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("20_fcu61")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Container_navigator/Control3/Navigator3/Map/Sprite2D"]
+position = Vector2(549.831, 278.116)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("21_lcngf")
+
+[node name="GraphNode0" parent="Container_navigator/Control3/Navigator3/Nodes" index="0"]
+position = Vector2(1669, 359.992)
+
+[node name="GraphNode1" parent="Container_navigator/Control3/Navigator3/Nodes" index="1"]
+position = Vector2(1450, 452.992)
+
+[node name="GraphNode2" parent="Container_navigator/Control3/Navigator3/Nodes" index="2"]
+position = Vector2(1550, 685.992)
+
+[node name="GraphNode3" parent="Container_navigator/Control3/Navigator3/Nodes" index="3"]
+position = Vector2(1263, 579.992)
+
+[node name="Frame" parent="Container_navigator/Control3/Navigator3" index="5"]
+position = Vector2(-148.749, -60.7072)
+scale = Vector2(2.97702, 3.01477)
+texture = ExtResource("22_lcngf")
+
+[node name="ButtonTravel" parent="Container_navigator/Control3/Navigator3/Control" index="0"]
+offset_left = 1972.5
+offset_top = 67.4904
+offset_right = 2144.5
+offset_bottom = 239.49
+scale = Vector2(0.6, 0.6)
+
+[node name="LED_Station2" parent="Container_navigator" instance=ExtResource("6_oe5xn")]
+offset_left = 1323.0
+offset_top = 1545.0
+offset_right = 1323.0
+offset_bottom = 1545.0
+scale = Vector2(1.205, 1.205)
+
+[node name="Container_binary" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+
+[node name="LED_Station3" parent="Container_binary" instance=ExtResource("6_oe5xn")]
+offset_left = 2586.81
+offset_top = 658.405
+offset_right = 2586.81
+offset_bottom = 658.405
+rotation = 3.14159
+scale = Vector2(1.31, 1.31)
+
+[node name="Control1" type="Control" parent="Container_binary"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Binary1" parent="Container_binary/Control1" instance=ExtResource("2_usurx")]
+position = Vector2(434.12, 925.18)
+rotation = 1.5708
+scale = Vector2(1.765, 1.765)
+
+[node name="Switches" parent="Container_binary/Control1/Binary1" index="0"]
+position = Vector2(-5.66589, 1.52588e-05)
+scale = Vector2(1.035, 1.035)
+
+[node name="Switch0" parent="Container_binary/Control1/Binary1/Switches" index="0"]
+position = Vector2(274.686, -1.06615)
+
+[node name="Switch" parent="Container_binary/Control1/Binary1/Switches/Switch0" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control1/Binary1/Switches/Switch0" index="1"]
+material = SubResource("ShaderMaterial_dma0e")
+position = Vector2(2.20628, -65.6535)
+
+[node name="Switch1" parent="Container_binary/Control1/Binary1/Switches" index="1"]
+position = Vector2(201.598, -1.06588)
+
+[node name="Switch" parent="Container_binary/Control1/Binary1/Switches/Switch1" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control1/Binary1/Switches/Switch1" index="1"]
+material = SubResource("ShaderMaterial_86ehu")
+
+[node name="Switch2" parent="Container_binary/Control1/Binary1/Switches" index="2"]
+position = Vector2(128.51, -1.06561)
+
+[node name="Switch" parent="Container_binary/Control1/Binary1/Switches/Switch2" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control1/Binary1/Switches/Switch2" index="1"]
+material = SubResource("ShaderMaterial_eu01k")
+
+[node name="Switch3" parent="Container_binary/Control1/Binary1/Switches" index="3"]
+position = Vector2(55.4221, -1.06537)
+
+[node name="Switch" parent="Container_binary/Control1/Binary1/Switches/Switch3" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control1/Binary1/Switches/Switch3" index="1"]
+material = SubResource("ShaderMaterial_oyu53")
+
+[node name="Switch4" parent="Container_binary/Control1/Binary1/Switches" index="4"]
+position = Vector2(-17.6654, -1.06509)
+
+[node name="Switch" parent="Container_binary/Control1/Binary1/Switches/Switch4" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control1/Binary1/Switches/Switch4" index="1"]
+material = SubResource("ShaderMaterial_4renm")
+
+[node name="Switch5" parent="Container_binary/Control1/Binary1/Switches" index="5"]
+position = Vector2(-90.7535, -1.06483)
+
+[node name="Switch" parent="Container_binary/Control1/Binary1/Switches/Switch5" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control1/Binary1/Switches/Switch5" index="1"]
+material = SubResource("ShaderMaterial_5okmh")
+
+[node name="Switch6" parent="Container_binary/Control1/Binary1/Switches" index="6"]
+position = Vector2(-163.841, -1.06458)
+
+[node name="Switch" parent="Container_binary/Control1/Binary1/Switches/Switch6" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control1/Binary1/Switches/Switch6" index="1"]
+material = SubResource("ShaderMaterial_3eslr")
+
+[node name="Switch7" parent="Container_binary/Control1/Binary1/Switches" index="7"]
+position = Vector2(-236.929, -1.0643)
+
+[node name="Switch" parent="Container_binary/Control1/Binary1/Switches/Switch7" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control1/Binary1/Switches/Switch7" index="1"]
+material = SubResource("ShaderMaterial_drwq4")
+
+[node name="VBoxContainer" parent="Container_binary/Control1/Binary1/Control" index="0"]
+offset_left = 334.742
+offset_top = -39.0267
+offset_right = 476.742
+offset_bottom = 70.9733
+
+[node name="TextureRect" parent="Container_binary/Control1/Binary1/Control/VBoxContainer/Control" index="0"]
+visible = false
+offset_left = -1.13334
+offset_top = -47.0255
+offset_right = 140.867
+offset_bottom = 47.6412
+texture = ExtResource("28_pgmtf")
+
+[node name="LabelTargetValue" parent="Container_binary/Control1/Binary1/Control/VBoxContainer/Control" index="1"]
+offset_left = 40.793
+offset_top = -28.8953
+offset_right = 111.793
+offset_bottom = 19.1047
+
+[node name="ButtonFire" parent="Container_binary/Control1/Binary1/Control/VBoxContainer/Control" index="2"]
+offset_left = 17.564
+offset_top = 63.456
+offset_right = 133.474
+offset_bottom = 106.251
+theme_override_colors/font_outline_color = Color(0.870588, 0.87451, 0.964706, 1)
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+theme_override_font_sizes/font_size = 31
+
+[node name="ValuesHelp" parent="Container_binary/Control1/Binary1/Control" index="1"]
+offset_left = -280.555
+offset_top = 40.2956
+offset_right = 314.315
+offset_bottom = 77.2956
+
+[node name="Label7" parent="Container_binary/Control1/Binary1/Control/ValuesHelp" index="0"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label6" parent="Container_binary/Control1/Binary1/Control/ValuesHelp" index="1"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label5" parent="Container_binary/Control1/Binary1/Control/ValuesHelp" index="2"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label4" parent="Container_binary/Control1/Binary1/Control/ValuesHelp" index="3"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label3" parent="Container_binary/Control1/Binary1/Control/ValuesHelp" index="4"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label2" parent="Container_binary/Control1/Binary1/Control/ValuesHelp" index="5"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label1" parent="Container_binary/Control1/Binary1/Control/ValuesHelp" index="6"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label0" parent="Container_binary/Control1/Binary1/Control/ValuesHelp" index="7"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Container_binary/Control1/Binary1"]
+z_index = -1
+position = Vector2(88, -20)
+scale = Vector2(1.282, 1.282)
+texture = ExtResource("28_lcngf")
+
+[node name="Control2" type="Control" parent="Container_binary"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Binary2" parent="Container_binary/Control2" instance=ExtResource("2_usurx")]
+position = Vector2(1792, 1830)
+scale = Vector2(1.595, 1.595)
+
+[node name="Switches" parent="Container_binary/Control2/Binary2" index="0"]
+position = Vector2(-5.66589, 1.52588e-05)
+scale = Vector2(1.035, 1.035)
+
+[node name="Switch0" parent="Container_binary/Control2/Binary2/Switches" index="0"]
+position = Vector2(274.686, -1.06615)
+
+[node name="Switch" parent="Container_binary/Control2/Binary2/Switches/Switch0" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control2/Binary2/Switches/Switch0" index="1"]
+material = SubResource("ShaderMaterial_dma0e")
+
+[node name="Switch1" parent="Container_binary/Control2/Binary2/Switches" index="1"]
+position = Vector2(201.598, -1.06588)
+
+[node name="Switch" parent="Container_binary/Control2/Binary2/Switches/Switch1" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control2/Binary2/Switches/Switch1" index="1"]
+material = SubResource("ShaderMaterial_86ehu")
+
+[node name="Switch2" parent="Container_binary/Control2/Binary2/Switches" index="2"]
+position = Vector2(128.51, -1.06561)
+
+[node name="Switch" parent="Container_binary/Control2/Binary2/Switches/Switch2" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control2/Binary2/Switches/Switch2" index="1"]
+material = SubResource("ShaderMaterial_eu01k")
+
+[node name="Switch3" parent="Container_binary/Control2/Binary2/Switches" index="3"]
+position = Vector2(55.4221, -1.06537)
+
+[node name="Switch" parent="Container_binary/Control2/Binary2/Switches/Switch3" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control2/Binary2/Switches/Switch3" index="1"]
+material = SubResource("ShaderMaterial_oyu53")
+
+[node name="Switch4" parent="Container_binary/Control2/Binary2/Switches" index="4"]
+position = Vector2(-17.6654, -1.06509)
+
+[node name="Switch" parent="Container_binary/Control2/Binary2/Switches/Switch4" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control2/Binary2/Switches/Switch4" index="1"]
+material = SubResource("ShaderMaterial_4renm")
+
+[node name="Switch5" parent="Container_binary/Control2/Binary2/Switches" index="5"]
+position = Vector2(-90.7535, -1.06483)
+
+[node name="Switch" parent="Container_binary/Control2/Binary2/Switches/Switch5" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control2/Binary2/Switches/Switch5" index="1"]
+material = SubResource("ShaderMaterial_5okmh")
+
+[node name="Switch6" parent="Container_binary/Control2/Binary2/Switches" index="6"]
+position = Vector2(-163.841, -1.06458)
+
+[node name="Switch" parent="Container_binary/Control2/Binary2/Switches/Switch6" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control2/Binary2/Switches/Switch6" index="1"]
+material = SubResource("ShaderMaterial_3eslr")
+position = Vector2(-2.71985, -64.963)
+
+[node name="Switch7" parent="Container_binary/Control2/Binary2/Switches" index="7"]
+position = Vector2(-236.929, -1.0643)
+
+[node name="Switch" parent="Container_binary/Control2/Binary2/Switches/Switch7" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control2/Binary2/Switches/Switch7" index="1"]
+material = SubResource("ShaderMaterial_drwq4")
+position = Vector2(-2.92859, -65.569)
+
+[node name="VBoxContainer" parent="Container_binary/Control2/Binary2/Control" index="0"]
+offset_left = 334.742
+offset_top = -39.0267
+offset_right = 476.742
+offset_bottom = 70.9733
+
+[node name="TextureRect" parent="Container_binary/Control2/Binary2/Control/VBoxContainer/Control" index="0"]
+visible = false
+offset_left = -1.13334
+offset_top = -47.0255
+offset_right = 140.867
+offset_bottom = 47.6412
+texture = ExtResource("28_pgmtf")
+
+[node name="LabelTargetValue" parent="Container_binary/Control2/Binary2/Control/VBoxContainer/Control" index="1"]
+offset_left = 39.0934
+offset_top = -22.663
+offset_right = 110.093
+offset_bottom = 25.337
+
+[node name="ButtonFire" parent="Container_binary/Control2/Binary2/Control/VBoxContainer/Control" index="2"]
+offset_left = 11.9665
+offset_top = 65.9859
+offset_right = 128.406
+offset_bottom = 111.236
+theme_override_colors/font_outline_color = Color(0.870588, 0.87451, 0.964706, 1)
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+theme_override_font_sizes/font_size = 32
+
+[node name="ValuesHelp" parent="Container_binary/Control2/Binary2/Control" index="1"]
+offset_left = -280.555
+offset_top = 40.2956
+offset_right = 314.315
+offset_bottom = 77.2956
+
+[node name="Label7" parent="Container_binary/Control2/Binary2/Control/ValuesHelp" index="0"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label6" parent="Container_binary/Control2/Binary2/Control/ValuesHelp" index="1"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label5" parent="Container_binary/Control2/Binary2/Control/ValuesHelp" index="2"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label4" parent="Container_binary/Control2/Binary2/Control/ValuesHelp" index="3"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label3" parent="Container_binary/Control2/Binary2/Control/ValuesHelp" index="4"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label2" parent="Container_binary/Control2/Binary2/Control/ValuesHelp" index="5"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label1" parent="Container_binary/Control2/Binary2/Control/ValuesHelp" index="6"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label0" parent="Container_binary/Control2/Binary2/Control/ValuesHelp" index="7"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Container_binary/Control2/Binary2"]
+z_index = -1
+position = Vector2(82.759, -16)
+scale = Vector2(1.282, 1.282)
+texture = ExtResource("28_lcngf")
+
+[node name="Control3" type="Control" parent="Container_binary"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Binary3" parent="Container_binary/Control3" instance=ExtResource("2_usurx")]
+position = Vector2(3426, 1231)
+rotation = -1.5708
+scale = Vector2(1.765, 1.765)
+
+[node name="Switches" parent="Container_binary/Control3/Binary3" index="0"]
+position = Vector2(-5.439, -6.503)
+scale = Vector2(1.035, 1.035)
+
+[node name="Switch0" parent="Container_binary/Control3/Binary3/Switches" index="0"]
+position = Vector2(274.686, -1.06615)
+
+[node name="Switch" parent="Container_binary/Control3/Binary3/Switches/Switch0" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control3/Binary3/Switches/Switch0" index="1"]
+material = SubResource("ShaderMaterial_dma0e")
+
+[node name="Switch1" parent="Container_binary/Control3/Binary3/Switches" index="1"]
+position = Vector2(201.598, -1.06588)
+
+[node name="Switch" parent="Container_binary/Control3/Binary3/Switches/Switch1" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control3/Binary3/Switches/Switch1" index="1"]
+material = SubResource("ShaderMaterial_86ehu")
+
+[node name="Switch2" parent="Container_binary/Control3/Binary3/Switches" index="2"]
+position = Vector2(128.51, -1.06561)
+
+[node name="Switch" parent="Container_binary/Control3/Binary3/Switches/Switch2" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control3/Binary3/Switches/Switch2" index="1"]
+material = SubResource("ShaderMaterial_eu01k")
+
+[node name="Switch3" parent="Container_binary/Control3/Binary3/Switches" index="3"]
+position = Vector2(55.4221, -1.06537)
+
+[node name="Switch" parent="Container_binary/Control3/Binary3/Switches/Switch3" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control3/Binary3/Switches/Switch3" index="1"]
+material = SubResource("ShaderMaterial_oyu53")
+
+[node name="Switch4" parent="Container_binary/Control3/Binary3/Switches" index="4"]
+position = Vector2(-17.6654, -1.06509)
+
+[node name="Switch" parent="Container_binary/Control3/Binary3/Switches/Switch4" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control3/Binary3/Switches/Switch4" index="1"]
+material = SubResource("ShaderMaterial_4renm")
+
+[node name="Switch5" parent="Container_binary/Control3/Binary3/Switches" index="5"]
+position = Vector2(-90.7535, -1.06483)
+
+[node name="Switch" parent="Container_binary/Control3/Binary3/Switches/Switch5" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control3/Binary3/Switches/Switch5" index="1"]
+material = SubResource("ShaderMaterial_5okmh")
+
+[node name="Switch6" parent="Container_binary/Control3/Binary3/Switches" index="6"]
+position = Vector2(-163.841, -1.06458)
+
+[node name="Switch" parent="Container_binary/Control3/Binary3/Switches/Switch6" index="0"]
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control3/Binary3/Switches/Switch6" index="1"]
+material = SubResource("ShaderMaterial_3eslr")
+
+[node name="Switch7" parent="Container_binary/Control3/Binary3/Switches" index="7"]
+position = Vector2(-236.929, -1.0643)
+
+[node name="Switch" parent="Container_binary/Control3/Binary3/Switches/Switch7" index="0"]
+position = Vector2(0.227598, 0.230139)
+texture = ExtResource("25_pgmtf")
+
+[node name="LED" parent="Container_binary/Control3/Binary3/Switches/Switch7" index="1"]
+material = SubResource("ShaderMaterial_drwq4")
+
+[node name="Control" parent="Container_binary/Control3/Binary3" index="1"]
+offset_left = -1.673
+offset_top = -7.075
+offset_right = 38.327
+offset_bottom = 32.925
+
+[node name="VBoxContainer" parent="Container_binary/Control3/Binary3/Control" index="0"]
+offset_left = 334.742
+offset_top = -39.0267
+offset_right = 476.742
+offset_bottom = 70.9733
+
+[node name="TextureRect" parent="Container_binary/Control3/Binary3/Control/VBoxContainer/Control" index="0"]
+visible = false
+offset_left = -1.13334
+offset_top = -47.0255
+offset_right = 140.867
+offset_bottom = 47.6412
+texture = ExtResource("28_pgmtf")
+
+[node name="LabelTargetValue" parent="Container_binary/Control3/Binary3/Control/VBoxContainer/Control" index="1"]
+offset_left = 39.0934
+offset_top = -22.663
+offset_right = 110.093
+offset_bottom = 25.337
+
+[node name="ButtonFire" parent="Container_binary/Control3/Binary3/Control/VBoxContainer/Control" index="2"]
+offset_left = 15.9394
+offset_top = 67.0662
+offset_right = 131.354
+offset_bottom = 110.941
+theme_override_colors/font_outline_color = Color(0.870588, 0.87451, 0.964706, 1)
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 32
+
+[node name="ValuesHelp" parent="Container_binary/Control3/Binary3/Control" index="1"]
+offset_left = -280.555
+offset_top = 40.2956
+offset_right = 314.315
+offset_bottom = 77.2956
+
+[node name="Label7" parent="Container_binary/Control3/Binary3/Control/ValuesHelp" index="0"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label6" parent="Container_binary/Control3/Binary3/Control/ValuesHelp" index="1"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label5" parent="Container_binary/Control3/Binary3/Control/ValuesHelp" index="2"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label4" parent="Container_binary/Control3/Binary3/Control/ValuesHelp" index="3"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label3" parent="Container_binary/Control3/Binary3/Control/ValuesHelp" index="4"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label2" parent="Container_binary/Control3/Binary3/Control/ValuesHelp" index="5"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label1" parent="Container_binary/Control3/Binary3/Control/ValuesHelp" index="6"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Label0" parent="Container_binary/Control3/Binary3/Control/ValuesHelp" index="7"]
+theme_override_colors/font_color = Color(0.870588, 0.87451, 0.964706, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Container_binary/Control3/Binary3"]
+z_index = -1
+position = Vector2(86, -22)
+scale = Vector2(1.272, 1.272)
+texture = ExtResource("28_lcngf")
+
+[node name="Container_circuit" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[node name="Circuit1" parent="Container_circuit" instance=ExtResource("4_01v6r")]
+position = Vector2(2445, 656)
+rotation = 3.14159
+style = 1
+
+[node name="Background" parent="Container_circuit/Circuit1" index="0"]
+position = Vector2(547.082, 286.085)
+scale = Vector2(0.604431, 0.580543)
+texture = ExtResource("32_ov0at")
+
+[node name="BBox" parent="Container_circuit/Circuit1" index="1"]
+offset_right = 1107.0
+offset_bottom = 518.0
+
+[node name="Gate" parent="Container_circuit/Circuit1/Components/Gates" index="0"]
+position = Vector2(712, 177)
+
+[node name="Gate2" parent="Container_circuit/Circuit1/Components/Gates" index="1"]
+position = Vector2(269, 66)
+
+[node name="Gate3" parent="Container_circuit/Circuit1/Components/Gates" index="2"]
+position = Vector2(268, 303)
+
+[node name="Connector3" parent="Container_circuit/Circuit1/Components/Connectors" index="0"]
+position = Vector2(496, 151)
+
+[node name="Connector4" parent="Container_circuit/Circuit1/Components/Connectors" index="1"]
+position = Vector2(507, 322)
+
+[node name="StaticComponents" parent="Container_circuit/Circuit1" index="3"]
+scale = Vector2(0.94, 0.94)
+
+[node name="Output" parent="Container_circuit/Circuit1/StaticComponents" index="5"]
+position = Vector2(976.631, 264.977)
+
+[node name="EvaluationAnimation" parent="Container_circuit/Circuit1" index="4"]
+position = Vector2(1055, 495.003)
+
+[node name="SpawnPoint" parent="Container_circuit/Circuit1" index="5"]
+position = Vector2(573.389, 281.611)
+
+[node name="UI" parent="Container_circuit/Circuit1" index="6"]
+offset_left = -62.0
+offset_top = 546.0
+offset_right = 1200.0
+offset_bottom = 636.0
+
+[node name="Buttons" parent="Container_circuit/Circuit1/UI" index="0"]
+offset_left = 27.4495
+offset_top = 9.18317
+offset_right = 1319.45
+offset_bottom = 56.1832
+scale = Vector2(0.785, 0.785)
+
+[node name="ButtonAddAND" parent="Container_circuit/Circuit1/UI/Buttons" index="0"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eevtr")
+
+[node name="ButtonAddOR" parent="Container_circuit/Circuit1/UI/Buttons" index="2"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_saomy")
+
+[node name="ButtonAddXOR" parent="Container_circuit/Circuit1/UI/Buttons" index="4"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_saomy")
+
+[node name="ButtonAddNOT" parent="Container_circuit/Circuit1/UI/Buttons" index="6"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_saomy")
+
+[node name="Container2" parent="Container_circuit/Circuit1/UI/Buttons" index="8"]
+color = Color(0.0823529, 0.0862745, 0.129412, 1)
+
+[node name="ButtonAddWire" parent="Container_circuit/Circuit1/UI/Buttons" index="10"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_saomy")
+
+[node name="Container4" type="Container" parent="Container_circuit/Circuit1/UI/Buttons" index="11"]
+custom_minimum_size = Vector2(270.805, 0)
+layout_mode = 2
+
+[node name="Container3" parent="Container_circuit/Circuit1/UI/Buttons" index="12"]
+custom_minimum_size = Vector2(244.265, 0)
+
+[node name="ButtonReset" parent="Container_circuit/Circuit1/UI/Buttons" index="13"]
+custom_minimum_size = Vector2(172.485, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_i3p70")
+
+[node name="ButtonEvaluate" parent="Container_circuit/Circuit1/UI/Buttons" index="16"]
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ktgrm")
+
+[node name="ExpressionInput" parent="Container_circuit/Circuit1/UI" index="1"]
+offset_left = -676.411
+offset_top = -631.84
+offset_right = -93.4105
+offset_bottom = -596.84
+theme_override_colors/background_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+
+[node name="InputALabel" parent="Container_circuit/Circuit1" index="7"]
+offset_left = 18.0166
+offset_top = 21.0001
+offset_right = 42.0166
+offset_bottom = 58.0001
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="InputBLabel" parent="Container_circuit/Circuit1" index="8"]
+offset_left = 17.0
+offset_top = 132.934
+offset_right = 41.0
+offset_bottom = 169.934
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="InputCLabel" parent="Container_circuit/Circuit1" index="9"]
+offset_left = 19.0
+offset_top = 240.8
+offset_right = 43.0
+offset_bottom = 277.8
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="InputDLabel" parent="Container_circuit/Circuit1" index="10"]
+offset_left = 19.0
+offset_top = 358.717
+offset_right = 43.0
+offset_bottom = 395.717
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="InputELabel" parent="Container_circuit/Circuit1" index="11"]
+offset_left = 20.0
+offset_top = 456.584
+offset_right = 44.0
+offset_bottom = 493.584
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="OutputLabel" parent="Container_circuit/Circuit1" index="12"]
+offset_left = 1053.98
+offset_top = 236.529
+offset_right = 1125.98
+offset_bottom = 273.529
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="FormattedInputField" parent="Container_circuit/Circuit1" index="13"]
+visible = true
+offset_left = 722.0
+offset_right = 1103.0
+
+[node name="DeletePanel" parent="Container_circuit/Circuit1" index="14"]
+position = Vector2(1055, 471)
+
+[node name="CollisionShape2D" parent="Container_circuit/Circuit1/DeletePanel/Area2D" index="0"]
+position = Vector2(0.000583649, 0.000286102)
+
+[node name="LED" parent="Container_circuit/Circuit1" index="15"]
+position = Vector2(1174, 523)
+
+[node name="Circuit2" parent="Container_circuit" instance=ExtResource("4_01v6r")]
+position = Vector2(726, 505)
+rotation = 1.5708
+style = 1
+
+[node name="Background" parent="Container_circuit/Circuit2" index="0"]
+position = Vector2(547.082, 286.085)
+scale = Vector2(0.604431, 0.580543)
+texture = ExtResource("32_ov0at")
+
+[node name="BBox" parent="Container_circuit/Circuit2" index="1"]
+offset_right = 1107.0
+offset_bottom = 518.0
+
+[node name="Gate" parent="Container_circuit/Circuit2/Components/Gates" index="0"]
+position = Vector2(712, 177)
+
+[node name="Gate2" parent="Container_circuit/Circuit2/Components/Gates" index="1"]
+position = Vector2(269, 66)
+
+[node name="Gate3" parent="Container_circuit/Circuit2/Components/Gates" index="2"]
+position = Vector2(268, 303)
+
+[node name="Connector3" parent="Container_circuit/Circuit2/Components/Connectors" index="0"]
+position = Vector2(496, 151)
+
+[node name="Connector4" parent="Container_circuit/Circuit2/Components/Connectors" index="1"]
+position = Vector2(507, 322)
+
+[node name="StaticComponents" parent="Container_circuit/Circuit2" index="3"]
+scale = Vector2(0.94, 0.94)
+
+[node name="Output" parent="Container_circuit/Circuit2/StaticComponents" index="5"]
+position = Vector2(976.631, 264.977)
+
+[node name="EvaluationAnimation" parent="Container_circuit/Circuit2" index="4"]
+position = Vector2(1058, 491.996)
+
+[node name="SpawnPoint" parent="Container_circuit/Circuit2" index="5"]
+position = Vector2(573.389, 281.611)
+
+[node name="UI" parent="Container_circuit/Circuit2" index="6"]
+offset_left = -62.0
+offset_top = 546.0
+offset_right = 1200.0
+offset_bottom = 636.0
+
+[node name="Buttons" parent="Container_circuit/Circuit2/UI" index="0"]
+offset_left = 27.4495
+offset_top = 9.18317
+offset_right = 1319.45
+offset_bottom = 56.1832
+scale = Vector2(0.785, 0.785)
+
+[node name="ButtonAddAND" parent="Container_circuit/Circuit2/UI/Buttons" index="0"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eevtr")
+
+[node name="ButtonAddOR" parent="Container_circuit/Circuit2/UI/Buttons" index="2"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_saomy")
+
+[node name="ButtonAddXOR" parent="Container_circuit/Circuit2/UI/Buttons" index="4"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_saomy")
+
+[node name="ButtonAddNOT" parent="Container_circuit/Circuit2/UI/Buttons" index="6"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_saomy")
+
+[node name="Container2" parent="Container_circuit/Circuit2/UI/Buttons" index="8"]
+color = Color(0.0823529, 0.0862745, 0.129412, 1)
+
+[node name="ButtonAddWire" parent="Container_circuit/Circuit2/UI/Buttons" index="10"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_saomy")
+
+[node name="Container4" type="Container" parent="Container_circuit/Circuit2/UI/Buttons" index="11"]
+custom_minimum_size = Vector2(270.805, 0)
+layout_mode = 2
+
+[node name="Container3" parent="Container_circuit/Circuit2/UI/Buttons" index="12"]
+custom_minimum_size = Vector2(244.265, 0)
+
+[node name="ButtonReset" parent="Container_circuit/Circuit2/UI/Buttons" index="13"]
+custom_minimum_size = Vector2(172.485, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_i3p70")
+
+[node name="ButtonEvaluate" parent="Container_circuit/Circuit2/UI/Buttons" index="16"]
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ktgrm")
+
+[node name="ExpressionInput" parent="Container_circuit/Circuit2/UI" index="1"]
+offset_left = -676.411
+offset_top = -631.84
+offset_right = -93.4105
+offset_bottom = -596.84
+theme_override_colors/background_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+
+[node name="InputALabel" parent="Container_circuit/Circuit2" index="7"]
+offset_left = 18.0166
+offset_top = 21.0001
+offset_right = 42.0166
+offset_bottom = 58.0001
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="InputBLabel" parent="Container_circuit/Circuit2" index="8"]
+offset_left = 17.0
+offset_top = 132.934
+offset_right = 41.0
+offset_bottom = 169.934
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="InputCLabel" parent="Container_circuit/Circuit2" index="9"]
+offset_left = 19.0
+offset_top = 240.8
+offset_right = 43.0
+offset_bottom = 277.8
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="InputDLabel" parent="Container_circuit/Circuit2" index="10"]
+offset_left = 19.0
+offset_top = 358.717
+offset_right = 43.0
+offset_bottom = 395.717
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="InputELabel" parent="Container_circuit/Circuit2" index="11"]
+offset_left = 20.0
+offset_top = 456.584
+offset_right = 44.0
+offset_bottom = 493.584
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="OutputLabel" parent="Container_circuit/Circuit2" index="12"]
+offset_left = 1053.98
+offset_top = 236.529
+offset_right = 1125.98
+offset_bottom = 273.529
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="FormattedInputField" parent="Container_circuit/Circuit2" index="13"]
+visible = true
+offset_left = 722.0
+offset_right = 1103.0
+
+[node name="DeletePanel" parent="Container_circuit/Circuit2" index="14"]
+position = Vector2(1055, 471)
+
+[node name="CollisionShape2D" parent="Container_circuit/Circuit2/DeletePanel/Area2D" index="0"]
+position = Vector2(0.000583649, 0.000286102)
+
+[node name="LED" parent="Container_circuit/Circuit2" index="15"]
+position = Vector2(1174, 523)
+
+[node name="Circuit3" parent="Container_circuit" instance=ExtResource("4_01v6r")]
+position = Vector2(1330, 1508)
+style = 1
+
+[node name="Background" parent="Container_circuit/Circuit3" index="0"]
+position = Vector2(547.082, 286.085)
+scale = Vector2(0.604431, 0.580543)
+texture = ExtResource("32_ov0at")
+
+[node name="BBox" parent="Container_circuit/Circuit3" index="1"]
+offset_right = 1107.0
+offset_bottom = 518.0
+
+[node name="Gate" parent="Container_circuit/Circuit3/Components/Gates" index="0"]
+position = Vector2(712, 177)
+
+[node name="Gate2" parent="Container_circuit/Circuit3/Components/Gates" index="1"]
+position = Vector2(269, 66)
+
+[node name="Gate3" parent="Container_circuit/Circuit3/Components/Gates" index="2"]
+position = Vector2(268, 303)
+
+[node name="Connector3" parent="Container_circuit/Circuit3/Components/Connectors" index="0"]
+position = Vector2(496, 151)
+
+[node name="Connector4" parent="Container_circuit/Circuit3/Components/Connectors" index="1"]
+position = Vector2(507, 322)
+
+[node name="StaticComponents" parent="Container_circuit/Circuit3" index="3"]
+scale = Vector2(0.94, 0.94)
+
+[node name="Output" parent="Container_circuit/Circuit3/StaticComponents" index="5"]
+position = Vector2(976.631, 264.977)
+
+[node name="EvaluationAnimation" parent="Container_circuit/Circuit3" index="4"]
+position = Vector2(1059, 496)
+
+[node name="SpawnPoint" parent="Container_circuit/Circuit3" index="5"]
+position = Vector2(573.389, 281.611)
+
+[node name="UI" parent="Container_circuit/Circuit3" index="6"]
+offset_left = -62.0
+offset_top = 546.0
+offset_right = 1200.0
+offset_bottom = 636.0
+
+[node name="Buttons" parent="Container_circuit/Circuit3/UI" index="0"]
+offset_left = 27.4495
+offset_top = 9.18317
+offset_right = 1319.45
+offset_bottom = 56.1832
+scale = Vector2(0.785, 0.785)
+
+[node name="ButtonAddAND" parent="Container_circuit/Circuit3/UI/Buttons" index="0"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eevtr")
+
+[node name="ButtonAddOR" parent="Container_circuit/Circuit3/UI/Buttons" index="2"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_saomy")
+
+[node name="ButtonAddXOR" parent="Container_circuit/Circuit3/UI/Buttons" index="4"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_saomy")
+
+[node name="ButtonAddNOT" parent="Container_circuit/Circuit3/UI/Buttons" index="6"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_saomy")
+
+[node name="Container2" parent="Container_circuit/Circuit3/UI/Buttons" index="8"]
+color = Color(0.0823529, 0.0862745, 0.129412, 1)
+
+[node name="ButtonAddWire" parent="Container_circuit/Circuit3/UI/Buttons" index="10"]
+custom_minimum_size = Vector2(100, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcu61")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7bn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_saomy")
+
+[node name="Container4" type="Container" parent="Container_circuit/Circuit3/UI/Buttons" index="11"]
+custom_minimum_size = Vector2(270.805, 0)
+layout_mode = 2
+
+[node name="Container3" parent="Container_circuit/Circuit3/UI/Buttons" index="12"]
+custom_minimum_size = Vector2(244.265, 0)
+
+[node name="ButtonReset" parent="Container_circuit/Circuit3/UI/Buttons" index="13"]
+custom_minimum_size = Vector2(172.485, 0)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_i3p70")
+
+[node name="ButtonEvaluate" parent="Container_circuit/Circuit3/UI/Buttons" index="16"]
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ktgrm")
+
+[node name="ExpressionInput" parent="Container_circuit/Circuit3/UI" index="1"]
+offset_left = -676.411
+offset_top = -631.84
+offset_right = -93.4105
+offset_bottom = -596.84
+theme_override_colors/background_color = Color(0.262745, 0.266667, 0.415686, 1)
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+
+[node name="InputALabel" parent="Container_circuit/Circuit3" index="7"]
+offset_left = 18.0166
+offset_top = 21.0001
+offset_right = 42.0166
+offset_bottom = 58.0001
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="InputBLabel" parent="Container_circuit/Circuit3" index="8"]
+offset_left = 17.0
+offset_top = 132.934
+offset_right = 41.0
+offset_bottom = 169.934
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="InputCLabel" parent="Container_circuit/Circuit3" index="9"]
+offset_left = 19.0
+offset_top = 240.8
+offset_right = 43.0
+offset_bottom = 277.8
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="InputDLabel" parent="Container_circuit/Circuit3" index="10"]
+offset_left = 19.0
+offset_top = 358.717
+offset_right = 43.0
+offset_bottom = 395.717
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="InputELabel" parent="Container_circuit/Circuit3" index="11"]
+offset_left = 20.0
+offset_top = 456.584
+offset_right = 44.0
+offset_bottom = 493.584
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="OutputLabel" parent="Container_circuit/Circuit3" index="12"]
+offset_left = 1053.98
+offset_top = 236.529
+offset_right = 1125.98
+offset_bottom = 273.529
+theme_override_colors/font_color = Color(0.823529, 0.827451, 0.905882, 1)
+label_settings = SubResource("LabelSettings_gklol")
+
+[node name="FormattedInputField" parent="Container_circuit/Circuit3" index="13"]
+visible = true
+offset_left = 722.0
+offset_right = 1103.0
+
+[node name="DeletePanel" parent="Container_circuit/Circuit3" index="14"]
+position = Vector2(1055, 471)
+
+[node name="CollisionShape2D" parent="Container_circuit/Circuit3/DeletePanel/Area2D" index="0"]
+position = Vector2(0.000583649, 0.000286102)
+
+[node name="LED" parent="Container_circuit/Circuit3" index="15"]
+position = Vector2(1174, 523)
+
+[node name="LED_Station4" parent="Container_circuit" instance=ExtResource("6_oe5xn")]
+offset_left = 3061.0
+offset_top = 1792.0
+offset_right = 3061.0
+offset_bottom = 1792.0
+rotation = 4.71239
+scale = Vector2(1.415, 1.415)
+
+[node name="RadarSpace" parent="." instance=ExtResource("5_ex8ox")]
+position = Vector2(1912, 1078)
+scale = Vector2(0.9, 0.9)
+
+[node name="Asteroid1" parent="RadarSpace/Mask" index="2"]
+visible = false
+
+[node name="Foreground2" parent="RadarSpace/Mask" index="3"]
+position = Vector2(6.28272, -11.8674)
+rotation = 0.554394
+scale = Vector2(0.088, 0.088)
+
+[node name="Rim" parent="RadarSpace" index="1"]
+z_index = 2
+scale = Vector2(2.13, 2.13)
+
+[node name="Asteroid1" parent="." instance=ExtResource("3_01v6r")]
+position = Vector2(1992, 1024)
+rotation = 3.00536
+
+[node name="Asteroid2" parent="." instance=ExtResource("3_01v6r")]
+position = Vector2(1937, 991)
+rotation = 1.59949
+
+[node name="Asteroid3" parent="." instance=ExtResource("3_01v6r")]
+position = Vector2(1826, 1074)
+rotation = -0.00321804
+
+[node name="Debug" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 2394.0
+offset_top = 964.0
+offset_right = 2499.0
+offset_bottom = 1021.0
+scale = Vector2(1.895, 1.895)
+
+[node name="Label" type="Label" parent="Debug"]
+layout_mode = 2
+text = "--------- Debug -------"
+
+[node name="Button" type="Button" parent="Debug"]
+layout_mode = 2
+text = "Next Round"
+
+[node name="Label2" type="Label" parent="Debug"]
+layout_mode = 2
+text = "---------------------------"
+
+[node name="ButtonRound1" type="Button" parent="Debug"]
+layout_mode = 2
+text = "Round Radio"
+
+[node name="ButtonRound2" type="Button" parent="Debug"]
+layout_mode = 2
+text = "Round Navigator"
+
+[node name="ButtonRound3" type="Button" parent="Debug"]
+layout_mode = 2
+text = "Round Binary"
+
+[node name="ButtonRound4" type="Button" parent="Debug"]
+layout_mode = 2
+text = "Round Circuit"
+
+[node name="WinOverlay" type="Control" parent="."]
+visible = false
+z_index = 105
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1621.0
+offset_top = 1010.0
+offset_right = 1661.0
+offset_bottom = 1050.0
+scale = Vector2(3.81, 3.81)
+
+[node name="ColorRect" type="ColorRect" parent="WinOverlay"]
+layout_mode = 0
+offset_left = -424.147
+offset_top = -265.092
+offset_right = 3415.85
+offset_bottom = 1894.91
+scale = Vector2(0.262, 0.262)
+color = Color(0, 0, 0, 0.643137)
+
+[node name="ColorRect2" type="ColorRect" parent="WinOverlay"]
+layout_mode = 0
+offset_left = -238.058
+offset_top = -72.4409
+offset_right = 2261.94
+offset_bottom = 89.2691
+scale = Vector2(0.262, 0.262)
+color = Color(0, 0, 0, 0.592157)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WinOverlay"]
+layout_mode = 0
+offset_left = -213.911
+offset_top = -63.2546
+offset_right = 391.089
+offset_bottom = 63.7454
+
+[node name="Label" type="Label" parent="WinOverlay/VBoxContainer"]
+custom_minimum_size = Vector2(0, 39.275)
+layout_mode = 2
+text = "Glückwunsch, die Axolotl haben es zurück zu ihrem Heimatplaneten geschafft!"
+
+[node name="btn_main_menu" type="Button" parent="WinOverlay/VBoxContainer"]
+layout_mode = 2
+text = "Hauptmenü"
+
+[node name="btn_restart" type="Button" parent="WinOverlay/VBoxContainer"]
+layout_mode = 2
+text = "Neustart"
+
+[node name="btn_quit" type="Button" parent="WinOverlay/VBoxContainer"]
+layout_mode = 2
+text = "Beenden"
+
+[node name="Einstellung" parent="." node_paths=PackedStringArray("debug_panel") instance=ExtResource("8_s62r6")]
+offset_left = 1339.0
+offset_top = 1049.0
+offset_right = 1339.0
+offset_bottom = 1049.0
+current_scene = 3
+debug_panel = NodePath("../Debug")
+
+[node name="Feedback" type="Node" parent="."]
+
+[node name="FeedbackOverlay1" parent="Feedback" instance=ExtResource("19_drwq4")]
+visible = false
+z_index = 11
+offset_left = 2588.0
+offset_top = 1876.0
+offset_right = 2628.0
+offset_bottom = 1916.0
+rotation = -6.29009
+scale = Vector2(0.41, 0.41)
+
+[node name="FeedbackOverlay2" parent="Feedback" instance=ExtResource("19_drwq4")]
+visible = false
+z_index = 11
+offset_left = 349.0
+offset_top = 1750.0
+offset_right = 389.0
+offset_bottom = 1790.0
+rotation = 1.5708
+scale = Vector2(0.41, 0.41)
+
+[node name="FeedbackOverlay3" parent="Feedback" instance=ExtResource("19_drwq4")]
+visible = false
+z_index = 11
+offset_left = 1285.0
+offset_top = 256.0
+offset_right = 1325.0
+offset_bottom = 296.0
+rotation = 3.14159
+scale = Vector2(0.41, 0.41)
+
+[node name="FeedbackOverlay4" parent="Feedback" instance=ExtResource("19_drwq4")]
+visible = false
+z_index = 11
+offset_left = 3494.0
+offset_top = 414.0
+offset_right = 3534.0
+offset_bottom = 454.0
+rotation = -1.5708
+scale = Vector2(0.41, 0.41)
+
+[connection signal="pressed" from="Debug/Button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Debug/ButtonRound1" to="." method="_on_button_round_pressed" binds= [1]]
+[connection signal="pressed" from="Debug/ButtonRound2" to="." method="_on_button_round_pressed" binds= [3]]
+[connection signal="pressed" from="Debug/ButtonRound3" to="." method="_on_button_round_pressed" binds= [5]]
+[connection signal="pressed" from="Debug/ButtonRound4" to="." method="_on_button_round_pressed" binds= [7]]
+[connection signal="pressed" from="WinOverlay/VBoxContainer/btn_main_menu" to="." method="_on_btn_main_menu_pressed"]
+[connection signal="pressed" from="WinOverlay/VBoxContainer/btn_restart" to="." method="_on_btn_restart_pressed"]
+[connection signal="pressed" from="WinOverlay/VBoxContainer/btn_quit" to="." method="_on_btn_quit_pressed"]
+
+[editable path="Container_radio/Radio1/CaesarMinigame"]
+[editable path="Container_radio/Radio2/CaesarMinigame"]
+[editable path="Container_radio/Radio3/CaesarMinigame"]
+[editable path="Container_radio/LED_Station1"]
+[editable path="Container_navigator/Control1/Navigator1"]
+[editable path="Container_navigator/Control1/ShipStatus1"]
+[editable path="Container_navigator/Control2/ShipStatus2"]
+[editable path="Container_navigator/Control2/Navigator2"]
+[editable path="Container_navigator/Control3/ShipStatus3"]
+[editable path="Container_navigator/Control3/Navigator3"]
+[editable path="Container_navigator/LED_Station2"]
+[editable path="Container_binary/Control1/Binary1"]
+[editable path="Container_binary/Control1/Binary1/Switches/Switch0"]
+[editable path="Container_binary/Control1/Binary1/Switches/Switch1"]
+[editable path="Container_binary/Control1/Binary1/Switches/Switch2"]
+[editable path="Container_binary/Control1/Binary1/Switches/Switch3"]
+[editable path="Container_binary/Control1/Binary1/Switches/Switch4"]
+[editable path="Container_binary/Control1/Binary1/Switches/Switch5"]
+[editable path="Container_binary/Control1/Binary1/Switches/Switch6"]
+[editable path="Container_binary/Control1/Binary1/Switches/Switch7"]
+[editable path="Container_binary/Control2/Binary2"]
+[editable path="Container_binary/Control2/Binary2/Switches/Switch0"]
+[editable path="Container_binary/Control2/Binary2/Switches/Switch1"]
+[editable path="Container_binary/Control2/Binary2/Switches/Switch2"]
+[editable path="Container_binary/Control2/Binary2/Switches/Switch3"]
+[editable path="Container_binary/Control2/Binary2/Switches/Switch4"]
+[editable path="Container_binary/Control2/Binary2/Switches/Switch5"]
+[editable path="Container_binary/Control2/Binary2/Switches/Switch6"]
+[editable path="Container_binary/Control2/Binary2/Switches/Switch7"]
+[editable path="Container_binary/Control3/Binary3"]
+[editable path="Container_binary/Control3/Binary3/Switches/Switch0"]
+[editable path="Container_binary/Control3/Binary3/Switches/Switch1"]
+[editable path="Container_binary/Control3/Binary3/Switches/Switch2"]
+[editable path="Container_binary/Control3/Binary3/Switches/Switch3"]
+[editable path="Container_binary/Control3/Binary3/Switches/Switch4"]
+[editable path="Container_binary/Control3/Binary3/Switches/Switch5"]
+[editable path="Container_binary/Control3/Binary3/Switches/Switch6"]
+[editable path="Container_binary/Control3/Binary3/Switches/Switch7"]
+[editable path="Container_circuit/Circuit1"]
+[editable path="Container_circuit/Circuit2"]
+[editable path="Container_circuit/Circuit3"]
+[editable path="RadarSpace"]
+[editable path="Einstellung"]

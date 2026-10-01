@@ -1,0 +1,159 @@
+[gd_scene load_steps=12 format=3 uid="uid://2g4526v6665e"]
+
+[ext_resource type="Script" uid="uid://8mnqjfqg547n" path="res://Scenes/Cutscenes/prologue_script.gd" id="1_hesxs"]
+[ext_resource type="Texture2D" uid="uid://d13yl8noekuov" path="res://Assets/Textures/Prologue/habour.svg" id="2_n87dr"]
+[ext_resource type="Texture2D" uid="uid://do04addawmt1q" path="res://Assets/Textures/Prologue/car.svg" id="3_3vpvf"]
+[ext_resource type="Texture2D" uid="uid://xx3pbod430e6" path="res://Assets/Textures/Prologue/light_cone_mask.png" id="4_gluvj"]
+[ext_resource type="Texture2D" uid="uid://dvqaq6tq26e26" path="res://Assets/Textures/Axolotl/Mechaniker_vonHinten.svg" id="5_wlvuy"]
+[ext_resource type="Texture2D" uid="uid://67vnafy7c4yp" path="res://Assets/Textures/Axolotl/Funker.svg" id="6_w8l67"]
+[ext_resource type="Texture2D" uid="uid://dsvqmmv5sxqa0" path="res://Assets/Textures/Axolotl/Kapitän.svg" id="7_3qw1x"]
+[ext_resource type="Texture2D" uid="uid://bhr57cwu6war1" path="res://Assets/Textures/Axolotl/Kanonier.svg" id="8_70g27"]
+
+[sub_resource type="Animation" id="Animation_ie1uk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Car:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.399841, 0.399841)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Car:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2123, 1232)]
+}
+
+[sub_resource type="Animation" id="Animation_0dps6"]
+resource_name = "animation"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 5.2, 6),
+"transitions": PackedFloat32Array(1, 2.5, 1, 2.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(6.13333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"switch_to_next_scene"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Car:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6.36667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.399841, 0.399841), Vector2(0.505, 0.505)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Car:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6.36667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2123, 1232), Vector2(1766, 1420)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wanfg"]
+_data = {
+&"RESET": SubResource("Animation_ie1uk"),
+&"animation": SubResource("Animation_0dps6")
+}
+
+[node name="Prologue_12" type="Node2D" node_paths=PackedStringArray("overlay")]
+script = ExtResource("1_hesxs")
+next_scene = 17
+overlay = NodePath("ColorRect")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_n87dr")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_wanfg")
+}
+autoplay = "animation"
+
+[node name="Car" type="Sprite2D" parent="."]
+position = Vector2(2123, 1232)
+scale = Vector2(0.399841, 0.399841)
+texture = ExtResource("3_3vpvf")
+
+[node name="PointLight2D" type="PointLight2D" parent="Car"]
+position = Vector2(-390.601, 526.404)
+rotation = 0.0872665
+scale = Vector2(1.15794, 1.15794)
+color = Color(0.894118, 0.67451, 0.352941, 1)
+texture = ExtResource("4_gluvj")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Car"]
+position = Vector2(307.227, 553.319)
+rotation = 0.0872665
+scale = Vector2(1.15794, 1.23383)
+color = Color(0.894118, 0.67451, 0.352941, 1)
+texture = ExtResource("4_gluvj")
+
+[node name="Axolotl" type="Node2D" parent="."]
+position = Vector2(3726, 1713)
+scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Axolotl"]
+position = Vector2(-1303.33, -340)
+texture = ExtResource("5_wlvuy")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Axolotl"]
+position = Vector2(-310, -136.667)
+texture = ExtResource("6_w8l67")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Axolotl"]
+position = Vector2(-386.666, 210)
+texture = ExtResource("7_3qw1x")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Axolotl"]
+position = Vector2(130, 660)
+texture = ExtResource("8_70g27")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -106.0
+offset_top = -90.0001
+offset_right = 4004.0
+offset_bottom = 2246.0
+color = Color(0, 0, 0, 1)

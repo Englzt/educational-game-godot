@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 21.00144 21.00144"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="gear.svg"
+   width="21.00144"
+   height="21.00144"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="16.875"
+     inkscape:cx="3.3185185"
+     inkscape:cy="11.348148"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1" />
+  <path
+     d="m 19.820087,8.5513535 -1.74,-0.58 a 8,8 0 0 0 -0.43,-1.05 l 0.85,-1.63 a 1,1 0 0 0 -0.19,-1.15 l -1.45,-1.42 a 1,1 0 0 0 -1.15,-0.22 l -1.63,0.82 a 8,8 0 0 0 -1.05,-0.43 l -0.53,-1.71 a 1,1 0 0 0 -1,-0.68000004 H 9.5000871 a 1,1 0 0 0 -0.95,0.68000004 l -0.58,1.74 a 8,8 0 0 0 -1.05,0.43 l -1.63,-0.85 a 1,1 0 0 0 -1.15,0.19 l -1.42,1.45 a 1,1 0 0 0 -0.22,1.15 l 0.82,1.63 a 8,8 0 0 0 -0.43,1.05 l -1.74,0.58 a 1,1 0 0 0 -0.64999996,0.95 v 1.9999995 a 1,1 0 0 0 0.67999996,0.95 l 1.74,0.58 a 8,8 0 0 0 0.43,1.05 l -0.85,1.63 a 1,1 0 0 0 0.19,1.15 l 1.42,1.42 a 1,1 0 0 0 1.18,0.22 l 1.63,-0.82 a 8,8 0 0 0 1.05,0.43 l 0.58,1.74 a 1,1 0 0 0 0.95,0.65 h 1.9999999 a 1,1 0 0 0 0.95,-0.68 l 0.58,-1.74 a 8,8 0 0 0 1.05,-0.43 l 1.63,0.82 a 1,1 0 0 0 1.15,-0.19 l 1.42,-1.42 a 1,1 0 0 0 0.22,-1.15 l -0.82,-1.63 a 8,8 0 0 0 0.43,-1.05 l 1.71,-0.53 a 1,1 0 0 0 0.68,-1 V 9.5013535 a 1,1 0 0 0 -0.68,-0.95 z m -9.32,5.9499995 a 4,4 0 1 1 4,-4 4,4 0 0 1 -4,4 z"
+     fill="#464646"
+     id="path1"
+     style="stroke:#000000;stroke-opacity:1" />
+</svg>

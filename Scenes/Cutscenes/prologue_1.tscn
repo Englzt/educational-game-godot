@@ -1,0 +1,160 @@
+[gd_scene load_steps=13 format=3 uid="uid://db80srmwny87h"]
+
+[ext_resource type="Script" uid="uid://8mnqjfqg547n" path="res://Scenes/Cutscenes/prologue_script.gd" id="1_8ibft"]
+[ext_resource type="Texture2D" uid="uid://wq7oo175vj5h" path="res://Assets/Textures/Prologue/prologue1_background.svg" id="2_6fqcy"]
+[ext_resource type="Texture2D" uid="uid://dhs3g6crbsnxo" path="res://Assets/Textures/Prologue/spaceship.svg" id="3_mqqfq"]
+[ext_resource type="Texture2D" uid="uid://bxfvfjinp477k" path="res://Assets/Textures/Other/smoke_particle_texture.png" id="4_ncm43"]
+
+[sub_resource type="Gradient" id="Gradient_bqp3i"]
+offsets = PackedFloat32Array(0, 0.464891, 1)
+colors = PackedColorArray(0.995264, 1, 0.715743, 1, 0.908173, 0.542989, 0, 1, 0.713726, 0, 0.0156863, 0.403922)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8ibft"]
+gradient = SubResource("Gradient_bqp3i")
+
+[sub_resource type="Curve" id="Curve_xj8h5"]
+_data = [Vector2(0, 0.690744), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_6fqcy"]
+curve = SubResource("Curve_xj8h5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_htxpw"]
+particle_flag_disable_z = true
+spread = 20.0
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_6fqcy")
+color_ramp = SubResource("GradientTexture1D_8ibft")
+
+[sub_resource type="Animation" id="Animation_3mv5q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Foreground:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(657, 1489)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bqp3i"]
+resource_name = "animation"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Foreground:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 9.92),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(657, 1489), Vector2(1470, 1351)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(9.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"switch_to_next_scene"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.966667, 4.9, 8.92, 9.4),
+"transitions": PackedFloat32Array(1, 2.5, 1, 2.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xj8h5"]
+_data = {
+&"RESET": SubResource("Animation_3mv5q"),
+&"animation": SubResource("Animation_bqp3i")
+}
+
+[node name="Prologue_1" type="Node2D" node_paths=PackedStringArray("overlay")]
+script = ExtResource("1_8ibft")
+next_scene = 6
+overlay = NodePath("ColorRect")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_6fqcy")
+centered = false
+
+[node name="Foreground" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(657, 1489)
+rotation = 0.798755
+texture = ExtResource("3_mqqfq")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Foreground"]
+z_index = -1
+position = Vector2(-72.6963, 406.212)
+rotation = 0.64971
+scale = Vector2(3, 3)
+amount = 300
+texture = ExtResource("4_ncm43")
+lifetime = 2.0
+preprocess = 2.0
+speed_scale = 1.5
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_htxpw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+z_index = 50
+offset_left = -228.0
+offset_top = -122.0
+offset_right = 4044.0
+offset_bottom = 2257.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xj8h5")
+}
+autoplay = "animation"

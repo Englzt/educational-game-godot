@@ -1,0 +1,313 @@
+[gd_scene load_steps=16 format=3 uid="uid://d0drrspolhjr2"]
+
+[ext_resource type="Script" uid="uid://5mf7ukmp0uy2" path="res://Stations/ShipStatus/ship_status.gd" id="1_s630g"]
+[ext_resource type="Texture2D" uid="uid://bldgn5gnculri" path="res://Assets/Textures/LogicGates/LED.svg" id="2_bbd0k"]
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="2_s630g"]
+[ext_resource type="Shader" uid="uid://dgw8jv2b3x70a" path="res://Resources/Shader/led_shader.gdshader" id="4_bbd0k"]
+[ext_resource type="Texture2D" uid="uid://jh5y0yda16gr" path="res://Assets/Textures/ShipStatus/ship_status_separator.png" id="5_l85xp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l85xp"]
+shader = ExtResource("4_bbd0k")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bbd0k"]
+font = ExtResource("2_s630g")
+font_size = 32
+font_color = Color(0.122252, 0.122252, 0.122252, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qtr8h"]
+shader = ExtResource("4_bbd0k")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cr4wh"]
+shader = ExtResource("4_bbd0k")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3qfut"]
+shader = ExtResource("4_bbd0k")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bbd0k"]
+shader = ExtResource("4_bbd0k")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qtr8h"]
+font = ExtResource("2_s630g")
+font_size = 64
+font_color = Color(0.215269, 0.607765, 0.214485, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbd0k"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.121569, 0.121569, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l85xp"]
+bg_color = Color(0.205117, 0.205117, 0.205117, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.121569, 0.121569, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_cr4wh"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_bbd0k")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_l85xp")
+
+[node name="ShipStatus" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s630g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SecStatus" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="StatusEffects" type="VBoxContainer" parent="VBoxContainer/SecStatus"]
+layout_mode = 2
+alignment = 1
+
+[node name="StatusStream" type="HBoxContainer" parent="VBoxContainer/SecStatus/StatusEffects"]
+layout_mode = 2
+
+[node name="StreamLED" type="TextureRect" parent="VBoxContainer/SecStatus/StatusEffects/StatusStream"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_l85xp")
+layout_mode = 2
+texture = ExtResource("2_bbd0k")
+expand_mode = 3
+
+[node name="Container" type="Container" parent="VBoxContainer/SecStatus/StatusEffects/StatusStream"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SecStatus/StatusEffects/StatusStream"]
+layout_mode = 2
+text = "A Strömung"
+label_settings = SubResource("LabelSettings_bbd0k")
+
+[node name="Container" type="Container" parent="VBoxContainer/SecStatus/StatusEffects"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="StatusRadiation" type="HBoxContainer" parent="VBoxContainer/SecStatus/StatusEffects"]
+layout_mode = 2
+
+[node name="RadLED" type="TextureRect" parent="VBoxContainer/SecStatus/StatusEffects/StatusRadiation"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_qtr8h")
+layout_mode = 2
+texture = ExtResource("2_bbd0k")
+expand_mode = 3
+
+[node name="Container" type="Container" parent="VBoxContainer/SecStatus/StatusEffects/StatusRadiation"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SecStatus/StatusEffects/StatusRadiation"]
+layout_mode = 2
+text = "B Strahlung"
+label_settings = SubResource("LabelSettings_bbd0k")
+
+[node name="Container2" type="Container" parent="VBoxContainer/SecStatus/StatusEffects"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="StatusPressure" type="HBoxContainer" parent="VBoxContainer/SecStatus/StatusEffects"]
+layout_mode = 2
+
+[node name="PressureLED" type="TextureRect" parent="VBoxContainer/SecStatus/StatusEffects/StatusPressure"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_cr4wh")
+layout_mode = 2
+texture = ExtResource("2_bbd0k")
+expand_mode = 3
+
+[node name="Container" type="Container" parent="VBoxContainer/SecStatus/StatusEffects/StatusPressure"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SecStatus/StatusEffects/StatusPressure"]
+layout_mode = 2
+text = "C Druck"
+label_settings = SubResource("LabelSettings_bbd0k")
+
+[node name="Container3" type="Container" parent="VBoxContainer/SecStatus/StatusEffects"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="StatusMalfunction" type="HBoxContainer" parent="VBoxContainer/SecStatus/StatusEffects"]
+layout_mode = 2
+
+[node name="MalfuncLED" type="TextureRect" parent="VBoxContainer/SecStatus/StatusEffects/StatusMalfunction"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_3qfut")
+layout_mode = 2
+texture = ExtResource("2_bbd0k")
+expand_mode = 3
+
+[node name="Container" type="Container" parent="VBoxContainer/SecStatus/StatusEffects/StatusMalfunction"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SecStatus/StatusEffects/StatusMalfunction"]
+layout_mode = 2
+text = "D Störung"
+label_settings = SubResource("LabelSettings_bbd0k")
+
+[node name="Container4" type="Container" parent="VBoxContainer/SecStatus/StatusEffects"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="StatusSeeMines" type="HBoxContainer" parent="VBoxContainer/SecStatus/StatusEffects"]
+layout_mode = 2
+
+[node name="MinesLED" type="TextureRect" parent="VBoxContainer/SecStatus/StatusEffects/StatusSeeMines"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_bbd0k")
+layout_mode = 2
+texture = ExtResource("2_bbd0k")
+expand_mode = 3
+
+[node name="Container" type="Container" parent="VBoxContainer/SecStatus/StatusEffects/StatusSeeMines"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SecStatus/StatusEffects/StatusSeeMines"]
+layout_mode = 2
+text = "E Seeminen"
+label_settings = SubResource("LabelSettings_bbd0k")
+
+[node name="Container" type="Container" parent="VBoxContainer/SecStatus"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/SecStatus"]
+modulate = Color(0.121569, 0.121569, 0.121569, 1)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("5_l85xp")
+stretch_mode = 2
+
+[node name="Container2" type="Container" parent="VBoxContainer/SecStatus"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/SecStatus"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/SecStatus/VBoxContainer"]
+layout_mode = 2
+text = "Konfiguration"
+label_settings = SubResource("LabelSettings_bbd0k")
+
+[node name="Container" type="Container" parent="VBoxContainer/SecStatus/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/SecStatus/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SecStatus/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "System: "
+label_settings = SubResource("LabelSettings_bbd0k")
+
+[node name="TargetSystemLabel" type="Label" parent="VBoxContainer/SecStatus/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Stoßdämpfer"
+label_settings = SubResource("LabelSettings_bbd0k")
+
+[node name="ConfigLabel" type="Label" parent="VBoxContainer/SecStatus/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "A ⊻ C"
+label_settings = SubResource("LabelSettings_qtr8h")
+
+[node name="Container" type="Container" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="SecHealth" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SecHealth"]
+layout_mode = 2
+text = "Leben"
+label_settings = SubResource("LabelSettings_bbd0k")
+
+[node name="Container" type="Container" parent="VBoxContainer/SecHealth"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="HealthLabel" type="Label" parent="VBoxContainer/SecHealth"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(86.42, 0)
+layout_mode = 2
+text = "50"
+label_settings = SubResource("LabelSettings_bbd0k")
+
+[node name="HealthBar" type="ProgressBar" parent="VBoxContainer/SecHealth"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 32)
+layout_mode = 2
+theme = SubResource("Theme_cr4wh")
+max_value = 50.0
+value = 50.0
+
+[node name="SecEnergy" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SecEnergy"]
+layout_mode = 2
+text = "Energie"
+label_settings = SubResource("LabelSettings_bbd0k")
+
+[node name="Container" type="Container" parent="VBoxContainer/SecEnergy"]
+custom_minimum_size = Vector2(29, 0)
+layout_mode = 2
+
+[node name="EnergyLabel" type="Label" parent="VBoxContainer/SecEnergy"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(86.42, 0)
+layout_mode = 2
+text = "50"
+label_settings = SubResource("LabelSettings_bbd0k")
+
+[node name="EnergyBar" type="ProgressBar" parent="VBoxContainer/SecEnergy"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 32)
+layout_mode = 2
+theme = SubResource("Theme_cr4wh")
+max_value = 50.0
+value = 50.0

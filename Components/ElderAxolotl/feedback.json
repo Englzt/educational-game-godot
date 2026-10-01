@@ -1,0 +1,83 @@
+{
+	"1": {
+		"success": [
+			"Nachricht entschlüsselt – exzellente Arbeit!",
+			"Richtig, jetzt wissen wir, wo wir hin müssen!",
+			"Super! Die Verschiebung passt, häufige Buchstaben ergeben jetzt echte Wörter."
+		],
+		"fail": [
+			"Falscher Schlüssel. Schau nochmal auf die Häufigkeiten.",
+			"Das klingt noch nach Rauschen ... schau nochmal im Cheatsheet nach.",
+			"Schlüssel stimmt noch nicht – überprüfe, ob das häufigste Zeichen vielleicht zu einem Vokal wird.",
+			"Schau nocheinmal in das Histogramm, und berechne den Abstand vom häufigsten Buchstaben im verschlüsselten Text zum 'E'"
+		]
+	},
+	"2": {
+		"success": [
+			"Kurs bestätigt, auf auf zum Heimatplaneten.",
+			"Schlaue Wahl, nicht mehr lang dann sind wir zu Hause."
+		],
+		"fail": [
+			"Route teurer – ein schon besuchter Knoten verlängert die Strecke enorm.",
+			"Tipp: Meide bereits abgefahrene Stationen, sie erhöhen die Gesamtkosten."
+		]
+	},
+	"3": {
+		"success": [
+			"Treffer – Asteroid zerstört!",
+			"Treffer! Deine 8-Bit-Zahl enthält alle richtigen Zweierpotenzen.",
+			"Gut gemacht – jedes Bit stimmt, der Asteroid ist zerstört.",
+			"Sauber umgerechnet, du hast das Raumschiff beschützt."
+		],
+		"fail": [
+			"Falsche Zahl – versuch’s nochmal.",
+			"Noch einmal – und diesmal in 8 Bit denken!",
+			"Das war nicht richtig, versuche vielleicht mal rückwärts zu rechnen."
+		]
+	},
+	"4": {
+		"success": [
+			"Schaltkreis ok – Energie fließt.",
+			"Schaltkreis ok – deine Verdrahtung erfüllt die Wahrheitstabelle.",
+			"Prima, die Ausgänge sind korrekt gesetzt, Energie fließt wieder.",
+			"Perfekt, die Systeme laufen wieder."
+		],
+		"fail": [
+			"Widerspruch in der Gleichung!",
+			"Kontakte tauschen, schau nochmal auf die Anforderung!",
+			"Verkabelung checken – vielleicht steckt ein faclsches Gatter."
+		]
+	},
+	"5": {
+		"success": [],
+		"fail": [
+			"Schau nocheinmal in das Histogramm, und berechne den Abstand vom häufigsten Buchstaben im verschlüsselten Text zum 'E'"
+		]
+	},
+	"6": {
+		"success": [],
+		"fail": [
+			"Die eingegebene Zahl ist nicht korrekt, rechne nochmal nach."
+		]
+	},
+	"7": {
+		"success": [],
+		"fail": [
+			"Die Schaltung stimmt so nicht. Schau nochmal auf die Gleichung und nutze den Spickzettel zur Hilfe."
+		]
+	},
+	"8": {
+		"success": [],
+		"fail": [
+			"Das war nicht richtig, konzentriere dich beim nächsten Mal, und klicke nicht zu schnell."
+		]
+	},
+	"9": {
+		"success": [],
+		"fail": [
+			"Route ist länger als nötig – addiere die Kantenlängen und such den kleinsten Wert.",
+			"Naja, versuche es noch einmal mit einem günstigerem Weg.",
+			"Noch nicht optimal – prüfe, ob es eine Verbindung mit weniger Zwischenknoten gibt."
+		]
+	}
+}

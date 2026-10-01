@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://ca82ldpnrpou1"]
+
+[ext_resource type="Script" uid="uid://8mnqjfqg547n" path="res://Scenes/Cutscenes/prologue_script.gd" id="1_tnq1b"]
+[ext_resource type="Texture2D" uid="uid://mmcpi8su2im7" path="res://Assets/Textures/Prologue/prologue8_background.svg" id="2_uucsr"]
+[ext_resource type="Texture2D" uid="uid://dtk1nru3p8gyh" path="res://Assets/Textures/Prologue/prologue8_foreground.svg" id="4_hplu8"]
+
+[sub_resource type="Animation" id="Animation_2bnw1"]
+resource_name = "animation"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 5.2, 6),
+"transitions": PackedFloat32Array(1, 2.5, 1, 2.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(6.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"switch_to_next_scene"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_cji76"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhxwp"]
+_data = {
+&"RESET": SubResource("Animation_cji76"),
+&"animation": SubResource("Animation_2bnw1")
+}
+
+[node name="Prologue_X" type="Node2D"]
+script = ExtResource("1_tnq1b")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_uucsr")
+centered = false
+
+[node name="Foreground" type="Sprite2D" parent="."]
+texture = ExtResource("4_hplu8")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qhxwp")
+}
+autoplay = "animation"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -106.0
+offset_top = -90.0
+offset_right = 4004.0
+offset_bottom = 2246.0
+color = Color(0, 0, 0, 1)

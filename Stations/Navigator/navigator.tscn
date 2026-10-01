@@ -1,0 +1,164 @@
+[gd_scene load_steps=11 format=3 uid="uid://buyhd1rmwfkl"]
+
+[ext_resource type="Script" uid="uid://cgdj06kbnverd" path="res://Stations/Navigator/navigator.gd" id="1_y74u7"]
+[ext_resource type="Texture2D" uid="uid://cf6mm713i6urq" path="res://Assets/Textures/Navigator/lake.svg" id="2_5iw3b"]
+[ext_resource type="Shader" uid="uid://ymr7abwpmtaf" path="res://Resources/Shader/crt_shader.gdshader" id="2_dd66q"]
+[ext_resource type="PackedScene" uid="uid://ba1oupkqi0uca" path="res://Components/GraphNode/graph_node.tscn" id="4_gyw2t"]
+[ext_resource type="Texture2D" uid="uid://bt38holvgqdlh" path="res://Assets/Textures/Navigator/Monitor.svg" id="6_5iw3b"]
+[ext_resource type="Texture2D" uid="uid://cud27uiwlmhl5" path="res://Assets/Textures/Navigator/go_button_texture.png" id="6_ng23l"]
+[ext_resource type="Texture2D" uid="uid://cgdl1ksn0km6r" path="res://Assets/Textures/Navigator/go_button_texture_pressed.png" id="7_ng23l"]
+[ext_resource type="Texture2D" uid="uid://3d42wn0cbolt" path="res://Assets/Textures/Navigator/go_button_texture_disabled.png" id="8_7073s"]
+[ext_resource type="LabelSettings" uid="uid://bj6vpineko30e" path="res://Resources/LabelSettings/path_cost_label_settings.tres" id="9_5iw3b"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dd66q"]
+shader = ExtResource("2_dd66q")
+shader_parameter/scanline_count = 16.0
+shader_parameter/scanline_speed = -3.0
+
+[node name="Navigator" type="Node2D"]
+texture_filter = 1
+texture_repeat = 1
+script = ExtResource("1_y74u7")
+
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(1947.41, 86.0943)
+rotation = 1.5708
+scale = Vector2(1.17053, 1.34759)
+texture = ExtResource("2_5iw3b")
+centered = false
+region_rect = Rect2(272, 66, 890, 1651)
+
+[node name="TravelPenaltyContainer" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+offset_left = 805.0
+offset_top = 1031.0
+offset_right = 1242.0
+offset_bottom = 1105.0
+
+[node name="LabelTravelPenalty" type="Label" parent="TravelPenaltyContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+5"
+label_settings = ExtResource("9_5iw3b")
+
+[node name="Container" type="Container" parent="TravelPenaltyContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TravelPenaltyContainer"]
+layout_mode = 2
+text = "Reisekosten"
+label_settings = ExtResource("9_5iw3b")
+
+[node name="Nodes" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = 10
+position = Vector2(42, 89)
+
+[node name="GraphNode0" parent="Nodes" instance=ExtResource("4_gyw2t")]
+unique_name_in_owner = true
+position = Vector2(1757, 273)
+
+[node name="GraphNode1" parent="Nodes" instance=ExtResource("4_gyw2t")]
+unique_name_in_owner = true
+position = Vector2(1538, 371)
+index = 1
+
+[node name="GraphNode2" parent="Nodes" instance=ExtResource("4_gyw2t")]
+unique_name_in_owner = true
+position = Vector2(1610, 571)
+index = 2
+
+[node name="GraphNode3" parent="Nodes" instance=ExtResource("4_gyw2t")]
+unique_name_in_owner = true
+position = Vector2(1317, 472)
+index = 3
+
+[node name="GraphNode4" parent="Nodes" instance=ExtResource("4_gyw2t")]
+unique_name_in_owner = true
+position = Vector2(1131, 706)
+index = 4
+
+[node name="GraphNode5" parent="Nodes" instance=ExtResource("4_gyw2t")]
+unique_name_in_owner = true
+position = Vector2(899, 260)
+index = 5
+
+[node name="GraphNode6" parent="Nodes" instance=ExtResource("4_gyw2t")]
+unique_name_in_owner = true
+position = Vector2(893, 527)
+index = 6
+
+[node name="GraphNode7" parent="Nodes" instance=ExtResource("4_gyw2t")]
+unique_name_in_owner = true
+position = Vector2(704, 662)
+index = 7
+
+[node name="GraphNode8" parent="Nodes" instance=ExtResource("4_gyw2t")]
+unique_name_in_owner = true
+position = Vector2(661, 272)
+index = 8
+
+[node name="GraphNode9" parent="Nodes" instance=ExtResource("4_gyw2t")]
+unique_name_in_owner = true
+modulate = Color(1, 0.699123, 0.674586, 1)
+position = Vector2(357, 341)
+index = 9
+
+[node name="GraphNode10" parent="Nodes" instance=ExtResource("4_gyw2t")]
+unique_name_in_owner = true
+position = Vector2(385, 848)
+index = 10
+
+[node name="Paths" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(42, 89)
+
+[node name="ShaderRect" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.384314)
+z_index = 10
+material = SubResource("ShaderMaterial_dd66q")
+offset_left = 42.0
+offset_top = 89.0
+offset_right = 1956.0
+offset_bottom = 1155.0
+mouse_filter = 1
+color = Color(1, 1, 1, 0.333333)
+
+[node name="Frame" type="Sprite2D" parent="."]
+z_index = 10
+texture = ExtResource("6_5iw3b")
+centered = false
+
+[node name="Control" type="Control" parent="."]
+z_index = 20
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonTravel" type="TextureButton" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 2028.0
+offset_top = 130.0
+offset_right = 2200.0
+offset_bottom = 302.0
+disabled = true
+texture_normal = ExtResource("6_ng23l")
+texture_pressed = ExtResource("7_ng23l")
+texture_disabled = ExtResource("8_7073s")
+stretch_mode = 4
+
+[connection signal="input_event" from="Nodes/GraphNode0" to="." method="_on_grid_node_input" binds= [0]]
+[connection signal="input_event" from="Nodes/GraphNode1" to="." method="_on_grid_node_input" binds= [1]]
+[connection signal="input_event" from="Nodes/GraphNode2" to="." method="_on_grid_node_input" binds= [2]]
+[connection signal="input_event" from="Nodes/GraphNode3" to="." method="_on_grid_node_input" binds= [3]]
+[connection signal="input_event" from="Nodes/GraphNode4" to="." method="_on_grid_node_input" binds= [4]]
+[connection signal="input_event" from="Nodes/GraphNode5" to="." method="_on_grid_node_input" binds= [5]]
+[connection signal="input_event" from="Nodes/GraphNode6" to="." method="_on_grid_node_input" binds= [6]]
+[connection signal="input_event" from="Nodes/GraphNode7" to="." method="_on_grid_node_input" binds= [7]]
+[connection signal="input_event" from="Nodes/GraphNode8" to="." method="_on_grid_node_input" binds= [8]]
+[connection signal="input_event" from="Nodes/GraphNode9" to="." method="_on_grid_node_input" binds= [9]]
+[connection signal="input_event" from="Nodes/GraphNode10" to="." method="_on_grid_node_input" binds= [10]]
+[connection signal="pressed" from="Control/ButtonTravel" to="." method="_on_button_travel_pressed"]

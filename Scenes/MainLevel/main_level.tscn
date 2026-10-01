@@ -1,0 +1,1114 @@
+[gd_scene load_steps=60 format=3 uid="uid://21e5cqv6t0gw"]
+
+[ext_resource type="Script" uid="uid://dawvdq8uklstb" path="res://Scenes/MainLevel/main_level.gd" id="1_skk0u"]
+[ext_resource type="PackedScene" uid="uid://buyhd1rmwfkl" path="res://Stations/Navigator/navigator.tscn" id="1_vyqcs"]
+[ext_resource type="Script" uid="uid://bdtru5xucrgfi" path="res://Resources/Monsters/monter_stats.gd" id="2_frnua"]
+[ext_resource type="PackedScene" uid="uid://chqbs4qit58gk" path="res://Stations/Circuit/circuit.tscn" id="2_jlqhw"]
+[ext_resource type="Resource" uid="uid://cvpcr7rvod7a6" path="res://Resources/Monsters/monster0.tres" id="3_seugi"]
+[ext_resource type="Resource" uid="uid://b5526yhcgssl2" path="res://Resources/Monsters/monster1.tres" id="4_n5s4r"]
+[ext_resource type="Resource" uid="uid://ew3yihmn4dfd" path="res://Resources/Monsters/monster2.tres" id="5_7gnqb"]
+[ext_resource type="PackedScene" uid="uid://d0drrspolhjr2" path="res://Stations/ShipStatus/ship_status.tscn" id="5_krnsu"]
+[ext_resource type="PackedScene" uid="uid://b8d635p1ulrat" path="res://Components/Radar/radar.tscn" id="6_j0tf5"]
+[ext_resource type="Texture2D" uid="uid://cbtpyqvij7wu1" path="res://Assets/Textures/MainLevel/background_desk.svg" id="6_p41yr"]
+[ext_resource type="PackedScene" uid="uid://c1kta5s04oqv0" path="res://Components/BasicBackground/basic_background_main_level.tscn" id="7_p41yr"]
+[ext_resource type="PackedScene" uid="uid://bnkxitdp5tkbf" path="res://Stations/Binary/binary.tscn" id="10_bk1fk"]
+[ext_resource type="PackedScene" uid="uid://bgwt52yddnfo5" path="res://Components/RoundProgress/round_progress.tscn" id="10_eid30"]
+[ext_resource type="PackedScene" uid="uid://dpmgtaf1hfw4i" path="res://Stations/TreeTraversal/tree_traversal.tscn" id="11_bk1fk"]
+[ext_resource type="Texture2D" uid="uid://dytlq6hffhnrq" path="res://Assets/Textures/CaesarShift/radio_station.svg" id="12_a8hac"]
+[ext_resource type="PackedScene" uid="uid://cyowb6t3tsbge" path="res://Stations/CaesarShift/CaesarMinigame.tscn" id="12_v70mk"]
+[ext_resource type="Theme" uid="uid://cxh5u5fqrenrh" path="res://Resources/Themes/button_theme_mainlevel.tres" id="13_xqvtp"]
+[ext_resource type="Theme" uid="uid://bgud7pwk17e5c" path="res://Resources/Themes/Radio_text_style.tres" id="14_5lhvh"]
+[ext_resource type="LabelSettings" uid="uid://bbolqiut2rbaq" path="res://Resources/LabelSettings/seven_segment_label.tres" id="16_a8hac"]
+[ext_resource type="Texture2D" uid="uid://dumtvey13vh6v" path="res://Assets/Textures/CaesarShift/panel_cooldown_info.svg" id="17_qkma6"]
+[ext_resource type="Theme" uid="uid://cal3btcbiisdg" path="res://Resources/Themes/histogram_theme.tres" id="18_n5s4r"]
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="18_vvxg4"]
+[ext_resource type="Texture2D" uid="uid://67vnafy7c4yp" path="res://Assets/Textures/Axolotl/Funker.svg" id="19_si61s"]
+[ext_resource type="Texture2D" uid="uid://dsvqmmv5sxqa0" path="res://Assets/Textures/Axolotl/Kapitän.svg" id="20_i75cs"]
+[ext_resource type="LabelSettings" uid="uid://cigims84anthv" path="res://Resources/LabelSettings/station_select_text_style.tres" id="20_rug88"]
+[ext_resource type="Texture2D" uid="uid://bxhf8e3wy52qr" path="res://Assets/Textures/Axolotl/Mechaniker.svg" id="21_goj7h"]
+[ext_resource type="Shader" uid="uid://dgw8jv2b3x70a" path="res://Resources/Shader/led_shader.gdshader" id="21_yqdlh"]
+[ext_resource type="Texture2D" uid="uid://bldgn5gnculri" path="res://Assets/Textures/LogicGates/LED.svg" id="22_pfi76"]
+[ext_resource type="Texture2D" uid="uid://bhr57cwu6war1" path="res://Assets/Textures/Axolotl/Kanonier.svg" id="22_wkvnu"]
+[ext_resource type="PackedScene" uid="uid://ctxkov3yvq82p" path="res://Scenes/Settings/settings.tscn" id="24_7d5oj"]
+[ext_resource type="Texture2D" uid="uid://csxmlqdtgrci5" path="res://Assets/Textures/MainLevel/augenklappe.svg" id="28_6gsva"]
+[ext_resource type="Texture2D" uid="uid://b5r1f15yklebl" path="res://Assets/Textures/MainLevel/kapitänsmütze.svg" id="29_vqmxf"]
+[ext_resource type="Texture2D" uid="uid://cnhd3s83gwpqf" path="res://Assets/Textures/MainLevel/Kopfhörer_Funker.svg" id="30_ekotv"]
+[ext_resource type="AudioStream" uid="uid://bs5skao405aoj" path="res://Assets/Audio/SFX/submarine-289985.mp3" id="30_pfi76"]
+[ext_resource type="AudioStream" uid="uid://duwfx30ysqb7" path="res://Assets/Audio/SFX/submarine-33709.mp3" id="31_eph02"]
+[ext_resource type="Texture2D" uid="uid://bixotu136h62n" path="res://Assets/Textures/MainLevel/Lineal_Mechaniker.svg" id="31_nyytb"]
+[ext_resource type="PackedScene" uid="uid://b1sif82enjmef" path="res://Stations/BinaryMinigame/binary_minigame.tscn" id="32_jqh07"]
+[ext_resource type="Texture2D" uid="uid://bqfv5molhc08x" path="res://Assets/Textures/MainLevel/Schraubendreher_Mechaniker.svg" id="32_p5r27"]
+[ext_resource type="PackedScene" uid="uid://ccs1o46v75ghu" path="res://Components/CheatSheet/cheat_sheet.tscn" id="33_4h2xa"]
+[ext_resource type="Texture2D" uid="uid://bn0whdxj31gg0" path="res://Assets/Textures/MainLevel/WalkieTalkie_Funker.svg" id="33_miryf"]
+[ext_resource type="PackedScene" uid="uid://diktdssu686x0" path="res://Components/ElderAxolotl/FeedbackOverlay.tscn" id="35_p41yr"]
+[ext_resource type="PackedScene" uid="uid://c7f5dldic4n72" path="res://Components/BackgroundDisplay/background_display.tscn" id="36_xmnip"]
+[ext_resource type="PackedScene" uid="uid://djx1cj66nbw1h" path="res://Components/BackgroundThermometer/background_thermometer.tscn" id="43_vqmxf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4h2xa"]
+
+[sub_resource type="Theme" id="Theme_xqvtp"]
+Button/styles/focus = SubResource("StyleBoxEmpty_4h2xa")
+
+[sub_resource type="Theme" id="Theme_p41yr"]
+Label/font_sizes/font_size = 48
+Label/fonts/font = ExtResource("18_vvxg4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eph02"]
+shader = ExtResource("21_yqdlh")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.6, 0.1, 0.1, 1)
+
+[sub_resource type="Animation" id="Animation_si61s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameOverScreen/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GameOverScreen/GameOverLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GameOverScreen/GameOverLabel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1677, 1147)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GameOverScreen/GameOverButtons:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GameOverScreen/GameOverButtons/ButtonMainMenu:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GameOverScreen/GameOverButtons/ButtonRestart:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GameOverScreen:mouse_filter")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GameOverScreen/GameOverButtons/ButtonContinue:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_vvxg4"]
+resource_name = "game_over"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameOverScreen/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.588235)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GameOverScreen/GameOverLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GameOverScreen/GameOverLabel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1082.53), Vector2(0, 1006.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GameOverScreen/GameOverButtons:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2, 2.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GameOverScreen/GameOverButtons/ButtonMainMenu:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GameOverScreen/GameOverButtons/ButtonRestart:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GameOverScreen:mouse_filter")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2.81),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GameOverScreen/GameOverButtons/ButtonContinue:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_si61s"]
+_data = {
+&"RESET": SubResource("Animation_si61s"),
+&"game_over": SubResource("Animation_vvxg4")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_si61s"]
+font = ExtResource("18_vvxg4")
+font_size = 80
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vvxg4"]
+bg_color = Color(0.129412, 0.129412, 0.129412, 0.784314)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jqh07"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_si61s"]
+bg_color = Color(0.129412, 0.129412, 0.129412, 0.784314)
+
+[sub_resource type="Theme" id="Theme_si61s"]
+Button/colors/font_disabled_color = Color(0.87451, 0.87451, 0.87451, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 48
+Button/fonts/font = ExtResource("18_vvxg4")
+Button/styles/disabled = SubResource("StyleBoxFlat_vvxg4")
+Button/styles/focus = SubResource("StyleBoxEmpty_jqh07")
+Button/styles/normal = SubResource("StyleBoxFlat_si61s")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eph02"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7d5oj"]
+bg_color = Color(0.60862, 0.236894, 0.205408, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rug88"]
+bg_color = Color(0.523592, 0.196858, 0.169578, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wkvnu"]
+bg_color = Color(0.682353, 0.27451, 0.239216, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0923971, 0.0923971, 0.092397, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="MainLevel" type="Node2D"]
+script = ExtResource("1_skk0u")
+monsters = Array[ExtResource("2_frnua")]([ExtResource("3_seugi"), ExtResource("4_n5s4r"), ExtResource("5_7gnqb")])
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -300
+offset_right = 3842.0
+offset_bottom = 2163.0
+mouse_filter = 2
+color = Color(0.190762, 0.190762, 0.190762, 1)
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.691357, 0.691357, 0.691357, 1)
+z_index = -100
+texture = ExtResource("6_p41yr")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="BackgroundDisplays" type="Node2D" parent="."]
+
+[node name="BackgroundDisplay" parent="BackgroundDisplays" instance=ExtResource("36_xmnip")]
+position = Vector2(1004, 774)
+scale = Vector2(0.5, 0.5)
+
+[node name="BackgroundDisplay2" parent="BackgroundDisplays" instance=ExtResource("36_xmnip")]
+position = Vector2(1249, 774)
+scale = Vector2(0.5, 0.5)
+
+[node name="BackgroundDisplay3" parent="BackgroundDisplays" instance=ExtResource("36_xmnip")]
+position = Vector2(2663, 774)
+scale = Vector2(0.5, 0.5)
+
+[node name="Background_Thermometer" parent="BackgroundDisplays" instance=ExtResource("43_vqmxf")]
+position = Vector2(2457, 773)
+scale = Vector2(0.3, 0.3)
+
+[node name="TempBackground" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[node name="BasicBackground" parent="TempBackground" instance=ExtResource("7_p41yr")]
+layout_mode = 0
+offset_left = 932.0
+offset_top = 99.0
+offset_right = 1332.0
+offset_bottom = 477.0
+
+[node name="BasicBackground4" parent="TempBackground" instance=ExtResource("7_p41yr")]
+layout_mode = 0
+offset_left = 1385.0
+offset_top = 94.0
+offset_right = 2786.0
+offset_bottom = 472.0
+
+[node name="BasicBackground2" parent="TempBackground" instance=ExtResource("7_p41yr")]
+layout_mode = 0
+offset_left = 2118.0
+offset_top = 1582.0
+offset_right = 2942.0
+offset_bottom = 2087.0
+
+[node name="BasicBackground3" parent="TempBackground" instance=ExtResource("7_p41yr")]
+layout_mode = 0
+offset_left = 1734.0
+offset_top = 1582.0
+offset_right = 2085.0
+offset_bottom = 2085.0
+
+[node name="Navigator" parent="." instance=ExtResource("1_vyqcs")]
+unique_name_in_owner = true
+z_index = 10
+position = Vector2(758, 1581)
+scale = Vector2(0.4, 0.4)
+
+[node name="CheatSheet_Logic" parent="." instance=ExtResource("33_4h2xa")]
+position = Vector2(3400, 1875)
+rotation = -1.5708
+scale = Vector2(0.4, 0.4)
+type = 1
+
+[node name="Circuit" parent="." instance=ExtResource("2_jlqhw")]
+unique_name_in_owner = true
+z_index = 10
+position = Vector2(3077, 1581)
+rotation = -1.5708
+
+[node name="ShipStatus" parent="." instance=ExtResource("5_krnsu")]
+unique_name_in_owner = true
+offset_left = 2183.0
+offset_top = 1649.0
+offset_right = 2183.0
+offset_bottom = 1649.0
+
+[node name="Radar" parent="." instance=ExtResource("6_j0tf5")]
+unique_name_in_owner = true
+position = Vector2(1920, 1080)
+
+[node name="DEBUG" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2773.0
+offset_top = 541.0
+offset_right = 2813.0
+offset_bottom = 581.0
+theme = SubResource("Theme_xqvtp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DEBUG"]
+layout_mode = 0
+offset_right = 217.0
+offset_bottom = 414.0
+
+[node name="Label" type="Label" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+text = "--------------- DEBUG ---------------"
+
+[node name="Container5" type="Container" parent="DEBUG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DEBUG/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Monster-HP:"
+
+[node name="LabelMonsterHealth" type="Label" parent="DEBUG/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "255"
+horizontal_alignment = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DEBUG/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(97, 0)
+layout_mode = 2
+text = "Binary:"
+horizontal_alignment = 2
+
+[node name="LabelMonsterHealthBinary" type="Label" parent="DEBUG/VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "11111111"
+horizontal_alignment = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DEBUG/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Caesar key:"
+
+[node name="LabelRadioKey" type="Label" parent="DEBUG/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "25"
+horizontal_alignment = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DEBUG/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Tree:"
+
+[node name="LabelTreeMode" type="Label" parent="DEBUG/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Depth-First-Search"
+horizontal_alignment = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DEBUG/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "Path:"
+
+[node name="LabelShortestPath" type="Label" parent="DEBUG/VBoxContainer/HBoxContainer5"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[0,1,2,3,4,5,6,7,8,9]"
+horizontal_alignment = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DEBUG/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "Cost:"
+
+[node name="LabelShortestPathCost" type="Label" parent="DEBUG/VBoxContainer/HBoxContainer6"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "35"
+horizontal_alignment = 2
+
+[node name="Container" type="Container" parent="DEBUG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="DebugEndRound" type="Button" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+text = "New Round"
+
+[node name="Container4" type="Container" parent="DEBUG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="ButtonSpawnMonster" type="Button" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+text = "Spawn Monster"
+
+[node name="DebugMonsterAttack" type="Button" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+text = "Monster Attack"
+
+[node name="Container2" type="Container" parent="DEBUG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="DebugKillMonster" type="Button" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+text = "Kill Monster"
+
+[node name="ButtonSolveCircuit" type="Button" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+text = "Solve Circuit"
+
+[node name="ButtonSolveTree" type="Button" parent="DEBUG/VBoxContainer"]
+layout_mode = 2
+text = "Solve Tree"
+
+[node name="Binary" parent="." instance=ExtResource("10_bk1fk")]
+unique_name_in_owner = true
+z_index = 10
+position = Vector2(2152, 272)
+rotation = 3.14159
+scale = Vector2(1.3, 1.3)
+
+[node name="Switches" parent="Binary" index="0"]
+position = Vector2(-38.0619, -1.32317)
+scale = Vector2(1.2, 1.2)
+
+[node name="ButtonFire" parent="Binary/Control/VBoxContainer/Control" index="2"]
+theme = ExtResource("13_xqvtp")
+
+[node name="ValuesHelp" parent="Binary/Control" index="1"]
+offset_left = -440.0
+offset_top = 43.0758
+offset_right = 322.0
+offset_bottom = 98.0758
+theme = SubResource("Theme_p41yr")
+theme_override_constants/separation = 56
+
+[node name="Label7" parent="Binary/Control/ValuesHelp" index="0"]
+modulate = Color(0.366595, 0.366595, 0.366595, 1)
+
+[node name="Label6" parent="Binary/Control/ValuesHelp" index="1"]
+modulate = Color(0.366595, 0.366595, 0.366595, 1)
+
+[node name="Label5" parent="Binary/Control/ValuesHelp" index="2"]
+modulate = Color(0.366595, 0.366595, 0.366595, 1)
+
+[node name="Label4" parent="Binary/Control/ValuesHelp" index="3"]
+modulate = Color(0.366595, 0.366595, 0.366595, 1)
+custom_minimum_size = Vector2(54.37, 0)
+
+[node name="Label3" parent="Binary/Control/ValuesHelp" index="4"]
+modulate = Color(0.366595, 0.366595, 0.366595, 1)
+custom_minimum_size = Vector2(48.795, 0)
+
+[node name="Label2" parent="Binary/Control/ValuesHelp" index="5"]
+modulate = Color(0.366595, 0.366595, 0.366595, 1)
+custom_minimum_size = Vector2(47.375, 0)
+
+[node name="Label1" parent="Binary/Control/ValuesHelp" index="6"]
+modulate = Color(0.366595, 0.366595, 0.366595, 1)
+custom_minimum_size = Vector2(51.275, 0)
+
+[node name="Label0" parent="Binary/Control/ValuesHelp" index="7"]
+modulate = Color(0.366595, 0.366595, 0.366595, 1)
+custom_minimum_size = Vector2(44.405, 0)
+
+[node name="BinaryMinigame" parent="." instance=ExtResource("32_jqh07")]
+unique_name_in_owner = true
+offset_left = 1270.0
+offset_top = 421.0
+offset_right = 1270.0
+offset_bottom = 421.0
+rotation = 3.14159
+
+[node name="RoundProgress" parent="." instance=ExtResource("10_eid30")]
+unique_name_in_owner = true
+offset_left = 898.0
+offset_top = 1011.0
+offset_right = 898.0
+offset_bottom = 1011.0
+
+[node name="TreeTraversal" parent="." instance=ExtResource("11_bk1fk")]
+unique_name_in_owner = true
+z_index = 10
+position = Vector2(1912, 1811)
+scale = Vector2(0.85, 0.85)
+layout = 1
+
+[node name="Radio" type="Node2D" parent="."]
+z_index = 10
+position = Vector2(400, 1073)
+rotation = 1.5708
+
+[node name="SpriteRadio" type="Sprite2D" parent="Radio"]
+texture = ExtResource("12_a8hac")
+
+[node name="PanelCooldownInfo" type="Sprite2D" parent="Radio"]
+position = Vector2(312.001, 239.999)
+texture = ExtResource("17_qkma6")
+
+[node name="CaesarMinigame" parent="Radio" instance=ExtResource("12_v70mk")]
+unique_name_in_owner = true
+histogrammanzeige = 6
+enable_cooldown = true
+
+[node name="FixedEncryptedText" parent="Radio/CaesarMinigame" index="1"]
+offset_left = -512.0
+offset_top = 89.0
+offset_right = 26.0
+offset_bottom = 219.0
+theme = ExtResource("14_5lhvh")
+
+[node name="EncryptedText" parent="Radio/CaesarMinigame" index="2"]
+offset_left = -514.0
+offset_top = -165.0
+offset_right = 27.0
+offset_bottom = -32.0
+theme = ExtResource("14_5lhvh")
+
+[node name="SpinBox" parent="Radio/CaesarMinigame" index="4"]
+offset_left = 431.0
+offset_top = 224.0
+offset_right = 517.563
+offset_bottom = 255.0
+
+[node name="ApplyButton" parent="Radio/CaesarMinigame" index="5"]
+custom_minimum_size = Vector2(0, 50)
+offset_left = 442.0
+offset_top = 125.998
+offset_right = 570.0
+offset_bottom = 175.998
+theme_override_font_sizes/font_size = 28
+text = "DECODE"
+
+[node name="rad_sprite" parent="Radio/CaesarMinigame" index="6"]
+position = Vector2(374, 152.999)
+base_rotation_degrees = 0.0
+
+[node name="HistogramContainer" parent="Radio/CaesarMinigame" index="7"]
+offset_left = 131.999
+offset_top = -175.001
+offset_right = 171.999
+offset_bottom = -135.001
+theme = ExtResource("18_n5s4r")
+
+[node name="ShiftUpButton" parent="Radio/CaesarMinigame" index="8"]
+offset_left = 249.0
+offset_top = 98.9999
+offset_right = 308.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 28
+
+[node name="ShiftDownButton" parent="Radio/CaesarMinigame" index="9"]
+offset_left = 250.0
+offset_top = 159.999
+offset_right = 307.0
+offset_bottom = 206.999
+
+[node name="ShiftLabel" parent="Radio/CaesarMinigame" index="10"]
+offset_left = 139.0
+offset_top = 114.999
+offset_right = 225.0
+offset_bottom = 204.332
+text = "25"
+label_settings = ExtResource("16_a8hac")
+horizontal_alignment = 2
+
+[node name="CooldownTimerPanel" parent="Radio/CaesarMinigame" index="11"]
+visible = true
+offset_left = 136.001
+offset_top = 230.0
+offset_right = 493.001
+offset_bottom = 249.0
+
+[node name="RadioIncLED" type="Sprite2D" parent="Radio"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_eph02")
+position = Vector2(-519.001, -218.998)
+texture = ExtResource("22_pfi76")
+
+[node name="CheatSheet_Caesar" parent="Radio" instance=ExtResource("33_4h2xa")]
+position = Vector2(774, -66.0028)
+scale = Vector2(0.4, 0.4)
+
+[node name="Accessories" type="Node2D" parent="."]
+
+[node name="Augenklappe" type="Sprite2D" parent="Accessories"]
+position = Vector2(211, 184)
+texture = ExtResource("28_6gsva")
+
+[node name="Kapitänsmütze" type="Sprite2D" parent="Accessories"]
+position = Vector2(2441, 1513)
+texture = ExtResource("29_vqmxf")
+
+[node name="KopfhörerFunker" type="Sprite2D" parent="Accessories"]
+position = Vector2(572, 277)
+rotation = 1.4748
+texture = ExtResource("30_ekotv")
+
+[node name="LinealMechaniker" type="Sprite2D" parent="Accessories"]
+position = Vector2(3382, 135)
+texture = ExtResource("31_nyytb")
+
+[node name="SchraubendreherMechaniker" type="Sprite2D" parent="Accessories"]
+position = Vector2(3278, 165)
+texture = ExtResource("32_p5r27")
+
+[node name="WalkieTalkieFunker" type="Sprite2D" parent="Accessories"]
+z_index = 20
+position = Vector2(477, 2083)
+rotation = 0.21293
+scale = Vector2(1, 0.901763)
+texture = ExtResource("33_miryf")
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_si61s")
+}
+
+[node name="GameOverScreen" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 3840.0
+offset_bottom = 2160.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameOverScreen"]
+z_index = 150
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="GameOverLabel" type="Label" parent="GameOverScreen"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+z_index = 200
+custom_minimum_size = Vector2(3840, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.0
+offset_top = 67.0
+offset_right = 3597.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Mission gescheitert"
+label_settings = SubResource("LabelSettings_si61s")
+horizontal_alignment = 1
+
+[node name="GameOverButtons" type="VBoxContainer" parent="GameOverScreen"]
+modulate = Color(1, 1, 1, 0)
+z_index = 150
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -162.5
+offset_top = 152.0
+offset_right = 162.5
+offset_bottom = 438.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_si61s")
+
+[node name="ButtonContinue" type="Button" parent="GameOverScreen/GameOverButtons"]
+custom_minimum_size = Vector2(325, 80)
+layout_mode = 2
+disabled = true
+text = "Weiter"
+
+[node name="Container" type="Container" parent="GameOverScreen/GameOverButtons"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="ButtonRestart" type="Button" parent="GameOverScreen/GameOverButtons"]
+custom_minimum_size = Vector2(325, 80)
+layout_mode = 2
+disabled = true
+text = "Neu starten"
+
+[node name="Container2" type="Container" parent="GameOverScreen/GameOverButtons"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="ButtonMainMenu" type="Button" parent="GameOverScreen/GameOverButtons"]
+custom_minimum_size = Vector2(325, 80)
+layout_mode = 2
+disabled = true
+text = "Hauptmenu"
+
+[node name="GameIntroScreen" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 3840.0
+offset_bottom = 2160.0
+
+[node name="ColorRect" type="ColorRect" parent="GameIntroScreen"]
+z_index = 150
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0.137255, 0.137255, 0.862745)
+
+[node name="GameIntoTitle" type="Label" parent="GameIntroScreen"]
+z_index = 250
+layout_mode = 0
+offset_left = 1025.0
+offset_top = 888.0
+offset_right = 2837.0
+offset_bottom = 1075.0
+text = "Alle Mann an Bord?
+Dann Schotten dicht machen und auf Tauchstation!"
+label_settings = SubResource("LabelSettings_si61s")
+horizontal_alignment = 1
+
+[node name="ButtonStartGame" type="Button" parent="GameIntroScreen"]
+unique_name_in_owner = true
+z_index = 250
+layout_mode = 0
+offset_left = 1744.0
+offset_top = 1141.0
+offset_right = 2098.0
+offset_bottom = 1231.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eph02")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7d5oj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rug88")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wkvnu")
+text = "Spiel Starten"
+
+[node name="RadioOpDesc" type="Control" parent="GameIntroScreen"]
+z_index = 250
+anchors_preset = 0
+offset_left = 716.0
+offset_top = 728.0
+offset_right = 756.0
+offset_bottom = 750.333
+rotation = 1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="GameIntroScreen/RadioOpDesc"]
+position = Vector2(234, 71)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("19_si61s")
+
+[node name="Label" type="Label" parent="GameIntroScreen/RadioOpDesc"]
+layout_mode = 0
+offset_left = -370.0
+offset_top = 309.0
+offset_right = 1031.0
+offset_bottom = 526.0
+text = "An dieser Station musst du Funksprüche entschlüsseln. Diese enthalten wichtige Informationen für die anderen Crewmitglieder!"
+label_settings = ExtResource("20_rug88")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CaptainDesc" type="Control" parent="GameIntroScreen"]
+z_index = 250
+anchors_preset = 0
+offset_left = 1747.0
+offset_top = 1522.0
+offset_right = 1787.0
+offset_bottom = 1544.33
+
+[node name="Sprite2D" type="Sprite2D" parent="GameIntroScreen/CaptainDesc"]
+position = Vector2(237, 71)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("20_i75cs")
+
+[node name="Label" type="Label" parent="GameIntroScreen/CaptainDesc"]
+layout_mode = 0
+offset_left = -449.0
+offset_top = 352.0
+offset_right = 1053.0
+offset_bottom = 476.0
+text = "An dieser Station musst du den günstigsten Pfad wählen, Schiffswracks erkunden und deinem Mechaniker Anweisungen geben!"
+label_settings = ExtResource("20_rug88")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MechanicDesc" type="Control" parent="GameIntroScreen"]
+z_index = 250
+anchors_preset = 0
+offset_left = 3206.0
+offset_top = 1300.0
+offset_right = 3246.0
+offset_bottom = 1322.33
+rotation = -1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="GameIntroScreen/MechanicDesc"]
+position = Vector2(226, 66)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("21_goj7h")
+
+[node name="Label" type="Label" parent="GameIntroScreen/MechanicDesc"]
+layout_mode = 0
+offset_left = -470.0
+offset_top = 312.0
+offset_right = 911.0
+offset_bottom = 529.0
+text = "An dieser Station musst du logische Schaltungen nach Anweisungen von deinem Kapitän zusammenbauen und testen!"
+label_settings = ExtResource("20_rug88")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="GunnerDesc" type="Control" parent="GameIntroScreen"]
+z_index = 250
+anchors_preset = 0
+offset_left = 2191.0
+offset_top = 582.0
+offset_right = 2231.0
+offset_bottom = 604.333
+rotation = 3.14159
+
+[node name="Sprite2D" type="Sprite2D" parent="GameIntroScreen/GunnerDesc"]
+position = Vector2(224, 77)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("22_wkvnu")
+
+[node name="Label" type="Label" parent="GameIntroScreen/GunnerDesc"]
+layout_mode = 0
+offset_left = -513.0
+offset_top = 338.0
+offset_right = 1081.0
+offset_bottom = 462.0
+text = "An dieser Station musst die Stärke der Bordkanone einstellen um die Ungeheuer zu besiegen, bevor sie dem U-Boot Schaden zufügen können."
+label_settings = ExtResource("20_rug88")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Settings" parent="." node_paths=PackedStringArray("debug_panel") instance=ExtResource("24_7d5oj")]
+z_index = 50
+offset_left = 2454.0
+offset_top = 1070.0
+offset_right = 2454.0
+offset_bottom = 1070.0
+current_scene = 2
+debug_panel = NodePath("../DEBUG")
+
+[node name="MenuPopup" parent="Settings" index="0"]
+offset_left = 64.0
+offset_top = 20.0
+offset_right = 364.0
+offset_bottom = 463.0
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="Submarine" type="AudioStreamPlayer2D" parent="SFX"]
+position = Vector2(1921, 1084)
+stream = ExtResource("30_pfi76")
+volume_db = -5.0
+autoplay = true
+
+[node name="Echolot" type="AudioStreamPlayer2D" parent="SFX"]
+position = Vector2(1921, 1084)
+stream = ExtResource("31_eph02")
+volume_db = -10.0
+autoplay = true
+
+[node name="FeedbackOverlays" type="Control" parent="."]
+z_index = 50
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="FeedbackRadio" parent="FeedbackOverlays" instance=ExtResource("35_p41yr")]
+unique_name_in_owner = true
+visible = false
+offset_left = 377.0
+offset_top = 471.0
+offset_right = 417.0
+offset_bottom = 511.0
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+show_time = 9.0
+
+[node name="ColorRect" parent="FeedbackOverlays/FeedbackRadio" index="0"]
+offset_left = 380.0
+offset_top = 156.0
+offset_right = 1619.0
+offset_bottom = 312.0
+
+[node name="Background" parent="FeedbackOverlays/FeedbackRadio" index="1"]
+offset_left = 384.0
+offset_top = 163.0
+offset_right = 466.0
+offset_bottom = 203.0
+
+[node name="Line" parent="FeedbackOverlays/FeedbackRadio" index="3"]
+offset_left = 389.0
+offset_top = 165.0
+offset_right = 1991.0
+offset_bottom = 353.0
+
+[node name="FeedbackBinary" parent="FeedbackOverlays" instance=ExtResource("35_p41yr")]
+unique_name_in_owner = true
+visible = false
+offset_left = 1537.0
+offset_top = 320.0
+offset_right = 1577.0
+offset_bottom = 360.0
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+
+[node name="FeedbackCircuit" parent="FeedbackOverlays" instance=ExtResource("35_p41yr")]
+unique_name_in_owner = true
+visible = false
+offset_left = 3500.0
+offset_top = 618.0
+offset_right = 3540.0
+offset_bottom = 658.0
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+
+[node name="FeedbackTree" parent="FeedbackOverlays" instance=ExtResource("35_p41yr")]
+unique_name_in_owner = true
+visible = false
+offset_left = 2273.0
+offset_top = 1858.0
+offset_right = 2313.0
+offset_bottom = 1898.0
+scale = Vector2(0.5, 0.5)
+
+[connection signal="pressed" from="DEBUG/VBoxContainer/DebugEndRound" to="." method="_on_debug_end_round_pressed"]
+[connection signal="pressed" from="DEBUG/VBoxContainer/ButtonSpawnMonster" to="." method="_on_button_spawn_monster_pressed"]
+[connection signal="pressed" from="DEBUG/VBoxContainer/DebugMonsterAttack" to="." method="_on_debug_monster_attack_pressed"]
+[connection signal="pressed" from="DEBUG/VBoxContainer/DebugKillMonster" to="." method="_on_debug_kill_monster_pressed"]
+[connection signal="pressed" from="DEBUG/VBoxContainer/ButtonSolveCircuit" to="." method="_on_button_solve_circuit_pressed"]
+[connection signal="pressed" from="DEBUG/VBoxContainer/ButtonSolveTree" to="." method="_on_button_solve_tree_pressed"]
+[connection signal="pressed" from="GameOverScreen/GameOverButtons/ButtonContinue" to="." method="_on_button_continue_pressed"]
+[connection signal="pressed" from="GameOverScreen/GameOverButtons/ButtonRestart" to="." method="_on_button_restart_pressed"]
+[connection signal="pressed" from="GameOverScreen/GameOverButtons/ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]
+[connection signal="pressed" from="GameIntroScreen/ButtonStartGame" to="." method="_on_button_start_game_pressed"]
+
+[editable path="Binary"]
+[editable path="Radio/CaesarMinigame"]
+[editable path="Settings"]
+[editable path="FeedbackOverlays/FeedbackRadio"]

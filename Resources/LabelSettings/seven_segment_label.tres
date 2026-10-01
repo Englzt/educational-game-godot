@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bbolqiut2rbaq"]
+
+[ext_resource type="FontFile" uid="uid://5utw7mjw5nfu" path="res://Assets/Fonts/Lux_SevenSegmentNumbers.ttf" id="1_bmm3a"]
+
+[resource]
+font = ExtResource("1_bmm3a")
+font_size = 78
+font_color = Color(0, 1, 0, 1)

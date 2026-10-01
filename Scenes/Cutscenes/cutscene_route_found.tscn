@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgmmiqimrqt6b"]
+
+[ext_resource type="Texture2D" uid="uid://co0p7m84x63od" path="res://Assets/Textures/BonusLevel/cutscenes/Planet_route.svg" id="1_iakey"]
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="2_a4al6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1upbe"]
+font = ExtResource("2_a4al6")
+font_size = 126
+font_color = Color(0.121569, 0.996078, 0.490196, 1)
+outline_size = 15
+outline_color = Color(0.168627, 0.827451, 0.435294, 1)
+
+[node name="Cutscene_route_found" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_iakey")
+centered = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 1071.0
+offset_top = 677.0
+offset_right = 2105.0
+offset_bottom = 1124.0
+text = "KURS ZUM
+HEIMATPLANETEN
+GEFUNDEN"
+label_settings = SubResource("LabelSettings_1upbe")
+horizontal_alignment = 1

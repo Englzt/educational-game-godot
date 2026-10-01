@@ -1,0 +1,74 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cxh5u5fqrenrh"]
+
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="1_gba0g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gba0g"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.190762, 0.190762, 0.190762, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.2484, 0.2484, 0.2484, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t1k6x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w37x2"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.613391, 0.61339, 0.61339, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.466667, 0.466667, 0.466667, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1k6x"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.666667, 0.666667, 0.666667, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.466667, 0.466667, 0.466667, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yttjp"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.509286, 0.509286, 0.509286, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.466667, 0.466667, 0.466667, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[resource]
+Button/colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 0.5)
+Button/colors/font_hover_color = Color(0.933333, 0.933333, 0.933333, 1)
+Button/colors/font_pressed_color = Color(0.933333, 0.933333, 0.933333, 1)
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_gba0g")
+Button/styles/disabled = SubResource("StyleBoxFlat_gba0g")
+Button/styles/focus = SubResource("StyleBoxEmpty_t1k6x")
+Button/styles/hover = SubResource("StyleBoxFlat_w37x2")
+Button/styles/normal = SubResource("StyleBoxFlat_t1k6x")
+Button/styles/pressed = SubResource("StyleBoxFlat_yttjp")

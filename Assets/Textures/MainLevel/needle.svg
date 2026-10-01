@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1.4832385mm"
+   height="4.2953558mm"
+   viewBox="0 0 1.4832385 4.2953558"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="tisch_tachonadel.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.59508979"
+     inkscape:cx="-117.62931"
+     inkscape:cy="25.20628"
+     inkscape:window-width="1500"
+     inkscape:window-height="912"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-136.26041,-141.81666)">
+    <circle
+       style="fill:#acb3ba;stroke-width:0.0257507"
+       cx="137.00203"
+       cy="144.82463"
+       r="0.74161923"
+       id="circle20" />
+    <path
+       style="fill:#be4545;fill-opacity:1;stroke-width:0.0257507"
+       d="m 137.12783,141.9307 c 0.003,-0.0651 -0.0557,-0.11225 -0.12084,-0.11398 -0.0651,-0.002 -0.12509,0.0488 -0.12684,0.11392 l -0.12038,3.92316 0.003,0.01 c 2.6e-4,0.14008 0.11044,0.25708 0.24757,0.24769 0.13711,-0.009 0.24424,-0.11734 0.23484,-0.25445 z"
+       id="path20" />
+  </g>
+</svg>

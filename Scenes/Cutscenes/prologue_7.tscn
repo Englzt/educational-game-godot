@@ -1,0 +1,364 @@
+[gd_scene load_steps=14 format=3 uid="uid://d1av8rl4volwd"]
+
+[ext_resource type="Script" uid="uid://8mnqjfqg547n" path="res://Scenes/Cutscenes/prologue_script.gd" id="1_lvx5s"]
+[ext_resource type="Texture2D" uid="uid://mmcpi8su2im7" path="res://Assets/Textures/Prologue/prologue8_background.svg" id="2_3jgfq"]
+[ext_resource type="Texture2D" uid="uid://cdnk5ek47vttw" path="res://Assets/Textures/Prologue/aztec_chief.svg" id="3_d4xwi"]
+[ext_resource type="Texture2D" uid="uid://67vnafy7c4yp" path="res://Assets/Textures/Axolotl/Funker.svg" id="3_sdgid"]
+[ext_resource type="Texture2D" uid="uid://bxhf8e3wy52qr" path="res://Assets/Textures/Axolotl/Mechaniker.svg" id="4_psdfs"]
+[ext_resource type="Texture2D" uid="uid://dtk1nru3p8gyh" path="res://Assets/Textures/Prologue/prologue8_foreground.svg" id="4_tteir"]
+[ext_resource type="Texture2D" uid="uid://dsvqmmv5sxqa0" path="res://Assets/Textures/Axolotl/Kapitän.svg" id="5_ialg3"]
+[ext_resource type="Texture2D" uid="uid://bhr57cwu6war1" path="res://Assets/Textures/Axolotl/Kanonier.svg" id="6_b20ac"]
+[ext_resource type="Texture2D" uid="uid://yie2coyhscpn" path="res://Assets/Textures/Prologue/bush.svg" id="9_psdfs"]
+[ext_resource type="Texture2D" uid="uid://540pipx3kjp3" path="res://Assets/Textures/Prologue/Humboldt.svg" id="10_ialg3"]
+
+[sub_resource type="Animation" id="Animation_qhxwp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Aztec:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2012, 1425)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Foreground:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Aztec:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Foreground:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Humboldt:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(344, 1894)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Humboldt:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.46745, 0.46745)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Bushes:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Bushes:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bua1h"]
+resource_name = "animation"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 5.2, 6),
+"transitions": PackedFloat32Array(1, 2.5, 1, 2.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-76, -30)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Aztec:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2012, 1425), Vector2(2022, 1550)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Foreground:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-303, -136)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05139, 1.05139)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Aztec:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.00957, 1.00957)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Foreground:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1662, 1.1662)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(6.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"switch_to_next_scene"
+}]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Humboldt:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.14, 2.74, 4.23333, 5.7),
+"transitions": PackedFloat32Array(1, 1, 0.125, 1, 1),
+"update": 0,
+"values": [Vector2(385, 1843), Vector2(344, 1894), Vector2(362, 1645), Vector2(359, 1663), Vector2(330, 1968.8)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Humboldt:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 6.02802),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1.71, 1.71)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Bushes:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 5.99847),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(271, 1686), Vector2(225, 1741)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Bushes:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 5.99847),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.2, 1.2), Vector2(1.37, 1.37)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhxwp"]
+_data = {
+&"RESET": SubResource("Animation_qhxwp"),
+&"animation": SubResource("Animation_bua1h")
+}
+
+[node name="Prologue_7" type="Node2D" node_paths=PackedStringArray("overlay")]
+script = ExtResource("1_lvx5s")
+next_scene = 12
+overlay = NodePath("ColorRect")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_3jgfq")
+centered = false
+
+[node name="Node2D" type="Node2D" parent="Background"]
+texture_filter = 4
+position = Vector2(1689, 442)
+scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Node2D"]
+position = Vector2(1935, 540)
+texture = ExtResource("3_sdgid")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background/Node2D"]
+position = Vector2(1450, 915)
+texture = ExtResource("4_psdfs")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background/Node2D"]
+position = Vector2(2580, 1390)
+texture = ExtResource("5_ialg3")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Background/Node2D"]
+position = Vector2(340.001, 1340)
+texture = ExtResource("6_b20ac")
+
+[node name="Aztec" type="Sprite2D" parent="."]
+position = Vector2(2012, 1425)
+texture = ExtResource("3_d4xwi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qhxwp")
+}
+autoplay = "animation"
+
+[node name="Humboldt" type="Sprite2D" parent="."]
+position = Vector2(344, 1894)
+scale = Vector2(0.46745, 0.46745)
+texture = ExtResource("10_ialg3")
+
+[node name="Grass" type="ColorRect" parent="."]
+offset_left = 14.0
+offset_top = 1731.0
+offset_right = 620.0
+offset_bottom = 2380.0
+color = Color(0.443137, 0.564706, 0.298039, 1)
+
+[node name="Bushes" type="Node2D" parent="."]
+
+[node name="Bush1" type="Sprite2D" parent="Bushes"]
+texture = ExtResource("9_psdfs")
+
+[node name="Bush2" type="Sprite2D" parent="Bushes"]
+position = Vector2(170, 23)
+texture = ExtResource("9_psdfs")
+
+[node name="Foreground" type="Sprite2D" parent="."]
+texture = ExtResource("4_tteir")
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -106.0
+offset_top = -90.0
+offset_right = 4004.0
+offset_bottom = 2246.0
+color = Color(0, 0, 0, 1)

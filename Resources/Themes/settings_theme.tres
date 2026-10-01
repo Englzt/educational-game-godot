@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dkrwbt08atd1e"]
+
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="1_vtx72"]
+[ext_resource type="Texture2D" uid="uid://dmx1i2bcp4xur" path="res://Assets/Textures/Settings/toggle_on.svg" id="2_bj06g"]
+[ext_resource type="Texture2D" uid="uid://cnfmp3ub5f1m8" path="res://Assets/Textures/Settings/toggle_off.svg" id="3_67g6p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d8idi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u0x25"]
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_vtx72")
+Button/styles/focus = SubResource("StyleBoxEmpty_d8idi")
+CheckButton/font_sizes/font_size = 32
+CheckButton/fonts/font = ExtResource("1_vtx72")
+CheckButton/icons/checked = ExtResource("2_bj06g")
+CheckButton/icons/unchecked = ExtResource("3_67g6p")
+CheckButton/styles/focus = SubResource("StyleBoxEmpty_u0x25")

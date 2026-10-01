@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1kta5s04oqv0"]
+
+[ext_resource type="Texture2D" uid="uid://ior36kjxt0qu" path="res://Assets/Textures/Binary/background.svg" id="1_tlpef"]
+
+[node name="BasicBackground" type="NinePatchRect"]
+offset_right = 413.0
+offset_bottom = 308.0
+texture = ExtResource("1_tlpef")
+patch_margin_left = 80
+patch_margin_top = 80
+patch_margin_right = 80
+patch_margin_bottom = 80

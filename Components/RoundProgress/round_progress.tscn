@@ -1,0 +1,163 @@
+[gd_scene load_steps=11 format=3 uid="uid://bgwt52yddnfo5"]
+
+[ext_resource type="Script" uid="uid://vs1efliolak3" path="res://Components/RoundProgress/round_progress.gd" id="1_q775l"]
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="1_utywh"]
+[ext_resource type="Texture2D" uid="uid://bldgn5gnculri" path="res://Assets/Textures/LogicGates/LED.svg" id="3_5nq7i"]
+[ext_resource type="LabelSettings" uid="uid://ju4kigya41cp" path="res://Resources/LabelSettings/ship_status_label_settings.tres" id="4_fmdfm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f1yox"]
+font = ExtResource("1_utywh")
+font_size = 64
+
+[sub_resource type="Shader" id="Shader_q775l"]
+code = "shader_type canvas_item;
+
+uniform bool enabled;
+uniform vec4 color_on = vec4(0.0, 0.8, 0.4, 1.0);
+uniform vec4 color_off = vec4(0.8, 0.0, 0.2, 1.0);
+
+void fragment() {
+	if(enabled) {
+		COLOR *= color_on;
+	} else {
+		COLOR *= color_off;
+	}
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5nq7i"]
+shader = SubResource("Shader_q775l")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="Shader" id="Shader_utywh"]
+code = "shader_type canvas_item;
+
+uniform bool enabled;
+uniform vec4 color_on = vec4(0.0, 0.8, 0.4, 1.0);
+uniform vec4 color_off = vec4(0.8, 0.0, 0.2, 1.0);
+
+void fragment() {
+	if(enabled) {
+		COLOR *= color_on;
+	} else {
+		COLOR *= color_off;
+	}
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_utywh"]
+shader = SubResource("Shader_utywh")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q775l"]
+shader = SubResource("Shader_q775l")
+shader_parameter/enabled = false
+shader_parameter/color_on = Vector4(0, 0.8, 0.4, 1)
+shader_parameter/color_off = Vector4(0.8, 0, 0.2, 1)
+
+[node name="RoundProgress" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q775l")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 670.0
+offset_bottom = 249.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Rundenfortschritt"
+label_settings = SubResource("LabelSettings_f1yox")
+
+[node name="Container" type="Container" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="SecStationsReady" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="StationGunner" type="HBoxContainer" parent="VBoxContainer/SecStationsReady"]
+layout_mode = 2
+
+[node name="BinaryLED" type="TextureRect" parent="VBoxContainer/SecStationsReady/StationGunner"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_5nq7i")
+layout_mode = 2
+texture = ExtResource("3_5nq7i")
+expand_mode = 3
+
+[node name="Container" type="Container" parent="VBoxContainer/SecStationsReady/StationGunner"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SecStationsReady/StationGunner"]
+layout_mode = 2
+text = "Monster besiegt"
+label_settings = ExtResource("4_fmdfm")
+
+[node name="Container" type="Container" parent="VBoxContainer/SecStationsReady"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="StationMechanic" type="HBoxContainer" parent="VBoxContainer/SecStationsReady"]
+layout_mode = 2
+
+[node name="MechanicLED" type="TextureRect" parent="VBoxContainer/SecStationsReady/StationMechanic"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_utywh")
+layout_mode = 2
+texture = ExtResource("3_5nq7i")
+expand_mode = 3
+
+[node name="Container" type="Container" parent="VBoxContainer/SecStationsReady/StationMechanic"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SecStationsReady/StationMechanic"]
+layout_mode = 2
+text = "Schaltung eingestellt"
+label_settings = ExtResource("4_fmdfm")
+
+[node name="Container2" type="Container" parent="VBoxContainer/SecStationsReady"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="StationTreeSearch" type="HBoxContainer" parent="VBoxContainer/SecStationsReady"]
+layout_mode = 2
+
+[node name="TreeLED" type="TextureRect" parent="VBoxContainer/SecStationsReady/StationTreeSearch"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_q775l")
+layout_mode = 2
+texture = ExtResource("3_5nq7i")
+expand_mode = 3
+
+[node name="Container" type="Container" parent="VBoxContainer/SecStationsReady/StationTreeSearch"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SecStationsReady/StationTreeSearch"]
+layout_mode = 2
+text = "Objekt erkundet"
+label_settings = ExtResource("4_fmdfm")
+
+[node name="Container3" type="Container" parent="VBoxContainer/SecStationsReady"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="RoundEndLabel" type="Label" parent="VBoxContainer/SecStationsReady"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Passage erfolgreich durchquert!
+Kapitän, wählen sie die nächste route!"
+label_settings = ExtResource("4_fmdfm")

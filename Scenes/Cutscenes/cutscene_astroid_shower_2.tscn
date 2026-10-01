@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://yk4rlbto5hgc"]
+
+[ext_resource type="Texture2D" uid="uid://dbawtctgiar1g" path="res://Assets/Textures/BonusLevel/cutscenes/asteroiden_cockpit.svg" id="1_4eppt"]
+
+[node name="Cutscene_astroid_shower_2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4eppt")
+centered = false

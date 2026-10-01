@@ -1,0 +1,226 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlbj0cva0nyia"]
+
+[ext_resource type="Script" uid="uid://8mnqjfqg547n" path="res://Scenes/Cutscenes/prologue_script.gd" id="1_q042m"]
+[ext_resource type="Texture2D" uid="uid://uy7uxvh52gar" path="res://Assets/Textures/Prologue/prologue2_3_background.svg" id="1_qhbwx"]
+[ext_resource type="Texture2D" uid="uid://bvvu7wns3a4mv" path="res://Assets/Textures/Prologue/space_background.svg" id="2_7f0ey"]
+[ext_resource type="Texture2D" uid="uid://duukkuxmjpuoh" path="res://Assets/Textures/Prologue/prologue2_3_outlines.png" id="2_mrri2"]
+[ext_resource type="Texture2D" uid="uid://bxhf8e3wy52qr" path="res://Assets/Textures/Axolotl/Mechaniker.svg" id="5_1gea6"]
+[ext_resource type="Texture2D" uid="uid://kqa6ofqg10ma" path="res://Assets/Textures/Prologue/desk.svg" id="5_vkppe"]
+[ext_resource type="Texture2D" uid="uid://67vnafy7c4yp" path="res://Assets/Textures/Axolotl/Funker.svg" id="6_6byxf"]
+
+[sub_resource type="Animation" id="Animation_7f0ey"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Funker:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3007, 1018)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mechaniker:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1863, 1025)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Funker:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Mechaniker:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_q042m"]
+resource_name = "animation"
+length = 6.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"switch_to_next_scene"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.75, 5.04788, 5.6),
+"transitions": PackedFloat32Array(1, 2.5, 1, 2.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(836, -294), Vector2(583, -179)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Funker:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0666667, 1.06667, 2.06667, 3.06667, 4.06667, 5.06667, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3007, 1018), Vector2(3007, 1065.82), Vector2(3007, 1018), Vector2(3007, 1041.82), Vector2(3007, 1018), Vector2(3007, 1041.82), Vector2(3007, 1018)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mechaniker:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1863, 1025), Vector2(1863, 1072.82), Vector2(1863, 1025), Vector2(1863, 1072.82), Vector2(1863, 1025), Vector2(1863, 1072.82), Vector2(1863, 1025)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Funker:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.0666667, 1.06667, 2.06667, 3.06667, 4.06667, 5.06667, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.97), Vector2(1, 1), Vector2(1, 0.97), Vector2(1, 1), Vector2(1, 0.97), Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Mechaniker:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.97), Vector2(1, 1), Vector2(1, 0.97), Vector2(1, 1), Vector2(1, 0.97), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7f0ey"]
+_data = {
+&"RESET": SubResource("Animation_7f0ey"),
+&"animation": SubResource("Animation_q042m")
+}
+
+[node name="Prologue_2" type="Node2D" node_paths=PackedStringArray("overlay")]
+script = ExtResource("1_q042m")
+next_scene = 7
+overlay = NodePath("ColorRect")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_7f0ey")
+centered = false
+
+[node name="Middleground" type="Sprite2D" parent="."]
+texture = ExtResource("1_qhbwx")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Outlines" type="Sprite2D" parent="Middleground"]
+position = Vector2(-23.669, -11)
+scale = Vector2(1.01064, 1.01064)
+texture = ExtResource("2_mrri2")
+centered = false
+
+[node name="Mechaniker" type="Sprite2D" parent="."]
+position = Vector2(1863, 1025)
+texture = ExtResource("5_1gea6")
+
+[node name="Funker" type="Sprite2D" parent="."]
+position = Vector2(3007, 1018)
+texture = ExtResource("6_6byxf")
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(2507, 1385)
+texture = ExtResource("5_vkppe")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7f0ey")
+}
+autoplay = "animation"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -106.0
+offset_top = -90.0
+offset_right = 4004.0
+offset_bottom = 2246.0
+color = Color(0, 0, 0, 1)

@@ -1,0 +1,92 @@
+[
+	{
+		"factors" : [0, 0, 1, 1, 0],
+		"expression" : "(values[2] or values[0]) and not values[3]",
+		"expression_UI" : "(A ∨ C) ∧ ¬D",
+		"target_system" : "Kühlkreislauf"
+	},
+	{
+		"factors" : [1, 0, 0, 0, 0],
+		"expression" : "(values[0] or values[2]) and values[3]",
+		"expression_UI" : "(A ∨ C) ∧ D",
+		"target_system" : "Notantrieb"
+	},
+	{
+		"factors" : [1, 0, 0, 0, 1],
+		"expression" : "(values[0] or values[2]) and not (values[0] and values[2])",
+		"expression_UI" : "A ⊕ C",
+		"target_system" : "Stoßdämpfer"
+	},
+	{
+		"factors" : [1, 0, 1, 0, 0],
+		"expression" : "(values[0] or values[2] or values[4])",
+		"expression_UI" : "A ∨ C ∨ E",
+		"target_system" : "Filteranlage"
+	},
+	{
+		"factors" : [1, 0, 0, 1, 0],
+		"expression" : "values[0] and values[3] and not values[4]",
+		"expression_UI" : "A ∧ C ∧ ¬E",
+		"target_system" : "Kommunikationssystem"
+	},
+		{
+		"factors": [0, 1, 1, 0, 0],
+		"expression": "(values[1] and not values[2])",
+		"expression_UI": "B ∧ ¬C",
+		"target_system": "Sauerstoffkompressor"
+	},
+	{
+		"factors": [1, 1, 0, 0, 0],
+		"expression": "not values[0] and values[1]",
+		"expression_UI": "¬A ∧ B",
+		"target_system": "Navigationshilfe"
+	},
+	{
+		"factors": [1, 0, 0, 0, 1],
+		"expression": "not(values[0]) or values[4]",
+		"expression_UI": "¬A ∨ E",
+		"target_system": "Tiefensensor"
+	},
+	{
+		"factors": [0, 1, 0, 1, 1],
+		"expression": "values[1] and not(values[3] or values[4])",
+		"expression_UI": "B ∧ ¬(D ∨ E)",
+		"target_system": "Schildgenerator"
+	},
+	{
+		"factors": [1, 0, 1, 1, 0],
+		"expression": "(values[0] and values[2]) or values[3]",
+		"expression_UI": "(A ∧ C) ∨ D",
+		"target_system": "Antriebseinheit"
+	},
+	{
+		"factors": [0, 1, 0, 1, 0],
+		"expression": "values[1] xor values[3]",
+		"expression_UI": "B ⊕ D",
+		"target_system": "Echolot"
+	},
+	{
+		"factors": [1, 0, 0, 1, 1],
+		"expression": "not values[0] and (values[3] or values[4])",
+		"expression_UI": "¬A ∧ (D ∨ E)",
+		"target_system": "Datenspeicher"
+	},
+	{
+		"factors": [1, 1, 1, 0, 0],
+		"expression": "values[0] xor values[2]",
+		"expression_UI": "A ⊕ C",
+		"target_system": "Reaktorsteuerung"
+	},
+	{
+		"factors": [0, 1, 1, 0, 1],
+		"expression": "(values[1] or values[2]) and not values[4]",
+		"expression_UI": "(B ∨ C) ∧ ¬E",
+		"target_system": "Abschirmfeld"
+	},
+	{
+		"factors": [0, 0, 1, 1, 1],
+		"expression": "not(values[3]) and (values[2] or values[4])",
+		"expression_UI": "¬D ∧ (C ∨ E)",
+		"target_system": "Stabilisator"
+	}
+]

@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccs1o46v75ghu"]
+
+[ext_resource type="Texture2D" uid="uid://bp0x7f453cequ" path="res://Assets/Textures/Other/Note.svg" id="1_fqtd0"]
+[ext_resource type="Script" uid="uid://cqd0yj33x8isr" path="res://Components/CheatSheet/cheat_sheet.gd" id="2_3cwyd"]
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="2_flpkq"]
+
+[node name="CheatSheet" type="Sprite2D" node_paths=PackedStringArray("sheets")]
+texture = ExtResource("1_fqtd0")
+script = ExtResource("2_3cwyd")
+sheets = [NodePath("CaesarShift"), NodePath("LogicGates"), NodePath("Binary")]
+
+[node name="CaesarShift" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Alphabet" type="RichTextLabel" parent="CaesarShift"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -383.0
+offset_top = -247.0
+offset_right = 341.0
+offset_bottom = 428.0
+rotation = -0.0261799
+theme_override_fonts/normal_font = ExtResource("2_flpkq")
+theme_override_font_sizes/normal_font_size = 60
+text = " 0:A    9:J    18:S
+ 1:B   10:K    19:T
+ 2:C   11:L    20:U
+ 3:D   12:M    21:V
+ 4:E   13:N    22:W
+ 5:F   14:O    23:X
+ 6:G   15:P    24:Y
+ 7:H   16:Q    25:Z
+ 8:I   17:R
+"
+
+[node name="Note" type="RichTextLabel" parent="CaesarShift"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -387.0
+offset_top = 396.0
+offset_right = 320.0
+offset_bottom = 463.0
+rotation = -0.0349066
+theme_override_fonts/normal_font = ExtResource("2_flpkq")
+theme_override_font_sizes/normal_font_size = 48
+text = "Häufigster Buchstabe = E"
+
+[node name="LogicGates" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Alphabet" type="RichTextLabel" parent="LogicGates"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -396.0
+offset_top = -180.0
+offset_right = 364.0
+offset_bottom = 400.0
+rotation = -0.0261799
+theme_override_fonts/normal_font = ExtResource("2_flpkq")
+theme_override_font_sizes/normal_font_size = 60
+text = "∧ AND -> beide 1
+
+∨ OR -> mind. eins 1
+
+⊕ XOR -> genau eins 1
+
+¬ NOT -> invertiert"
+scroll_active = false
+
+[node name="Binary" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Alphabet" type="RichTextLabel" parent="Binary"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -351.0
+offset_top = -40.0
+offset_right = 323.0
+offset_bottom = 122.0
+rotation = -0.0261799
+theme_override_fonts/normal_font = ExtResource("2_flpkq")
+theme_override_font_sizes/normal_font_size = 60
+text = "[hier könnte Ihre Werbung stehen]"
+scroll_active = false

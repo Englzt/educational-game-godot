@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctxkov3yvq82p"]
+
+[ext_resource type="Script" uid="uid://v3mks1wo38ko" path="res://Scenes/Settings/settings.gd" id="1_54igw"]
+[ext_resource type="Theme" uid="uid://dkrwbt08atd1e" path="res://Resources/Themes/settings_theme.tres" id="2_iey1w"]
+[ext_resource type="Texture2D" uid="uid://cqvy3fslx3pom" path="res://Assets/Textures/Settings/gear_texture.svg" id="5_ucrpl"]
+
+[node name="Settings" type="Control"]
+z_index = 1000
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_54igw")
+
+[node name="MenuPopup" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = -363.0
+offset_top = 37.0
+offset_right = -63.0
+offset_bottom = 480.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuPopup"]
+layout_mode = 2
+theme = ExtResource("2_iey1w")
+
+[node name="ToggleSFX" type="CheckButton" parent="MenuPopup/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "SFX"
+alignment = 1
+
+[node name="ToggleDebug" type="CheckButton" parent="MenuPopup/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "Debug"
+alignment = 1
+
+[node name="Container" type="Container" parent="MenuPopup/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="Restart" type="Button" parent="MenuPopup/VBoxContainer"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+text = "Neustart"
+
+[node name="Container2" type="Container" parent="MenuPopup/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="MainMenu" type="Button" parent="MenuPopup/VBoxContainer"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+text = "Menü"
+
+[node name="Container3" type="Container" parent="MenuPopup/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="MenuPopup/VBoxContainer"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+text = "Beenden"
+
+[node name="GearButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -50.5
+offset_top = -50.5
+offset_right = 50.5
+offset_bottom = 50.5
+pivot_offset = Vector2(50.5, 50.5)
+texture_normal = ExtResource("5_ucrpl")
+
+[connection signal="toggled" from="MenuPopup/VBoxContainer/ToggleSFX" to="." method="_on_toggle_sfx_toggled"]
+[connection signal="toggled" from="MenuPopup/VBoxContainer/ToggleDebug" to="." method="_on_toggle_debug_toggled"]
+[connection signal="pressed" from="MenuPopup/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MenuPopup/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="MenuPopup/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="GearButton" to="." method="_on_gear_button_pressed"]

@@ -1,0 +1,215 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0r2p04llfqye"]
+
+[ext_resource type="Script" uid="uid://8mnqjfqg547n" path="res://Scenes/Cutscenes/prologue_script.gd" id="1_nwcwb"]
+[ext_resource type="Texture2D" uid="uid://b72rv7qa3uhme" path="res://Assets/Textures/Prologue/prologue6_background.svg" id="2_rc4ch"]
+[ext_resource type="Texture2D" uid="uid://ixebili5kkon" path="res://Assets/Textures/Prologue/Schiff.svg" id="3_v41ou"]
+[ext_resource type="Texture2D" uid="uid://c0tjtparyay27" path="res://Assets/Textures/Radar/mask.png" id="4_v41ou"]
+[ext_resource type="Texture2D" uid="uid://540pipx3kjp3" path="res://Assets/Textures/Prologue/Humboldt.svg" id="5_gll1u"]
+
+[sub_resource type="Animation" id="Animation_qhxwp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Ship:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(623, 841)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Ship/Camera2D:zoom")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Ship/Camera2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1297, 239)]
+}
+
+[sub_resource type="Animation" id="Animation_bua1h"]
+resource_name = "animation"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 5.2, 6),
+"transitions": PackedFloat32Array(1, 2.5, 1, 2.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(6.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"switch_to_next_scene"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Ship:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.76667, 3.6, 4.4, 5.43333, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(623, 841), Vector2(1140, 769), Vector2(1885, 636), Vector2(2328, 725), Vector2(2858, 931), Vector2(3692, 1059)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Ship/Camera2D:zoom")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Ship/Camera2D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1297, 239), Vector2(255.182, 316.927)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhxwp"]
+_data = {
+&"RESET": SubResource("Animation_qhxwp"),
+&"animation": SubResource("Animation_bua1h")
+}
+
+[node name="Prologue_9" type="Node2D" node_paths=PackedStringArray("overlay")]
+script = ExtResource("1_nwcwb")
+next_scene = 14
+overlay = NodePath("ColorRect")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -1822.0
+offset_top = -1180.0
+offset_right = 6530.0
+offset_bottom = 3606.0
+color = Color(0.54902, 0.701961, 0.796078, 1)
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_rc4ch")
+centered = false
+
+[node name="Ship" type="Sprite2D" parent="."]
+position = Vector2(623, 841)
+texture = ExtResource("3_v41ou")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="Ship"]
+position = Vector2(1297, 239)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ship"]
+clip_children = 1
+position = Vector2(354, 112)
+scale = Vector2(2.25488, 2.25488)
+texture = ExtResource("4_v41ou")
+
+[node name="Humboldt" type="Sprite2D" parent="Ship/Sprite2D"]
+position = Vector2(11, 124)
+scale = Vector2(0.303464, 0.303464)
+texture = ExtResource("5_gll1u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qhxwp")
+}
+autoplay = "animation"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -2105.0
+offset_top = -1470.0
+offset_right = 6764.0
+offset_bottom = 3912.0
+color = Color(0, 0, 0, 1)

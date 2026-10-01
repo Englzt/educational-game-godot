@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=3 uid="uid://c8d1hp87fk83j"]
+
+[ext_resource type="Texture2D" uid="uid://drdu8jv25y88n" path="res://Assets/Textures/BonusLevel/cutscenes/planet_reached.svg" id="1_m78xm"]
+[ext_resource type="Texture2D" uid="uid://dxwwofslagale" path="res://Assets/Textures/BonusLevel/cutscenes/planet.svg" id="2_o61eb"]
+[ext_resource type="Texture2D" uid="uid://dhs3g6crbsnxo" path="res://Assets/Textures/Prologue/spaceship.svg" id="3_l36h8"]
+[ext_resource type="Texture2D" uid="uid://bxfvfjinp477k" path="res://Assets/Textures/Other/smoke_particle_texture.png" id="4_d2phq"]
+
+[sub_resource type="Gradient" id="Gradient_ecypw"]
+offsets = PackedFloat32Array(0, 0.464891, 1)
+colors = PackedColorArray(0.995264, 1, 0.715743, 1, 0.908173, 0.542989, 0, 1, 0.713726, 0, 0.0156863, 0.403922)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2l4a7"]
+gradient = SubResource("Gradient_ecypw")
+
+[sub_resource type="Curve" id="Curve_2owvo"]
+_data = [Vector2(0, 0.690744), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_wf71g"]
+curve = SubResource("Curve_2owvo")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e1i22"]
+particle_flag_disable_z = true
+spread = 20.0
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_wf71g")
+color_ramp = SubResource("GradientTexture1D_2l4a7")
+
+[sub_resource type="Animation" id="Animation_o61eb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Foreground2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1590, 1390)]
+}
+
+[sub_resource type="Animation" id="Animation_m78xm"]
+resource_name = "animation"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Foreground2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 19.9667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1601, 1390), Vector2(1683, 1117)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l36h8"]
+_data = {
+&"RESET": SubResource("Animation_o61eb"),
+&"animation": SubResource("Animation_m78xm")
+}
+
+[node name="Cutscene_planet_reached" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1923, 1194)
+scale = Vector2(2.53359, 2.53359)
+texture = ExtResource("1_m78xm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2774, 881)
+scale = Vector2(1.51476, 1.51476)
+texture = ExtResource("2_o61eb")
+
+[node name="Foreground2" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1590, 1390)
+texture = ExtResource("3_l36h8")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Foreground2"]
+z_index = -1
+position = Vector2(-72.6963, 406.212)
+rotation = 0.64971
+scale = Vector2(3, 3)
+amount = 300
+texture = ExtResource("4_d2phq")
+lifetime = 2.0
+preprocess = 2.0
+speed_scale = 1.5
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_e1i22")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_l36h8")
+}

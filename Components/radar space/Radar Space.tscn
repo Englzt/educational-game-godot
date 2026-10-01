@@ -1,0 +1,220 @@
+[gd_scene load_steps=20 format=3 uid="uid://b5o76vflhmbut"]
+
+[ext_resource type="Texture2D" uid="uid://c0tjtparyay27" path="res://Assets/Textures/Radar/mask.png" id="1_0hbsg"]
+[ext_resource type="Script" uid="uid://ciswrj0mg5aw2" path="res://Components/radar space/radar_space.gd" id="1_sfev4"]
+[ext_resource type="Texture2D" uid="uid://04ym8d0l4yac" path="res://Assets/Textures/RadarSpace/space_far.svg" id="3_sfev4"]
+[ext_resource type="Texture2D" uid="uid://cniltf2md8qgl" path="res://Assets/Textures/RadarSpace/space_front.svg" id="4_wfepx"]
+[ext_resource type="Texture2D" uid="uid://dhs3g6crbsnxo" path="res://Assets/Textures/Prologue/spaceship.svg" id="5_2x4py"]
+[ext_resource type="PackedScene" uid="uid://cyd430wvjrhpk" path="res://Components/asteroids/Asteroids.tscn" id="5_sfev4"]
+[ext_resource type="Texture2D" uid="uid://bxfvfjinp477k" path="res://Assets/Textures/Other/smoke_particle_texture.png" id="6_y66yr"]
+[ext_resource type="Texture2D" uid="uid://cwxaqittyg2ux" path="res://Assets/Textures/RadarSpace/path2.svg" id="8_wfepx"]
+[ext_resource type="Texture2D" uid="uid://bfwy0ykrxbdth" path="res://Assets/Textures/RadarSpace/radar_rim.svg" id="9_dwbsa"]
+
+[sub_resource type="Gradient" id="Gradient_mtrqk"]
+offsets = PackedFloat32Array(0, 0.464891, 1)
+colors = PackedColorArray(0.995264, 1, 0.715743, 1, 0.908173, 0.542989, 0, 1, 0.713726, 0, 0.0156863, 0.403922)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wfepx"]
+gradient = SubResource("Gradient_mtrqk")
+
+[sub_resource type="Curve" id="Curve_lurn3"]
+_data = [Vector2(0, 0.690744), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_dwbsa"]
+curve = SubResource("Curve_lurn3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_alikf"]
+particle_flag_disable_z = true
+spread = 20.0
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_dwbsa")
+color_ramp = SubResource("GradientTexture1D_wfepx")
+
+[sub_resource type="Animation" id="Animation_o2vef"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask/Asteroid1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(92, -145)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mask/Asteroid1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mask/Asteroid1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s28od"]
+resource_name = "monster_arrival"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask/Asteroid1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9, 5),
+"transitions": PackedFloat32Array(1, 0.517632, 1),
+"update": 0,
+"values": [Vector2(-163.333, -88), Vector2(-72.3333, -55.6667), Vector2(37.6667, -57.6667)]
+}
+
+[sub_resource type="Animation" id="Animation_5akwh"]
+resource_name = "monster_defeated"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("Mask/Asteroid1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(40, -57), Vector2(70.6667, -40)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mask/Asteroid1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.4556]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mask/Asteroid1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rh6od"]
+resource_name = "monster_idle"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask/Asteroid1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.02, 1.99, 2.83333, 4.01, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(37.6667, -57.6667), Vector2(39.3333, -56), Vector2(40.6667, -58.6667), Vector2(39.417, -54.943), Vector2(39.3333, -58.6667), Vector2(37.6667, -57.6667)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5akwh"]
+_data = {
+&"RESET": SubResource("Animation_o2vef"),
+&"monster_arrival": SubResource("Animation_s28od"),
+&"monster_defeated": SubResource("Animation_5akwh"),
+&"monster_idle": SubResource("Animation_rh6od")
+}
+
+[node name="RadarSpace" type="Node2D"]
+script = ExtResource("1_sfev4")
+
+[node name="Mask" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+clip_children = 2
+scale = Vector2(3, 3)
+texture = ExtResource("1_0hbsg")
+
+[node name="Background" type="Sprite2D" parent="Mask"]
+unique_name_in_owner = true
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("3_sfev4")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 256)
+
+[node name="Foreground" type="Sprite2D" parent="Mask"]
+unique_name_in_owner = true
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(8.66667, 28.6667)
+texture = ExtResource("4_wfepx")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 256)
+
+[node name="Asteroid1" parent="Mask" instance=ExtResource("5_sfev4")]
+position = Vector2(92, -145)
+scale = Vector2(0.333333, 0.333333)
+
+[node name="Foreground2" type="Sprite2D" parent="Mask"]
+z_index = 5
+position = Vector2(-4.66667, -7.66667)
+rotation = 0.678933
+scale = Vector2(0.098, 0.098)
+texture = ExtResource("5_2x4py")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Mask/Foreground2"]
+z_index = -1
+position = Vector2(-72.6963, 406.212)
+rotation = 0.64971
+scale = Vector2(3, 3)
+amount = 300
+texture = ExtResource("6_y66yr")
+lifetime = 2.0
+preprocess = 2.0
+speed_scale = 1.5
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_alikf")
+
+[node name="Rim" type="Sprite2D" parent="."]
+scale = Vector2(2.335, 2.335)
+texture = ExtResource("8_wfepx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rim"]
+rotation = 3.14159
+texture = ExtResource("9_dwbsa")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_5akwh")
+}

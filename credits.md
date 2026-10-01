@@ -1,10 +1,3 @@
-# Axolotl Rescue
-
-**Axolotl Rescue** ist ein Lernspiel zur Vermittlung grundlegender Konzepte der Informatik. Es behandelt Themen wie die Umrechnung von Dezimal- in Binärzahlen, die Cäsar-Verschlüsselung, den kürzesten Pfad, Tiefen- und Breitensuche in Baumstrukturen sowie logische Schaltungen.
-Zielgruppe sind Schüler der Klassenstufen 7 bis 9.
-
-Das Spiel wird im Rahmen des Moduls Mediendidaktik und -psychologie im Bachelorstudiengang Medieninformatik an der TU Dresden entwickelt.
-
 ## Verwendete Assets
 
 ### Godot Plugins
@@ -17,7 +10,7 @@ Das Spiel wird im Rahmen des Moduls Mediendidaktik und -psychologie im Bachelors
 
 ### Texturen
 - **[The Valley of Mexico at the time of the Spanish conquest in 1519](https://commons.wikimedia.org/wiki/File:Basin_of_Mexico_1519_map-en.svg#/media/File:Basin_of_Mexico_1519_map-en.svg)** - [[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)]
-	- Änderungen: Overlays entfernt, Farben angepasst, Umriss des Sees verändert
+    - Änderungen: Overlays entfernt, Farben angepasst, Umriss des Sees verändert
 
 ### Shader
 - **[Retro TV shader](https://godotshaders.com/shader/retro-tv-shader/)** - [[CC0](https://creativecommons.org/publicdomain/zero/1.0/)]

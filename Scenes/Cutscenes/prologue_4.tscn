@@ -1,0 +1,352 @@
+[gd_scene load_steps=14 format=3 uid="uid://d0ea3johq4tcy"]
+
+[ext_resource type="Texture2D" uid="uid://c8npiqmmm1d2a" path="res://Assets/Textures/Prologue/prologue4_background.svg" id="1_016sl"]
+[ext_resource type="Script" uid="uid://8mnqjfqg547n" path="res://Scenes/Cutscenes/prologue_script.gd" id="1_km3ph"]
+[ext_resource type="Texture2D" uid="uid://d3swxvw3hsriw" path="res://Assets/Textures/Prologue/earth.svg" id="3_akc87"]
+[ext_resource type="Texture2D" uid="uid://nxi2fnkjuga" path="res://Assets/Textures/Asteroids/Asteroid.svg" id="3_d8c2a"]
+[ext_resource type="Shader" uid="uid://c88758o8314vf" path="res://Resources/Shader/asteroid_heat.gdshader" id="4_h660v"]
+[ext_resource type="Texture2D" uid="uid://caiiiwrhf3hdw" path="res://Assets/Textures/Prologue/prologue5_background.svg" id="6_xfpdr"]
+[ext_resource type="Texture2D" uid="uid://duukkuxmjpuoh" path="res://Assets/Textures/Prologue/prologue2_3_outlines.png" id="7_21fpw"]
+[ext_resource type="Texture2D" uid="uid://dj2hohitt1q6r" path="res://Assets/Textures/Axolotl/Mechaniker_aengstlich.svg" id="8_exwt4"]
+[ext_resource type="Texture2D" uid="uid://kqa6ofqg10ma" path="res://Assets/Textures/Prologue/desk.svg" id="9_3n6qo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q3lxh"]
+shader = ExtResource("4_h660v")
+shader_parameter/max_shift = 0.04
+shader_parameter/speed = 0.02
+shader_parameter/frequency = 4.075
+
+[sub_resource type="Animation" id="Animation_kl0ex"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Asteroid:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1530, 255)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MechanikerAengstlich:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1473, 1065)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MechanikerAengstlich:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DirectionalLight2D:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.18]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Background:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(297, -133)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Asteroid2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2456, 106)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Asteroid:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Asteroid2:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.725, 0.725)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/Asteroid:skew")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_qmehg"]
+resource_name = "animation"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 5.2, 6),
+"transitions": PackedFloat32Array(1, 2.5, 1, 2.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(6.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"switch_to_next_scene"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MechanikerAengstlich:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.51, 1.01, 1.51, 2, 2.5, 3, 3.5, 4, 4.86667, 5.46667, 5.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1473, 1065), Vector2(1323, 1019), Vector2(1189, 1061), Vector2(1055, 998), Vector2(905, 1048), Vector2(796, 981), Vector2(570, 1035), Vector2(403, 972), Vector2(177, 1039), Vector2(-220, 918), Vector2(-501, 1051), Vector2(-740, 975)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MechanikerAengstlich:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DirectionalLight2D:energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.5, 0.1, 0.5, 0.1, 0.5, 0.1, 0.5]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Background:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(297, -133), Vector2(40, -119)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Asteroid:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1530, 255), Vector2(1792, 723)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Asteroid2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2456, 106), Vector2(2631, 464)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/Asteroid:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.375, 1.375)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/Asteroid2:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.725, 0.725)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/Asteroid:skew")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 6, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.125664, -0.125664]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kl0ex"]
+_data = {
+&"RESET": SubResource("Animation_kl0ex"),
+&"animation": SubResource("Animation_qmehg")
+}
+
+[node name="Prologue_4" type="Node2D" node_paths=PackedStringArray("overlay")]
+script = ExtResource("1_km3ph")
+next_scene = 9
+overlay = NodePath("ColorRect")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+visibility_layer = 2
+z_index = -1
+position = Vector2(297, -133)
+scale = Vector2(1.02593, 1.02593)
+texture = ExtResource("1_016sl")
+centered = false
+
+[node name="Earth" type="Sprite2D" parent="CanvasLayer"]
+visibility_layer = 2
+z_index = -1
+position = Vector2(3419, 688)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_akc87")
+
+[node name="Asteroid" type="Sprite2D" parent="CanvasLayer"]
+visibility_layer = 2
+z_index = -1
+material = SubResource("ShaderMaterial_q3lxh")
+position = Vector2(1530, 255)
+rotation = -1.15366
+texture = ExtResource("3_d8c2a")
+
+[node name="Asteroid2" type="Sprite2D" parent="CanvasLayer"]
+visibility_layer = 2
+z_index = -1
+material = SubResource("ShaderMaterial_q3lxh")
+position = Vector2(2456, 106)
+rotation = -1.40674
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("3_d8c2a")
+
+[node name="Middleground" type="Sprite2D" parent="."]
+texture = ExtResource("6_xfpdr")
+centered = false
+
+[node name="Outlines" type="Sprite2D" parent="Middleground"]
+position = Vector2(-23.669, -11)
+scale = Vector2(1.01064, 1.01064)
+texture = ExtResource("7_21fpw")
+centered = false
+
+[node name="MechanikerAengstlich" type="Sprite2D" parent="."]
+position = Vector2(1473, 1065)
+texture = ExtResource("8_exwt4")
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(2507, 1385)
+texture = ExtResource("9_3n6qo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -106.0
+offset_top = -90.0
+offset_right = 4004.0
+offset_bottom = 2246.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_kl0ex")
+}
+autoplay = "animation"
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(126, 106)
+color = Color(1, 0, 0, 1)
+energy = 0.18
+blend_mode = 2
+range_z_min = 1
+shadow_color = Color(0, 0, 0, 1)

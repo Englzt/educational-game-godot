@@ -1,0 +1,419 @@
+[gd_scene load_steps=12 format=3 uid="uid://d0ea3johq4tcy"]
+
+[ext_resource type="Script" uid="uid://8mnqjfqg547n" path="res://Scenes/Cutscenes/prologue_script.gd" id="1_qmehg"]
+[ext_resource type="Texture2D" uid="uid://b72rv7qa3uhme" path="res://Assets/Textures/Prologue/prologue6_background.svg" id="2_qmehg"]
+[ext_resource type="Texture2D" uid="uid://bfoobssp5is78" path="res://Assets/Textures/Prologue/spaceship_pt_1.svg" id="3_kl0ex"]
+[ext_resource type="Shader" uid="uid://c88758o8314vf" path="res://Resources/Shader/asteroid_heat.gdshader" id="3_mdowq"]
+[ext_resource type="Texture2D" uid="uid://b2vjks4er4ih7" path="res://Assets/Textures/Prologue/spaceship_pt_2.svg" id="4_mdowq"]
+[ext_resource type="Texture2D" uid="uid://b3bem73dv4ol4" path="res://Assets/Textures/Prologue/spaceship_pt_3.svg" id="5_q3lxh"]
+[ext_resource type="Texture2D" uid="uid://3heuqoraheq6" path="res://Assets/Textures/Axolotl/Mechaniker_Glider.svg" id="6_a4fwv"]
+
+[sub_resource type="Animation" id="Animation_qhxwp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Spaceship/Spaceship_Part1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Spaceship/Spaceship_Part2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Spaceship/Spaceship_Part3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Spaceship/Spaceship_Part1:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Spaceship/Spaceship_Part2:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Spaceship/Spaceship_Part3:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Spaceship:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Spaceship:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2753, 763)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Axolotl:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-480, 971)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Axolotl:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.66, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Axolotl:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_moksm"]
+resource_name = "animation"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 5.2, 6),
+"transitions": PackedFloat32Array(1, 2.5, 1, 2.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(6.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"switch_to_next_scene"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Spaceship/Spaceship_Part1:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 6.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(329.4, -46.7667), Vector2(1620, -230)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Spaceship/Spaceship_Part2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(82.7567, 191.133), Vector2(407, 940)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Spaceship/Spaceship_Part3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 6.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-171.41, -79.7067), Vector2(-843, -392)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Spaceship/Spaceship_Part1:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 6.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0514581, 0.253073]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Spaceship/Spaceship_Part2:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 6.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0684925, 0.336849]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Spaceship/Spaceship_Part3:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 6.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.102916, -0.506145]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Spaceship:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 6.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.2, 0.2), Vector2(0.15, 0.15)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Spaceship:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 6.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(368, 1159), Vector2(507, 1224)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Axolotl:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 1.93, 3.9, 5.7, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1, 2.46229, 1),
+"update": 0,
+"values": [Vector2(-480, 971), Vector2(276, 984), Vector2(923, 1030), Vector2(656, 984), Vector2(568, 884)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Axolotl:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 6.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.61, 0.61)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Axolotl:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 3.9, 5.7, 6.5),
+"transitions": PackedFloat32Array(1, 1, 2.46229, 1),
+"update": 0,
+"values": [0.0, -0.253073, 0.253073, 0.0855211]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhxwp"]
+_data = {
+&"RESET": SubResource("Animation_qhxwp"),
+&"animation": SubResource("Animation_moksm")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q3lxh"]
+shader = ExtResource("3_mdowq")
+shader_parameter/max_shift = 0.015
+shader_parameter/speed = 0.115
+shader_parameter/frequency = 7.19
+
+[node name="Prologue_5" type="Node2D" node_paths=PackedStringArray("overlay")]
+script = ExtResource("1_qmehg")
+next_scene = 10
+overlay = NodePath("ColorRect")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -1822.0
+offset_top = -1180.0
+offset_right = 6530.0
+offset_bottom = 3606.0
+color = Color(0.54902, 0.701961, 0.796078, 1)
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_qmehg")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qhxwp")
+}
+autoplay = "animation"
+
+[node name="Spaceship" type="Node2D" parent="."]
+position = Vector2(2753, 763)
+
+[node name="Spaceship_Part1" type="Sprite2D" parent="Spaceship"]
+modulate = Color(0.999999, 0.666413, 0.505261, 1)
+material = SubResource("ShaderMaterial_q3lxh")
+texture = ExtResource("3_kl0ex")
+
+[node name="Spaceship_Part2" type="Sprite2D" parent="Spaceship"]
+modulate = Color(0.999999, 0.666413, 0.505261, 1)
+material = SubResource("ShaderMaterial_q3lxh")
+texture = ExtResource("4_mdowq")
+
+[node name="Spaceship_Part3" type="Sprite2D" parent="Spaceship"]
+modulate = Color(0.999999, 0.666413, 0.505261, 1)
+material = SubResource("ShaderMaterial_q3lxh")
+texture = ExtResource("5_q3lxh")
+
+[node name="Axolotl" type="Sprite2D" parent="."]
+position = Vector2(-480, 971)
+scale = Vector2(0.66, 1)
+texture = ExtResource("6_a4fwv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -2105.0
+offset_top = -1470.0
+offset_right = 6764.0
+offset_bottom = 3912.0
+color = Color(0, 0, 0, 1)

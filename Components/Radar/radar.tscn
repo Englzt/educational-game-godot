@@ -1,0 +1,541 @@
+[gd_scene load_steps=46 format=3 uid="uid://b8d635p1ulrat"]
+
+[ext_resource type="Script" uid="uid://bq08gysmeaoid" path="res://Components/Radar/radar.gd" id="1_pm01m"]
+[ext_resource type="Texture2D" uid="uid://c0tjtparyay27" path="res://Assets/Textures/Radar/mask.png" id="2_w7i4i"]
+[ext_resource type="Texture2D" uid="uid://dmnmxuqtd6r4b" path="res://Assets/Textures/Radar/far.svg" id="3_s28od"]
+[ext_resource type="Texture2D" uid="uid://dmtefw1jfln2d" path="res://Assets/Textures/Radar/sand.svg" id="4_s28od"]
+[ext_resource type="Texture2D" uid="uid://d0ohypq2ligp0" path="res://Assets/Textures/Radar/UBoot.svg" id="5_1fch7"]
+[ext_resource type="Texture2D" uid="uid://cjp6jx3b5avwn" path="res://Assets/Textures/Radar/UBoot_propellor_one.svg" id="6_p7dtq"]
+[ext_resource type="PackedScene" uid="uid://cutxlwsog5pwu" path="res://Components/MonsterInstance/monster_instance.tscn" id="6_s28od"]
+[ext_resource type="Texture2D" uid="uid://cckfqv6axmjcw" path="res://Assets/Textures/Radar/UBoot_propellor_two.svg" id="7_0k56i"]
+[ext_resource type="Texture2D" uid="uid://c1ospacp2tcb" path="res://Assets/Textures/Radar/bullet.svg" id="7_f0kvi"]
+[ext_resource type="Texture2D" uid="uid://dv1l4m7sx4f5n" path="res://Assets/Textures/Radar/UBoot_gun.svg" id="8_yx46s"]
+[ext_resource type="Texture2D" uid="uid://bqgqo0fqpenvr" path="res://Assets/Textures/Radar/warning_sprites.svg" id="9_8ikv7"]
+[ext_resource type="Shader" uid="uid://ciehsoka12y1a" path="res://Resources/Shader/radar.gdshader" id="9_dfxdf"]
+[ext_resource type="Animation" uid="uid://dopg25qljeide" path="res://Resources/Animations/propellor.res" id="10_5akwh"]
+[ext_resource type="Animation" uid="uid://cgssyslaojc0p" path="res://Resources/Animations/shoot.res" id="11_yb20b"]
+[ext_resource type="FontFile" uid="uid://ckdnrljp0ybj" path="res://Assets/Fonts/CascadiaCode.ttf" id="12_1fch7"]
+[ext_resource type="Texture2D" uid="uid://ddai3mo1ulbc3" path="res://Assets/Textures/Other/foam_particle.png" id="13_8ikv7"]
+[ext_resource type="Texture2D" uid="uid://ckfhypmsxrtcd" path="res://Assets/Textures/Radar/radar_rim.svg" id="13_f0kvi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fch7"]
+atlas = ExtResource("9_8ikv7")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7dtq"]
+atlas = ExtResource("9_8ikv7")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k56i"]
+atlas = ExtResource("9_8ikv7")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx46s"]
+atlas = ExtResource("9_8ikv7")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5gan"]
+atlas = ExtResource("9_8ikv7")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dxoa"]
+atlas = ExtResource("9_8ikv7")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqs65"]
+atlas = ExtResource("9_8ikv7")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63ds3"]
+atlas = ExtResource("9_8ikv7")
+region = Rect2(672, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouu5h"]
+atlas = ExtResource("9_8ikv7")
+region = Rect2(768, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqs65"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fch7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7dtq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k56i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yx46s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5gan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dxoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqs65")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63ds3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouu5h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f0kvi"]
+font = ExtResource("12_1fch7")
+font_size = 64
+font_color = Color(0.984314, 0.670588, 0.207843, 1)
+outline_size = 5
+outline_color = Color(0.619608, 0.156863, 0.203922, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1fch7"]
+font = ExtResource("12_1fch7")
+font_size = 32
+font_color = Color(0.984314, 0.670588, 0.207843, 1)
+outline_size = 5
+outline_color = Color(0.619608, 0.156863, 0.203922, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b84co"]
+shader = ExtResource("9_dfxdf")
+shader_parameter/line_color = Color(0, 0.4, 0, 0.333333)
+shader_parameter/beam_color = Color(0.501961, 1, 0.501961, 0.333333)
+shader_parameter/trail_color = Color(0, 0.501961, 0, 0.333333)
+shader_parameter/blip_color = Color(0.501961, 1, 0.501961, 0.333333)
+shader_parameter/show_edges = false
+shader_parameter/range_lines = 4.0
+shader_parameter/sector_lines = 4.0
+shader_parameter/line_width = 0.01
+shader_parameter/beam_angle = 0.2
+shader_parameter/beam_width = 0.003
+shader_parameter/trail_width = 0.5
+shader_parameter/blip_size = 0.1
+shader_parameter/blip_softness = 0.4
+shader_parameter/blip_presistence = 2.0
+shader_parameter/blip_position = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_1fch7"]
+_data = [Vector2(0, 0.191011), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_p7dtq"]
+curve = SubResource("Curve_1fch7")
+
+[sub_resource type="Curve" id="Curve_0k56i"]
+_limits = [0.0, 0.25, 0.0, 1.0]
+_data = [Vector2(0, 0.154494), 0.0, 0.0, 0, 0, Vector2(1, 0.0212095), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_yx46s"]
+curve = SubResource("Curve_0k56i")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_r5gan"]
+particle_flag_disable_z = true
+spread = 63.414
+initial_velocity_max = 15.0
+gravity = Vector3(0, 4, 0)
+scale_curve = SubResource("CurveTexture_yx46s")
+alpha_curve = SubResource("CurveTexture_p7dtq")
+
+[sub_resource type="Animation" id="Animation_o2vef"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask/Monster:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(92, -145)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mask/Monster:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mask/Monster:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mask/Submarine:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s28od"]
+resource_name = "monster_arrival"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask/Monster:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(150.667, -104.667), Vector2(37.6667, -57.6667)]
+}
+
+[sub_resource type="Animation" id="Animation_b84co"]
+resource_name = "monster_attack"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask/Monster:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.2, 1.4, 1.6, 1.83333, 2.1, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(37.6667, -57.6667), Vector2(-9.66667, 49.3333), Vector2(-12, 53.3333), Vector2(-9.66667, 51), Vector2(-11.3333, 52.3333), Vector2(-13.6667, 49.6667), Vector2(-12, 51), Vector2(37.6667, -57.6667)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mask/Submarine:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.23333, 1.36667, 1.5, 1.63333, 1.76667, 1.9, 2.03333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.425788, 0.357085, 1), Color(1, 1, 1, 1), Color(1, 0.425788, 0.357085, 1), Color(1, 1, 1, 1), Color(1, 0.425788, 0.357085, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.53333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"send_signal_ship_damaged"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_5akwh"]
+resource_name = "monster_defeated"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask/Monster:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(40, -57), Vector2(70.6667, -40)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mask/Monster:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.4556]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mask/Monster:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rh6od"]
+resource_name = "monster_idle"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask/Monster:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.02, 1.99, 2.83333, 4.01, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(37.6667, -57.6667), Vector2(39.3333, -56), Vector2(40.6667, -58.6667), Vector2(39.417, -54.943), Vector2(39.3333, -58.6667), Vector2(37.6667, -57.6667)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5akwh"]
+_data = {
+&"RESET": SubResource("Animation_o2vef"),
+&"monster_arrival": SubResource("Animation_s28od"),
+&"monster_attack": SubResource("Animation_b84co"),
+&"monster_defeated": SubResource("Animation_5akwh"),
+&"monster_idle": SubResource("Animation_rh6od")
+}
+
+[sub_resource type="Animation" id="Animation_dfxdf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask/Submarine/Gun:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mask/Submarine/Gun/RoundShot:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mask/Submarine/Gun/RoundShot:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1720, -360)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mask/Submarine/PropellorTwo:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-260, 81.6666)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dfxdf"]
+_data = {
+&"RESET": SubResource("Animation_dfxdf"),
+&"propellor_animation": ExtResource("10_5akwh")
+}
+
+[sub_resource type="Animation" id="Animation_yb20b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask/Submarine/Gun/RoundShot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(8004.45, -991.11)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b84co"]
+_data = {
+&"RESET": SubResource("Animation_yb20b"),
+&"shoot": ExtResource("11_yb20b")
+}
+
+[node name="Radar" type="Node2D"]
+script = ExtResource("1_pm01m")
+
+[node name="Mask" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+clip_children = 2
+scale = Vector2(3, 3)
+texture = ExtResource("2_w7i4i")
+
+[node name="Background" type="Sprite2D" parent="Mask"]
+unique_name_in_owner = true
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("3_s28od")
+region_enabled = true
+region_rect = Rect2(0, 0, 772, 256)
+
+[node name="Foreground" type="Sprite2D" parent="Mask"]
+unique_name_in_owner = true
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("4_s28od")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 256)
+
+[node name="Submarine" type="Sprite2D" parent="Mask"]
+unique_name_in_owner = true
+z_index = 5
+position = Vector2(-29.6667, 46)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_1fch7")
+
+[node name="PropellorOne" type="Sprite2D" parent="Mask/Submarine"]
+z_index = 1
+position = Vector2(-260, 79.9999)
+scale = Vector2(1, 0.809656)
+texture = ExtResource("6_p7dtq")
+
+[node name="PropellorTwo" type="Sprite2D" parent="Mask/Submarine"]
+z_index = -1
+position = Vector2(-260, 81.6666)
+scale = Vector2(1, 0.809656)
+texture = ExtResource("7_0k56i")
+
+[node name="Gun" type="Sprite2D" parent="Mask/Submarine"]
+unique_name_in_owner = true
+position = Vector2(58.3333, -21.6667)
+texture = ExtResource("8_yx46s")
+offset = Vector2(97.07, -24.39)
+
+[node name="RoundShot" type="Sprite2D" parent="Mask/Submarine/Gun"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+position = Vector2(8004.45, -991.11)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_f0kvi")
+
+[node name="Monster" parent="Mask" instance=ExtResource("6_s28od")]
+unique_name_in_owner = true
+position = Vector2(92, -145)
+
+[node name="MonsterTimer" type="Timer" parent="Mask/Monster"]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="AttackIndicator" type="Node2D" parent="Mask/Monster"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-24, 50)
+
+[node name="WarningSign" type="AnimatedSprite2D" parent="Mask/Monster/AttackIndicator"]
+unique_name_in_owner = true
+scale = Vector2(0.38, 0.38)
+sprite_frames = SubResource("SpriteFrames_pqs65")
+autoplay = "default"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Mask/Monster/AttackIndicator"]
+offset_left = 21.0889
+offset_top = -10.2649
+offset_right = 126.089
+offset_bottom = 61.7351
+scale = Vector2(0.4, 0.4)
+
+[node name="LabelTimer" type="Label" parent="Mask/Monster/AttackIndicator/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "111"
+label_settings = SubResource("LabelSettings_f0kvi")
+
+[node name="Label" type="Label" parent="Mask/Monster/AttackIndicator/HBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "s"
+label_settings = SubResource("LabelSettings_1fch7")
+vertical_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="Mask"]
+visible = false
+z_index = 6
+material = SubResource("ShaderMaterial_b84co")
+offset_left = -131.333
+offset_top = -128.667
+offset_right = 130.667
+offset_bottom = 133.333
+
+[node name="FoamParticles" type="GPUParticles2D" parent="Mask"]
+unique_name_in_owner = true
+position = Vector2(-81, 63.3333)
+rotation = 3.14159
+emitting = false
+amount = 500
+texture = ExtResource("13_8ikv7")
+lifetime = 4.0
+preprocess = 0.5
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_r5gan")
+
+[node name="Rim" type="Sprite2D" parent="."]
+z_index = 100
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("13_f0kvi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_5akwh")
+}
+
+[node name="AnimationPlayerUboot" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_dfxdf")
+}
+autoplay = "propellor_animation"
+
+[node name="AnimationPlayerGun" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_b84co")
+}
+
+[connection signal="timeout" from="Mask/Monster/MonsterTimer" to="." method="_on_monster_timer_timeout"]

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba1oupkqi0uca"]
+
+[ext_resource type="Texture2D" uid="uid://dyyhetmaprrrx" path="res://Assets/Textures/LogicGates/connector.svg" id="1_fftc5"]
+[ext_resource type="Script" uid="uid://bbuk4pk1vhyel" path="res://Components/GraphNode/graph_node.gd" id="1_hbe6b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fftc5"]
+radius = 20.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_fjbqh"]
+font_color = Color(0.695503, 0.695503, 0.695503, 1)
+
+[node name="GraphNode" type="Area2D"]
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_hbe6b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_fftc5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fftc5")
+
+[node name="LabelIndex" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -8.8
+offset_top = -10.8
+offset_right = 10.2
+offset_bottom = 11.5333
+text = "8"
+label_settings = SubResource("LabelSettings_fjbqh")
+horizontal_alignment = 1

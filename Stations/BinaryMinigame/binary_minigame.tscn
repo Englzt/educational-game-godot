@@ -1,0 +1,161 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1sif82enjmef"]
+
+[ext_resource type="Script" uid="uid://cpnqf3ksbrg5r" path="res://Stations/BinaryMinigame/binary_minigame.gd" id="1_h0ah5"]
+[ext_resource type="PackedScene" uid="uid://di5ag2ummgmvc" path="res://Components/led/led.tscn" id="2_alfmg"]
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="3_y17mm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y17mm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tjnnc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8pvui"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vwom2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tjnnc"]
+font = ExtResource("3_y17mm")
+font_size = 64
+
+[node name="BinaryMinigame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_h0ah5")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 166.0
+offset_bottom = 166.0
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="Led1" parent="GridContainer" instance=ExtResource("2_alfmg")]
+layout_mode = 2
+
+[node name="Led2" parent="GridContainer" instance=ExtResource("2_alfmg")]
+layout_mode = 2
+
+[node name="Led3" parent="GridContainer" instance=ExtResource("2_alfmg")]
+layout_mode = 2
+
+[node name="Led4" parent="GridContainer" instance=ExtResource("2_alfmg")]
+layout_mode = 2
+
+[node name="Led5" parent="GridContainer" instance=ExtResource("2_alfmg")]
+layout_mode = 2
+
+[node name="Led6" parent="GridContainer" instance=ExtResource("2_alfmg")]
+layout_mode = 2
+
+[node name="Led7" parent="GridContainer" instance=ExtResource("2_alfmg")]
+layout_mode = 2
+
+[node name="Led8" parent="GridContainer" instance=ExtResource("2_alfmg")]
+layout_mode = 2
+
+[node name="Led9" parent="GridContainer" instance=ExtResource("2_alfmg")]
+layout_mode = 2
+
+[node name="UI" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="StartButton" type="Button" parent="UI"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -7.0
+offset_top = -9.0
+offset_right = 275.0
+offset_bottom = 272.0
+theme_override_fonts/font = ExtResource("3_y17mm")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y17mm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tjnnc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8pvui")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vwom2")
+text = "Start
+Game
+"
+
+[node name="ColorRect" type="ColorRect" parent="UI/StartButton"]
+self_modulate = Color(0, 0, 0, 0.792157)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="LabelReward" type="Label" parent="UI"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 274.0
+offset_bottom = 273.0
+text = "+ 5 HP
+ + 5 ⚡"
+label_settings = SubResource("LabelSettings_tjnnc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="UI/LabelReward"]
+self_modulate = Color(0, 0, 0, 0.792157)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Border" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Border"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -12.0
+offset_right = 274.0
+offset_bottom = -6.0
+mouse_filter = 2
+color = Color(0.466667, 0.466667, 0.466667, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Border"]
+layout_mode = 0
+offset_left = -11.0
+offset_top = 271.0
+offset_right = 274.0
+offset_bottom = 277.0
+mouse_filter = 2
+color = Color(0.466667, 0.466667, 0.466667, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Border"]
+layout_mode = 0
+offset_left = -11.0
+offset_top = -12.0
+offset_right = -5.0
+offset_bottom = 277.0
+mouse_filter = 2
+color = Color(0.466667, 0.466667, 0.466667, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Border"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = -12.0
+offset_right = 278.0
+offset_bottom = 277.0
+mouse_filter = 2
+color = Color(0.466667, 0.466667, 0.466667, 1)
+
+[connection signal="pressed" from="UI/StartButton" to="." method="_on_start_pressed"]

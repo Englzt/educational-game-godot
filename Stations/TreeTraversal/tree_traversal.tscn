@@ -1,0 +1,246 @@
+[gd_scene load_steps=11 format=3 uid="uid://dpmgtaf1hfw4i"]
+
+[ext_resource type="Script" uid="uid://b81km3v0u5t6x" path="res://Stations/TreeTraversal/tree_traversal.gd" id="1_jvaed"]
+[ext_resource type="Texture2D" uid="uid://d10p7dodffkbv" path="res://Assets/Textures/TreeTraversal/ship_wreck_02.svg" id="3_rec1c"]
+[ext_resource type="PackedScene" uid="uid://d04ei2mvtbf85" path="res://Components/TreeNode/tree_node.tscn" id="3_uotpr"]
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="5_enwly"]
+[ext_resource type="Texture2D" uid="uid://xs0sb7vpgt04" path="res://Assets/Textures/TreeTraversal/Ship_layout_2.svg" id="5_rec1c"]
+[ext_resource type="Texture2D" uid="uid://cfema25w1rpnm" path="res://Assets/Textures/TreeTraversal/ship_wreck_01.svg" id="6_70iaj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hls0j"]
+font = ExtResource("5_enwly")
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_enwly"]
+font = ExtResource("5_enwly")
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_rec1c"]
+font = ExtResource("5_enwly")
+font_size = 40
+font_color = Color(0.215686, 0.607843, 0.215686, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_70iaj"]
+font = ExtResource("5_enwly")
+font_size = 64
+
+[node name="TreeTraversal" type="Node2D"]
+script = ExtResource("1_jvaed")
+layout_overlays = Array[Texture2D]([ExtResource("6_70iaj"), ExtResource("3_rec1c")])
+
+[node name="Nodes" type="Node2D" parent="."]
+position = Vector2(-247, -433)
+
+[node name="TreeNode0" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(246, 381)
+breadth_search_index = 0
+depth_search_index = 0
+
+[node name="TreeNode1" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(191, 438)
+breadth_search_index = 1
+depth_search_index = 1
+
+[node name="TreeNode2" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(249, 436)
+breadth_search_index = 2
+depth_search_index = 6
+
+[node name="TreeNode3" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(305, 439)
+breadth_search_index = 3
+depth_search_index = 10
+
+[node name="TreeNode4" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(177, 499)
+breadth_search_index = 4
+depth_search_index = 2
+
+[node name="TreeNode5" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(229, 499)
+breadth_search_index = 5
+depth_search_index = 5
+
+[node name="TreeNode6" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(317, 497)
+breadth_search_index = 7
+depth_search_index = 11
+
+[node name="TreeNode7" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(178, 564)
+breadth_search_index = 8
+depth_search_index = 3
+
+[node name="TreeNode8" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(260, 562)
+breadth_search_index = 6
+depth_search_index = 7
+
+[node name="TreeNode9" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(318, 565)
+breadth_search_index = 11
+depth_search_index = 12
+
+[node name="TreeNode10" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(189, 622)
+breadth_search_index = 12
+depth_search_index = 4
+
+[node name="TreeNode11" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(243, 622)
+breadth_search_index = 9
+depth_search_index = 8
+
+[node name="TreeNode12" parent="Nodes" instance=ExtResource("3_uotpr")]
+unique_name_in_owner = true
+position = Vector2(312, 624)
+breadth_search_index = 10
+depth_search_index = 9
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 23)
+scale = Vector2(0.795649, 0.795649)
+texture = ExtResource("5_rec1c")
+
+[node name="Overlay" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 69)
+texture = ExtResource("6_70iaj")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -339.0
+offset_top = -677.0
+offset_right = 345.0
+offset_bottom = -535.0
+
+[node name="Label" type="Label" parent="Control"]
+visible = false
+layout_mode = 2
+offset_left = 142.0
+offset_top = 300.0
+offset_right = 536.0
+offset_bottom = 451.0
+text = "Schiffswrack
+gefunden!"
+label_settings = SubResource("LabelSettings_hls0j")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 926.0
+offset_right = 495.0
+offset_bottom = 1078.0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Suchmodus:"
+label_settings = SubResource("LabelSettings_enwly")
+horizontal_alignment = 1
+
+[node name="LabelSearchMode" type="Label" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Unbekannt"
+label_settings = SubResource("LabelSettings_rec1c")
+horizontal_alignment = 1
+
+[node name="LabelReward" type="Label" parent="Control"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 211.0
+offset_top = 459.0
+offset_right = 469.0
+offset_bottom = 924.0
+text = "+ 5 HP
+ + 5 ⚡"
+label_settings = SubResource("LabelSettings_70iaj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Control/LabelReward"]
+self_modulate = Color(0, 0, 0, 0.792157)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Border" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -110.0
+offset_top = -97.0
+offset_right = -70.0
+offset_bottom = -57.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Border"]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -125.0
+offset_right = 245.0
+offset_bottom = -119.0
+mouse_filter = 2
+color = Color(0.466667, 0.466667, 0.466667, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Border"]
+layout_mode = 0
+offset_left = -23.0
+offset_top = 342.0
+offset_right = 245.0
+offset_bottom = 348.0
+mouse_filter = 2
+color = Color(0.466667, 0.466667, 0.466667, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Border"]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -125.0
+offset_right = -17.0
+offset_bottom = 344.0
+mouse_filter = 2
+color = Color(0.466667, 0.466667, 0.466667, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Border"]
+layout_mode = 0
+offset_left = 239.0
+offset_top = -125.0
+offset_right = 245.0
+offset_bottom = 345.0
+mouse_filter = 2
+color = Color(0.466667, 0.466667, 0.466667, 1)
+
+[connection signal="input_event" from="Nodes/TreeNode0" to="." method="_on_tree_node_input_event" binds= [0]]
+[connection signal="input_event" from="Nodes/TreeNode1" to="." method="_on_tree_node_input_event" binds= [1]]
+[connection signal="input_event" from="Nodes/TreeNode2" to="." method="_on_tree_node_input_event" binds= [2]]
+[connection signal="input_event" from="Nodes/TreeNode3" to="." method="_on_tree_node_input_event" binds= [3]]
+[connection signal="input_event" from="Nodes/TreeNode4" to="." method="_on_tree_node_input_event" binds= [4]]
+[connection signal="input_event" from="Nodes/TreeNode5" to="." method="_on_tree_node_input_event" binds= [5]]
+[connection signal="input_event" from="Nodes/TreeNode6" to="." method="_on_tree_node_input_event" binds= [6]]
+[connection signal="input_event" from="Nodes/TreeNode7" to="." method="_on_tree_node_input_event" binds= [7]]
+[connection signal="input_event" from="Nodes/TreeNode8" to="." method="_on_tree_node_input_event" binds= [8]]
+[connection signal="input_event" from="Nodes/TreeNode9" to="." method="_on_tree_node_input_event" binds= [9]]
+[connection signal="input_event" from="Nodes/TreeNode10" to="." method="_on_tree_node_input_event" binds= [10]]
+[connection signal="input_event" from="Nodes/TreeNode11" to="." method="_on_tree_node_input_event" binds= [11]]
+[connection signal="input_event" from="Nodes/TreeNode12" to="." method="_on_tree_node_input_event" binds= [12]]

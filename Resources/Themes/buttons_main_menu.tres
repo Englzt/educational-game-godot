@@ -1,0 +1,58 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://fhe7ah7woput"]
+
+[ext_resource type="FontFile" uid="uid://dsdnggwkk6kl0" path="res://Assets/Fonts/OperationNapalm-Regular.ttf" id="1_jeiip"]
+[ext_resource type="Texture2D" uid="uid://dmx1i2bcp4xur" path="res://Assets/Textures/Settings/toggle_on.svg" id="2_jebvq"]
+[ext_resource type="Texture2D" uid="uid://cnfmp3ub5f1m8" path="res://Assets/Textures/Settings/toggle_off.svg" id="3_owam8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_adu2g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2r307"]
+bg_color = Color(0.0862745, 0.0862745, 0.0862745, 0.784314)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0l8wx"]
+bg_color = Color(0.117647, 0.117647, 0.117647, 0.862745)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omq0y"]
+bg_color = Color(0, 0, 0, 0.705882)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0l8wx"]
+
+[resource]
+default_font = ExtResource("1_jeiip")
+Button/font_sizes/font_size = 64
+Button/fonts/font = ExtResource("1_jeiip")
+Button/styles/focus = SubResource("StyleBoxEmpty_adu2g")
+Button/styles/hover = SubResource("StyleBoxFlat_2r307")
+Button/styles/normal = SubResource("StyleBoxFlat_0l8wx")
+Button/styles/pressed = SubResource("StyleBoxFlat_omq0y")
+CheckButton/icons/checked = ExtResource("2_jebvq")
+CheckButton/icons/unchecked = ExtResource("3_owam8")
+CheckButton/styles/focus = SubResource("StyleBoxEmpty_0l8wx")
+CheckButton/styles/hover = SubResource("StyleBoxFlat_2r307")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxFlat_2r307")
+CheckButton/styles/normal = SubResource("StyleBoxFlat_0l8wx")
+CheckButton/styles/pressed = SubResource("StyleBoxFlat_2r307")

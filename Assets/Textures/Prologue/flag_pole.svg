@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="6.2332458mm"
+   height="65.797562mm"
+   viewBox="0 0 6.2332458 65.79756"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="flag_pole.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.1694726"
+     inkscape:cx="26.734608"
+     inkscape:cy="187.83367"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g2" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-95.779167,-52.652084)">
+    <g
+       id="g2"
+       transform="matrix(0.26458333,0,0,0.26458333,-16.508784,23.956671)">
+      <rect
+         style="fill:#b6bbbd;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.80798;stroke-linecap:square;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect2"
+         width="7.5986838"
+         height="233.56219"
+         x="432.17935"
+         y="123.17262" />
+      <circle
+         style="fill:#e5c153;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.72748;stroke-linecap:square;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path2"
+         cx="436.17477"
+         cy="120.23447"
+         r="10.915623" />
+    </g>
+  </g>
+</svg>
