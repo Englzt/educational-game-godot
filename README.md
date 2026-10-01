@@ -1,3 +1,23 @@
+# Educational CS Game (Godot)
+
+**Ausgestellt auf der OUTPUT Projektschau der TU Dresden.**
+
+## Über das Projekt
+Ein interaktives Lernspiel, das entwickelt wurde, um Kernkonzepte der Informatik spielerisch zu vermitteln. Die integrierten Lernmechaniken umfassen unter anderem Pathfinding (Breitensuche), Kryptographie (Caesar-Verschlüsselung), Binärcodierung und Logikgatter.
+
+## Tech Stack
+* **Engine:** Godot
+* **Sprache:** GDScript
+
+## Meine Rolle
+* **Game Design:** Eigenständige Konzeption und Verfassen des Game Design Documents (GDD).
+* **Programmierung:** Iterative Entwicklung im agilen 3er-Team, wobei wir uns bei komplexen Blockern flexibel abgewechselt haben (Pair Programming).
+
+---
+
+*(Original Readme follows below)*
+
+
 # Axolotl Rescue
 
 **Axolotl Rescue** ist ein Lernspiel zur Vermittlung grundlegender Konzepte der Informatik. Es behandelt Themen wie die Umrechnung von Dezimal- in Binärzahlen, die Cäsar-Verschlüsselung, den kürzesten Pfad, Tiefen- und Breitensuche in Baumstrukturen sowie logische Schaltungen.
