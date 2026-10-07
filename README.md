@@ -10,7 +10,7 @@ Ein interaktives Lernspiel, das entwickelt wurde, um Kernkonzepte der Informatik
 * **Sprache:** GDScript
 
 ## Meine Rolle
-* **Game Design:** Eigenständige Konzeption und Verfassen des Game Design Documents (GDD).
+* **Game Design:** Eigenständige Konzeption und Verfassen des [Game Design Documents (GDD)](docs/Game Design DoKument.pdf).
 * **Programmierung:** Iterative Entwicklung im agilen 3er-Team, wobei wir uns bei komplexen Blockern flexibel abgewechselt haben (Pair Programming).
 
 ---
@@ -23,7 +23,7 @@ Ein interaktives Lernspiel, das entwickelt wurde, um Kernkonzepte der Informatik
 **Axolotl Rescue** ist ein Lernspiel zur Vermittlung grundlegender Konzepte der Informatik. Es behandelt Themen wie die Umrechnung von Dezimal- in Binärzahlen, die Cäsar-Verschlüsselung, den kürzesten Pfad, Tiefen- und Breitensuche in Baumstrukturen sowie logische Schaltungen.
 Zielgruppe sind Schüler der Klassenstufen 7 bis 9.
 
-Das Spiel wird im Rahmen des Moduls Mediendidaktik und -psychologie im Bachelorstudiengang Medieninformatik an der TU Dresden entwickelt.
+Das Spiel wird im Rahmen des Moduls Medienpsychologie und -didaktik im Bachelorstudiengang Medieninformatik an der TU Dresden entwickelt.
 
 ## Verwendete Assets
 
