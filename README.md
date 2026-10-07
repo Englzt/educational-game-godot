@@ -10,7 +10,7 @@ Ein interaktives Lernspiel, das entwickelt wurde, um Kernkonzepte der Informatik
 * **Sprache:** GDScript
 
 ## Meine Rolle
-* **Game Design:** Eigenständige Konzeption und Verfassen des [Game Design Documents (GDD)](docs/Game Design DoKument.pdf).
+* **Game Design:** Eigenständige Konzeption und Verfassen des [Game Design Documents (GDD)]([docs/Game Design DoKument.pdf](https://github.com/Englzt/educational-game-godot/blob/main/Game%20Design%20Dokument.pdf)).
 * **Programmierung:** Iterative Entwicklung im agilen 3er-Team, wobei wir uns bei komplexen Blockern flexibel abgewechselt haben (Pair Programming).
 
 ---
